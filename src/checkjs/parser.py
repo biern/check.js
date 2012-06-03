@@ -18,6 +18,28 @@ class Node(object):
         self.parent = parent
         self.attrs = attrs
 
+    def up(self, arg):
+        """
+        Go up `arg` times or up to parent.type == `arg`.
+        Returns None on failure.
+        """
+
+        res = self
+        if type(arg) == int:
+            for i in range(arg):
+                try:
+                    res = res.parent
+                except AttributeError:
+                    return None
+
+            return res
+
+        if type(arg) == str:
+            while res and not (res and res.type == arg):
+                res = res.parent
+
+            return res
+
     def print_tree(self, indent=0):
         indent_str = ' ' * 2 * indent
         print('{}{}: {}'.format(

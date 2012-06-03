@@ -8,7 +8,7 @@ from JavaScriptLexer import JavaScriptLexer, \
      CALL, CALL_IDENTIFIER, CALL_ARGUMENTS, FUNCTION, \
      FUNCTION_EXPR, FUNCTION_PARAMETERS, VARIABLE_DECL, \
      MEMBER, MEMBER_EXPR, ASSIGNMENT, OPERATOR_ARGS, \
-     VARIABLE_DECL
+     VARIABLE_DECL, OBJECT, PROPERTY
 from JavaScriptParser import JavaScriptParser, tokenNames
 
 
@@ -23,6 +23,8 @@ class AntlrParser(Parser):
         FUNCTION_EXPR: ('FunctionExpression', ['params', 'body']),  # TODO
         ASSIGNMENT: ('Assignment', ['operator', 'args']),
         OPERATOR_ARGS: ('OperatorArguments', ['left', 'right']),
+        OBJECT: ('Object', []),
+        PROPERTY: ('Property', ['name', 'value']),
         MEMBER_EXPR: ('MemberExpr', ['base']),
         VARIABLE_DECL: ('VariableDecl', ['identifier', 'value']),
     }

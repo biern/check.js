@@ -1,4 +1,4 @@
-# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-03 14:51:57
+# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-03 20:54:26
 
 import sys
 from antlr3 import *
@@ -84,6 +84,8 @@ T__117=117
 T__114=114
 T__115=115
 LineComment=50
+T__121=121
+T__120=120
 T__61=61
 T__60=60
 HexDigit=38
@@ -95,8 +97,8 @@ T__58=58
 T__52=52
 T__53=53
 T__54=54
-T__107=107
 OBJECT=9
+T__107=107
 T__108=108
 T__109=109
 T__103=103
@@ -1574,10 +1576,10 @@ class JavaScriptLexer(Lexer):
             _type = T__108
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:63:8: ( 'delete' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:63:10: 'delete'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:63:8: ( '===' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:63:10: '==='
             pass 
-            self.match("delete")
+            self.match("===")
 
 
 
@@ -1599,10 +1601,10 @@ class JavaScriptLexer(Lexer):
             _type = T__109
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:64:8: ( 'void' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:64:10: 'void'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:64:8: ( '!==' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:64:10: '!=='
             pass 
-            self.match("void")
+            self.match("!==")
 
 
 
@@ -1624,10 +1626,10 @@ class JavaScriptLexer(Lexer):
             _type = T__110
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:65:8: ( 'typeof' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:65:10: 'typeof'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:65:8: ( 'delete' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:65:10: 'delete'
             pass 
-            self.match("typeof")
+            self.match("delete")
 
 
 
@@ -1649,10 +1651,10 @@ class JavaScriptLexer(Lexer):
             _type = T__111
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:66:8: ( '++' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:66:10: '++'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:66:8: ( 'void' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:66:10: 'void'
             pass 
-            self.match("++")
+            self.match("void")
 
 
 
@@ -1674,10 +1676,10 @@ class JavaScriptLexer(Lexer):
             _type = T__112
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:67:8: ( '--' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:67:10: '--'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:67:8: ( 'typeof' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:67:10: 'typeof'
             pass 
-            self.match("--")
+            self.match("typeof")
 
 
 
@@ -1699,10 +1701,10 @@ class JavaScriptLexer(Lexer):
             _type = T__113
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:68:8: ( '~' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:68:10: '~'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:68:8: ( '++' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:68:10: '++'
             pass 
-            self.match(126)
+            self.match("++")
 
 
 
@@ -1724,10 +1726,10 @@ class JavaScriptLexer(Lexer):
             _type = T__114
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:69:8: ( '!' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:69:10: '!'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:69:8: ( '--' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:69:10: '--'
             pass 
-            self.match(33)
+            self.match("--")
 
 
 
@@ -1749,10 +1751,10 @@ class JavaScriptLexer(Lexer):
             _type = T__115
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:70:8: ( 'this' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:70:10: 'this'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:70:8: ( '~' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:70:10: '~'
             pass 
-            self.match("this")
+            self.match(126)
 
 
 
@@ -1774,10 +1776,10 @@ class JavaScriptLexer(Lexer):
             _type = T__116
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:71:8: ( 'null' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:71:10: 'null'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:71:8: ( '!' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:71:10: '!'
             pass 
-            self.match("null")
+            self.match(33)
 
 
 
@@ -1799,10 +1801,10 @@ class JavaScriptLexer(Lexer):
             _type = T__117
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:72:8: ( 'true' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:72:10: 'true'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:72:8: ( 'this' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:72:10: 'this'
             pass 
-            self.match("true")
+            self.match("this")
 
 
 
@@ -1824,10 +1826,10 @@ class JavaScriptLexer(Lexer):
             _type = T__118
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:73:8: ( 'false' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:73:10: 'false'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:73:8: ( 'null' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:73:10: 'null'
             pass 
-            self.match("false")
+            self.match("null")
 
 
 
@@ -1849,8 +1851,58 @@ class JavaScriptLexer(Lexer):
             _type = T__119
             _channel = DEFAULT_CHANNEL
 
-            # ../src/checkjs/parsers/antlr/JavaScript.g:74:8: ( '\\/' )
-            # ../src/checkjs/parsers/antlr/JavaScript.g:74:10: '\\/'
+            # ../src/checkjs/parsers/antlr/JavaScript.g:74:8: ( 'true' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:74:10: 'true'
+            pass 
+            self.match("true")
+
+
+
+            self._state.type = _type
+            self._state.channel = _channel
+
+        finally:
+
+            pass
+
+    # $ANTLR end "T__119"
+
+
+
+    # $ANTLR start "T__120"
+    def mT__120(self, ):
+
+        try:
+            _type = T__120
+            _channel = DEFAULT_CHANNEL
+
+            # ../src/checkjs/parsers/antlr/JavaScript.g:75:8: ( 'false' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:75:10: 'false'
+            pass 
+            self.match("false")
+
+
+
+            self._state.type = _type
+            self._state.channel = _channel
+
+        finally:
+
+            pass
+
+    # $ANTLR end "T__120"
+
+
+
+    # $ANTLR start "T__121"
+    def mT__121(self, ):
+
+        try:
+            _type = T__121
+            _channel = DEFAULT_CHANNEL
+
+            # ../src/checkjs/parsers/antlr/JavaScript.g:76:8: ( '\\/' )
+            # ../src/checkjs/parsers/antlr/JavaScript.g:76:10: '\\/'
             pass 
             self.match(47)
 
@@ -1863,7 +1915,7 @@ class JavaScriptLexer(Lexer):
 
             pass
 
-    # $ANTLR end "T__119"
+    # $ANTLR end "T__121"
 
 
 
@@ -3286,8 +3338,8 @@ class JavaScriptLexer(Lexer):
 
 
     def mTokens(self):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:1:8: ( T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace )
-        alt27 = 75
+        # ../src/checkjs/parsers/antlr/JavaScript.g:1:8: ( T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | StringLiteral | NumericLiteral | Identifier | Comment | LineComment | LT | WhiteSpace )
+        alt27 = 77
         alt27 = self.dfa27.predict(self.input)
         if alt27 == 1:
             # ../src/checkjs/parsers/antlr/JavaScript.g:1:10: T__52
@@ -3698,43 +3750,55 @@ class JavaScriptLexer(Lexer):
 
 
         elif alt27 == 69:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:438: StringLiteral
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:438: T__120
+            pass 
+            self.mT__120()
+
+
+        elif alt27 == 70:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:445: T__121
+            pass 
+            self.mT__121()
+
+
+        elif alt27 == 71:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:452: StringLiteral
             pass 
             self.mStringLiteral()
 
 
-        elif alt27 == 70:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:452: NumericLiteral
+        elif alt27 == 72:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:466: NumericLiteral
             pass 
             self.mNumericLiteral()
 
 
-        elif alt27 == 71:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:467: Identifier
+        elif alt27 == 73:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:481: Identifier
             pass 
             self.mIdentifier()
 
 
-        elif alt27 == 72:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:478: Comment
+        elif alt27 == 74:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:492: Comment
             pass 
             self.mComment()
 
 
-        elif alt27 == 73:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:486: LineComment
+        elif alt27 == 75:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:500: LineComment
             pass 
             self.mLineComment()
 
 
-        elif alt27 == 74:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:498: LT
+        elif alt27 == 76:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:512: LT
             pass 
             self.mLT()
 
 
-        elif alt27 == 75:
-            # ../src/checkjs/parsers/antlr/JavaScript.g:1:501: WhiteSpace
+        elif alt27 == 77:
+            # ../src/checkjs/parsers/antlr/JavaScript.g:1:515: WhiteSpace
             pass 
             self.mWhiteSpace()
 
@@ -3815,71 +3879,73 @@ class JavaScriptLexer(Lexer):
     DFA27_eot = DFA.unpack(
         u"\1\uffff\1\47\6\uffff\1\47\1\61\7\47\1\uffff\3\47\2\uffff\1\103"
         u"\1\105\1\111\1\uffff\1\114\1\117\1\122\1\125\1\130\1\uffff\1\133"
-        u"\1\uffff\1\135\6\uffff\6\47\2\uffff\1\144\1\145\1\47\1\147\15\47"
-        u"\33\uffff\1\47\1\174\2\47\1\177\1\47\2\uffff\1\47\1\uffff\14\47"
-        u"\1\u008e\2\47\1\u0091\1\47\2\uffff\1\47\1\uffff\2\47\1\uffff\1"
-        u"\u0096\1\u0097\3\47\1\u009b\1\47\1\u009d\5\47\1\u00a3\1\uffff\1"
-        u"\u00a4\1\47\1\uffff\1\u00a6\2\47\1\u00a9\2\uffff\2\47\1\u00ac\1"
-        u"\uffff\1\47\1\uffff\1\u00ae\1\u00af\2\47\1\u00b2\2\uffff\1\47\1"
-        u"\uffff\2\47\1\uffff\1\47\1\u00b7\1\uffff\1\47\2\uffff\1\u00b9\1"
-        u"\u00ba\1\uffff\1\u00bb\1\47\1\u00bd\1\u00be\1\uffff\1\47\3\uffff"
-        u"\1\u00c0\2\uffff\1\u00c1\2\uffff"
+        u"\1\uffff\1\135\6\uffff\6\47\1\145\1\uffff\1\146\1\147\1\47\1\151"
+        u"\15\47\31\uffff\1\176\1\uffff\1\47\1\u0080\2\47\1\u0083\1\47\4"
+        u"\uffff\1\47\1\uffff\14\47\1\u0092\2\47\1\u0095\1\47\4\uffff\1\47"
+        u"\1\uffff\2\47\1\uffff\1\u009a\1\u009b\3\47\1\u009f\1\47\1\u00a1"
+        u"\5\47\1\u00a7\1\uffff\1\u00a8\1\47\1\uffff\1\u00aa\2\47\1\u00ad"
+        u"\2\uffff\2\47\1\u00b0\1\uffff\1\47\1\uffff\1\u00b2\1\u00b3\2\47"
+        u"\1\u00b6\2\uffff\1\47\1\uffff\2\47\1\uffff\1\47\1\u00bb\1\uffff"
+        u"\1\47\2\uffff\1\u00bd\1\u00be\1\uffff\1\u00bf\1\47\1\u00c1\1\u00c2"
+        u"\1\uffff\1\47\3\uffff\1\u00c4\2\uffff\1\u00c5\2\uffff"
         )
 
     DFA27_eof = DFA.unpack(
-        u"\u00c2\uffff"
+        u"\u00c6\uffff"
         )
 
     DFA27_min = DFA.unpack(
         u"\1\11\1\141\6\uffff\1\141\1\75\1\146\1\154\1\145\1\150\1\141\1"
         u"\162\1\145\1\uffff\1\167\1\150\1\145\2\uffff\1\60\1\75\1\52\1\uffff"
         u"\1\53\1\55\1\74\1\75\1\46\1\uffff\1\75\1\uffff\1\75\6\uffff\1\156"
-        u"\1\162\1\156\1\154\1\162\1\151\2\uffff\2\44\1\163\1\44\1\146\1"
-        u"\151\1\164\1\156\1\163\1\145\1\164\2\151\1\165\1\160\1\167\1\154"
-        u"\20\uffff\1\75\12\uffff\1\143\1\44\1\141\1\163\1\44\1\144\2\uffff"
-        u"\1\145\1\uffff\1\141\1\145\1\154\1\150\1\164\1\145\1\143\1\141"
-        u"\1\165\1\164\1\157\1\163\1\44\2\145\1\44\1\154\2\uffff\1\164\1"
-        u"\uffff\1\154\1\145\1\uffff\2\44\1\165\1\164\1\145\1\44\1\151\1"
-        u"\44\1\150\1\153\1\162\1\143\1\167\1\44\1\uffff\1\44\1\157\1\uffff"
-        u"\1\44\1\151\1\154\1\44\2\uffff\1\154\1\145\1\44\1\uffff\1\156\1"
-        u"\uffff\2\44\1\156\1\150\1\44\2\uffff\1\146\1\uffff\1\157\1\171"
-        u"\1\uffff\1\164\1\44\1\uffff\1\165\2\uffff\2\44\1\uffff\1\44\1\156"
-        u"\2\44\1\uffff\1\145\3\uffff\1\44\2\uffff\1\44\2\uffff"
+        u"\1\162\1\156\1\154\1\162\1\151\1\75\1\uffff\2\44\1\163\1\44\1\146"
+        u"\1\151\1\164\1\156\1\163\1\145\1\164\2\151\1\165\1\160\1\167\1"
+        u"\154\20\uffff\1\75\10\uffff\1\75\1\uffff\1\143\1\44\1\141\1\163"
+        u"\1\44\1\144\4\uffff\1\145\1\uffff\1\141\1\145\1\154\1\150\1\164"
+        u"\1\145\1\143\1\141\1\165\1\164\1\157\1\163\1\44\2\145\1\44\1\154"
+        u"\4\uffff\1\164\1\uffff\1\154\1\145\1\uffff\2\44\1\165\1\164\1\145"
+        u"\1\44\1\151\1\44\1\150\1\153\1\162\1\143\1\167\1\44\1\uffff\1\44"
+        u"\1\157\1\uffff\1\44\1\151\1\154\1\44\2\uffff\1\154\1\145\1\44\1"
+        u"\uffff\1\156\1\uffff\2\44\1\156\1\150\1\44\2\uffff\1\146\1\uffff"
+        u"\1\157\1\171\1\uffff\1\164\1\44\1\uffff\1\165\2\uffff\2\44\1\uffff"
+        u"\1\44\1\156\2\44\1\uffff\1\145\3\uffff\1\44\2\uffff\1\44\2\uffff"
         )
 
     DFA27_max = DFA.unpack(
         u"\1\uffdc\1\165\6\uffff\1\157\1\75\1\156\1\154\1\157\1\151\1\157"
         u"\1\162\1\145\1\uffff\1\167\1\171\1\165\2\uffff\1\71\2\75\1\uffff"
         u"\3\75\1\76\1\75\1\uffff\1\174\1\uffff\1\75\6\uffff\1\156\1\162"
-        u"\1\156\1\154\1\162\1\151\2\uffff\2\uffdc\1\163\1\uffdc\1\154\1"
-        u"\151\1\164\1\156\1\164\1\145\1\164\1\151\1\162\1\171\1\160\1\167"
-        u"\1\154\20\uffff\1\76\12\uffff\1\143\1\uffdc\1\141\1\163\1\uffdc"
-        u"\1\144\2\uffff\1\145\1\uffff\1\141\1\145\1\154\1\150\1\164\1\145"
-        u"\1\143\1\141\1\165\1\164\1\157\1\163\1\uffdc\2\145\1\uffdc\1\154"
-        u"\2\uffff\1\164\1\uffff\1\154\1\145\1\uffff\2\uffdc\1\165\1\164"
-        u"\1\145\1\uffdc\1\151\1\uffdc\1\150\1\153\1\162\1\143\1\167\1\uffdc"
-        u"\1\uffff\1\uffdc\1\157\1\uffff\1\uffdc\1\151\1\154\1\uffdc\2\uffff"
-        u"\1\154\1\145\1\uffdc\1\uffff\1\156\1\uffff\2\uffdc\1\156\1\150"
-        u"\1\uffdc\2\uffff\1\146\1\uffff\1\157\1\171\1\uffff\1\164\1\uffdc"
-        u"\1\uffff\1\165\2\uffff\2\uffdc\1\uffff\1\uffdc\1\156\2\uffdc\1"
-        u"\uffff\1\145\3\uffff\1\uffdc\2\uffff\1\uffdc\2\uffff"
+        u"\1\156\1\154\1\162\1\151\1\75\1\uffff\2\uffdc\1\163\1\uffdc\1\154"
+        u"\1\151\1\164\1\156\1\164\1\145\1\164\1\151\1\162\1\171\1\160\1"
+        u"\167\1\154\20\uffff\1\76\10\uffff\1\75\1\uffff\1\143\1\uffdc\1"
+        u"\141\1\163\1\uffdc\1\144\4\uffff\1\145\1\uffff\1\141\1\145\1\154"
+        u"\1\150\1\164\1\145\1\143\1\141\1\165\1\164\1\157\1\163\1\uffdc"
+        u"\2\145\1\uffdc\1\154\4\uffff\1\164\1\uffff\1\154\1\145\1\uffff"
+        u"\2\uffdc\1\165\1\164\1\145\1\uffdc\1\151\1\uffdc\1\150\1\153\1"
+        u"\162\1\143\1\167\1\uffdc\1\uffff\1\uffdc\1\157\1\uffff\1\uffdc"
+        u"\1\151\1\154\1\uffdc\2\uffff\1\154\1\145\1\uffdc\1\uffff\1\156"
+        u"\1\uffff\2\uffdc\1\156\1\150\1\uffdc\2\uffff\1\146\1\uffff\1\157"
+        u"\1\171\1\uffff\1\164\1\uffdc\1\uffff\1\165\2\uffff\2\uffdc\1\uffff"
+        u"\1\uffdc\1\156\2\uffdc\1\uffff\1\145\3\uffff\1\uffdc\2\uffff\1"
+        u"\uffdc\2\uffff"
         )
 
     DFA27_accept = DFA.unpack(
         u"\2\uffff\1\2\1\3\1\4\1\5\1\6\1\7\11\uffff\1\24\3\uffff\1\35\1\36"
-        u"\3\uffff\1\42\5\uffff\1\51\1\uffff\1\53\1\uffff\1\76\1\105\1\106"
-        u"\1\107\1\112\1\113\6\uffff\1\67\1\11\21\uffff\1\37\1\40\1\54\1"
-        u"\41\1\110\1\111\1\104\1\43\1\74\1\56\1\44\1\75\1\55\1\45\1\64\1"
-        u"\63\1\uffff\1\66\1\65\1\50\1\60\1\57\1\52\1\62\1\61\1\70\1\77\6"
-        u"\uffff\1\12\1\17\1\uffff\1\14\21\uffff\1\46\1\47\1\uffff\1\16\2"
-        u"\uffff\1\10\16\uffff\1\31\2\uffff\1\34\4\uffff\1\72\1\13\3\uffff"
-        u"\1\23\1\uffff\1\26\5\uffff\1\100\1\102\1\uffff\1\101\2\uffff\1"
-        u"\103\2\uffff\1\15\1\uffff\1\32\1\21\2\uffff\1\30\4\uffff\1\71\1"
-        u"\uffff\1\22\1\25\1\73\1\uffff\1\33\1\27\1\uffff\1\1\1\20"
+        u"\3\uffff\1\42\5\uffff\1\51\1\uffff\1\53\1\uffff\1\100\1\107\1\110"
+        u"\1\111\1\114\1\115\7\uffff\1\11\21\uffff\1\37\1\40\1\54\1\41\1"
+        u"\112\1\113\1\106\1\43\1\76\1\56\1\44\1\77\1\55\1\45\1\64\1\63\1"
+        u"\uffff\1\66\1\65\1\50\1\60\1\57\1\52\1\62\1\61\1\uffff\1\101\6"
+        u"\uffff\1\71\1\67\1\12\1\17\1\uffff\1\14\21\uffff\1\46\1\47\1\72"
+        u"\1\70\1\uffff\1\16\2\uffff\1\10\16\uffff\1\31\2\uffff\1\34\4\uffff"
+        u"\1\74\1\13\3\uffff\1\23\1\uffff\1\26\5\uffff\1\102\1\104\1\uffff"
+        u"\1\103\2\uffff\1\105\2\uffff\1\15\1\uffff\1\32\1\21\2\uffff\1\30"
+        u"\4\uffff\1\73\1\uffff\1\22\1\25\1\75\1\uffff\1\33\1\27\1\uffff"
+        u"\1\1\1\20"
         )
 
     DFA27_special = DFA.unpack(
-        u"\u00c2\uffff"
+        u"\u00c6\uffff"
         )
 
             
@@ -3993,8 +4059,8 @@ class JavaScriptLexer(Lexer):
         DFA.unpack(u"\1\141"),
         DFA.unpack(u"\1\142"),
         DFA.unpack(u"\1\143"),
+        DFA.unpack(u"\1\144"),
         DFA.unpack(u""),
-        DFA.unpack(u""),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -4119,7 +4185,7 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\146"),
+        DFA.unpack(u"\1\150"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -4182,19 +4248,19 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\150\5\uffff\1\151"),
-        DFA.unpack(u"\1\152"),
-        DFA.unpack(u"\1\153"),
+        DFA.unpack(u"\1\152\5\uffff\1\153"),
         DFA.unpack(u"\1\154"),
-        DFA.unpack(u"\1\155\1\156"),
-        DFA.unpack(u"\1\157"),
-        DFA.unpack(u"\1\160"),
+        DFA.unpack(u"\1\155"),
+        DFA.unpack(u"\1\156"),
+        DFA.unpack(u"\1\157\1\160"),
         DFA.unpack(u"\1\161"),
-        DFA.unpack(u"\1\163\10\uffff\1\162"),
-        DFA.unpack(u"\1\165\3\uffff\1\164"),
-        DFA.unpack(u"\1\166"),
-        DFA.unpack(u"\1\167"),
+        DFA.unpack(u"\1\162"),
+        DFA.unpack(u"\1\163"),
+        DFA.unpack(u"\1\165\10\uffff\1\164"),
+        DFA.unpack(u"\1\167\3\uffff\1\166"),
         DFA.unpack(u"\1\170"),
+        DFA.unpack(u"\1\171"),
+        DFA.unpack(u"\1\172"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -4211,7 +4277,7 @@ class JavaScriptLexer(Lexer):
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\171\1\172"),
+        DFA.unpack(u"\1\173\1\174"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -4220,73 +4286,9 @@ class JavaScriptLexer(Lexer):
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
-        DFA.unpack(u""),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\173"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\175"),
-        DFA.unpack(u"\1\176"),
+        DFA.unpack(u""),
+        DFA.unpack(u"\1\177"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -4349,15 +4351,77 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\u0080"),
-        DFA.unpack(u""),
-        DFA.unpack(u""),
         DFA.unpack(u"\1\u0081"),
-        DFA.unpack(u""),
         DFA.unpack(u"\1\u0082"),
-        DFA.unpack(u"\1\u0083"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u0084"),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\u0085"),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\u0086"),
         DFA.unpack(u"\1\u0087"),
         DFA.unpack(u"\1\u0088"),
@@ -4366,70 +4430,10 @@ class JavaScriptLexer(Lexer):
         DFA.unpack(u"\1\u008b"),
         DFA.unpack(u"\1\u008c"),
         DFA.unpack(u"\1\u008d"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u008e"),
         DFA.unpack(u"\1\u008f"),
         DFA.unpack(u"\1\u0090"),
+        DFA.unpack(u"\1\u0091"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -4492,141 +4496,142 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\u0092"),
-        DFA.unpack(u""),
-        DFA.unpack(u""),
         DFA.unpack(u"\1\u0093"),
-        DFA.unpack(u""),
         DFA.unpack(u"\1\u0094"),
-        DFA.unpack(u"\1\u0095"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u0096"),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
+        DFA.unpack(u"\1\u0097"),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\u0098"),
         DFA.unpack(u"\1\u0099"),
-        DFA.unpack(u"\1\u009a"),
+        DFA.unpack(u""),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -4690,264 +4695,138 @@ class JavaScriptLexer(Lexer):
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u009c"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u009d"),
         DFA.unpack(u"\1\u009e"),
-        DFA.unpack(u"\1\u009f"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u00a0"),
-        DFA.unpack(u"\1\u00a1"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u00a2"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u00a3"),
+        DFA.unpack(u"\1\u00a4"),
         DFA.unpack(u"\1\u00a5"),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\u00a7"),
-        DFA.unpack(u"\1\u00a8"),
+        DFA.unpack(u"\1\u00a6"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5011,9 +4890,134 @@ class JavaScriptLexer(Lexer):
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u""),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u00a9"),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\u00aa"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u00ab"),
+        DFA.unpack(u"\1\u00ac"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5077,8 +5081,9 @@ class JavaScriptLexer(Lexer):
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\u00ad"),
         DFA.unpack(u""),
+        DFA.unpack(u"\1\u00ae"),
+        DFA.unpack(u"\1\u00af"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5141,70 +5146,9 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u"\1\u00b0"),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\u00b1"),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5267,14 +5211,70 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
-        DFA.unpack(u""),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\u00b3"),
-        DFA.unpack(u""),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u00b4"),
         DFA.unpack(u"\1\u00b5"),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\u00b6"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5337,72 +5337,14 @@ class JavaScriptLexer(Lexer):
         u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
+        DFA.unpack(u"\1\u00b7"),
         DFA.unpack(u""),
         DFA.unpack(u"\1\u00b8"),
+        DFA.unpack(u"\1\u00b9"),
         DFA.unpack(u""),
-        DFA.unpack(u""),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u00ba"),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5466,69 +5408,9 @@ class JavaScriptLexer(Lexer):
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
-        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
-        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
-        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
-        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
-        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
-        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
-        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
-        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
-        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
-        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
-        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
-        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
-        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
-        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
-        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
-        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
-        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
-        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
-        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
-        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
-        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
-        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
-        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
-        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
-        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
-        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
-        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
-        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
-        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
-        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
-        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
-        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
-        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
-        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
-        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
-        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
-        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
-        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
-        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
-        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
-        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
-        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
-        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
-        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
-        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
-        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
-        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
-        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
-        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
-        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
-        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
-        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
-        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
-        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
-        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
-        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
-        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
-        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
-        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
-        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
-        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u"\1\u00bc"),
+        DFA.unpack(u""),
+        DFA.unpack(u""),
         DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
         u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
         u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
@@ -5654,7 +5536,195 @@ class JavaScriptLexer(Lexer):
         u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
         u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
         DFA.unpack(u""),
-        DFA.unpack(u"\1\u00bf"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\u00c0"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u"\1\47\13\uffff\12\47\7\uffff\32\47\1\uffff\1\47\2\uffff"
+        u"\1\47\1\uffff\32\47\57\uffff\1\47\12\uffff\1\47\4\uffff\1\47\5"
+        u"\uffff\27\47\1\uffff\37\47\1\uffff\u0128\47\2\uffff\22\47\34\uffff"
+        u"\136\47\2\uffff\11\47\2\uffff\7\47\16\uffff\2\47\16\uffff\5\47"
+        u"\11\uffff\1\47\u008b\uffff\1\47\13\uffff\1\47\1\uffff\3\47\1\uffff"
+        u"\1\47\1\uffff\24\47\1\uffff\54\47\1\uffff\10\47\2\uffff\32\47\14"
+        u"\uffff\u0082\47\12\uffff\71\47\2\uffff\2\47\2\uffff\2\47\3\uffff"
+        u"\46\47\2\uffff\2\47\67\uffff\46\47\2\uffff\1\47\7\uffff\47\47\110"
+        u"\uffff\33\47\5\uffff\3\47\56\uffff\32\47\5\uffff\13\47\25\uffff"
+        u"\12\47\7\uffff\143\47\1\uffff\1\47\17\uffff\2\47\11\uffff\15\47"
+        u"\23\uffff\1\47\1\uffff\33\47\123\uffff\46\47\u015f\uffff\65\47"
+        u"\3\uffff\1\47\22\uffff\1\47\7\uffff\12\47\4\uffff\12\47\25\uffff"
+        u"\10\47\2\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\1\47\3\uffff"
+        u"\4\47\42\uffff\2\47\1\uffff\3\47\4\uffff\14\47\23\uffff\6\47\4"
+        u"\uffff\2\47\2\uffff\26\47\1\uffff\7\47\1\uffff\2\47\1\uffff\2\47"
+        u"\1\uffff\2\47\37\uffff\4\47\1\uffff\1\47\7\uffff\12\47\2\uffff"
+        u"\3\47\20\uffff\7\47\1\uffff\1\47\1\uffff\3\47\1\uffff\26\47\1\uffff"
+        u"\7\47\1\uffff\2\47\1\uffff\5\47\3\uffff\1\47\22\uffff\1\47\17\uffff"
+        u"\1\47\5\uffff\12\47\25\uffff\10\47\2\uffff\2\47\2\uffff\26\47\1"
+        u"\uffff\7\47\1\uffff\2\47\2\uffff\4\47\3\uffff\1\47\36\uffff\2\47"
+        u"\1\uffff\3\47\4\uffff\12\47\25\uffff\6\47\3\uffff\3\47\1\uffff"
+        u"\4\47\3\uffff\2\47\1\uffff\1\47\1\uffff\2\47\3\uffff\2\47\3\uffff"
+        u"\3\47\3\uffff\10\47\1\uffff\3\47\55\uffff\11\47\25\uffff\10\47"
+        u"\1\uffff\3\47\1\uffff\27\47\1\uffff\12\47\1\uffff\5\47\46\uffff"
+        u"\2\47\4\uffff\12\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1"
+        u"\uffff\12\47\1\uffff\5\47\44\uffff\1\47\1\uffff\2\47\4\uffff\12"
+        u"\47\25\uffff\10\47\1\uffff\3\47\1\uffff\27\47\1\uffff\20\47\46"
+        u"\uffff\2\47\4\uffff\12\47\25\uffff\22\47\3\uffff\30\47\1\uffff"
+        u"\11\47\1\uffff\1\47\2\uffff\7\47\72\uffff\60\47\1\uffff\2\47\14"
+        u"\uffff\7\47\11\uffff\12\47\47\uffff\2\47\1\uffff\1\47\2\uffff\2"
+        u"\47\1\uffff\1\47\2\uffff\1\47\6\uffff\4\47\1\uffff\7\47\1\uffff"
+        u"\3\47\1\uffff\1\47\1\uffff\1\47\2\uffff\2\47\1\uffff\4\47\1\uffff"
+        u"\2\47\11\uffff\10\47\1\uffff\1\47\11\uffff\12\47\2\uffff\2\47\42"
+        u"\uffff\1\47\37\uffff\12\47\26\uffff\53\47\35\uffff\4\47\164\uffff"
+        u"\42\47\1\uffff\5\47\1\uffff\2\47\25\uffff\12\47\6\uffff\6\47\112"
+        u"\uffff\46\47\12\uffff\47\47\11\uffff\132\47\5\uffff\104\47\5\uffff"
+        u"\122\47\6\uffff\7\47\1\uffff\77\47\1\uffff\1\47\1\uffff\4\47\2"
+        u"\uffff\7\47\1\uffff\1\47\1\uffff\4\47\2\uffff\47\47\1\uffff\1\47"
+        u"\1\uffff\4\47\2\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7"
+        u"\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff\7\47\1\uffff"
+        u"\27\47\1\uffff\37\47\1\uffff\1\47\1\uffff\4\47\2\uffff\7\47\1\uffff"
+        u"\47\47\1\uffff\23\47\16\uffff\11\47\56\uffff\125\47\14\uffff\u0276"
+        u"\47\12\uffff\32\47\5\uffff\113\47\u0095\uffff\64\47\54\uffff\12"
+        u"\47\46\uffff\12\47\6\uffff\130\47\10\uffff\51\47\u0557\uffff\u009c"
+        u"\47\4\uffff\132\47\6\uffff\26\47\2\uffff\6\47\2\uffff\46\47\2\uffff"
+        u"\6\47\2\uffff\10\47\1\uffff\1\47\1\uffff\1\47\1\uffff\1\47\1\uffff"
+        u"\37\47\2\uffff\65\47\1\uffff\7\47\1\uffff\1\47\3\uffff\3\47\1\uffff"
+        u"\7\47\3\uffff\4\47\2\uffff\6\47\4\uffff\15\47\5\uffff\3\47\1\uffff"
+        u"\7\47\102\uffff\2\47\76\uffff\1\47\u0082\uffff\1\47\4\uffff\1\47"
+        u"\2\uffff\12\47\1\uffff\1\47\3\uffff\5\47\6\uffff\1\47\1\uffff\1"
+        u"\47\1\uffff\1\47\1\uffff\4\47\1\uffff\3\47\1\uffff\7\47\46\uffff"
+        u"\44\47\u0e81\uffff\3\47\31\uffff\11\47\7\uffff\5\47\2\uffff\3\47"
+        u"\6\uffff\124\47\10\uffff\2\47\2\uffff\136\47\6\uffff\50\47\4\uffff"
+        u"\136\47\21\uffff\30\47\u0248\uffff\1\47\u19b4\uffff\1\47\112\uffff"
+        u"\1\47\u51a4\uffff\1\47\132\uffff\u048d\47\u0773\uffff\1\47\u2ba2"
+        u"\uffff\1\47\u215c\uffff\u012e\47\u00d2\uffff\7\47\14\uffff\5\47"
+        u"\5\uffff\1\47\1\uffff\12\47\1\uffff\15\47\1\uffff\5\47\1\uffff"
+        u"\1\47\1\uffff\2\47\1\uffff\2\47\1\uffff\154\47\41\uffff\u016b\47"
+        u"\22\uffff\100\47\2\uffff\66\47\50\uffff\14\47\67\uffff\2\47\30"
+        u"\uffff\3\47\40\uffff\3\47\1\uffff\1\47\1\uffff\u0087\47\23\uffff"
+        u"\12\47\7\uffff\32\47\4\uffff\1\47\1\uffff\32\47\12\uffff\132\47"
+        u"\3\uffff\6\47\2\uffff\6\47\2\uffff\6\47\2\uffff\3\47"),
+        DFA.unpack(u""),
+        DFA.unpack(u"\1\u00c3"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),

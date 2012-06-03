@@ -1,4 +1,4 @@
-# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-03 14:51:55
+# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-03 20:54:25
 
 import sys
 from antlr3 import *
@@ -87,6 +87,8 @@ T__117=117
 T__114=114
 T__115=115
 LineComment=50
+T__121=121
+T__120=120
 T__61=61
 T__60=60
 HexDigit=38
@@ -150,9 +152,9 @@ tokenNames = [
     "'throw'", "'try'", "'catch'", "'finally'", "'new'", "'['", "']'", "'.'", 
     "'*='", "'/='", "'%='", "'+='", "'-='", "'<<='", "'>>='", "'>>>='", 
     "'&='", "'^='", "'|='", "'?'", "'*'", "'-'", "'+'", "'&'", "'&&'", "'|'", 
-    "'||'", "'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'delete'", "'void'", 
-    "'typeof'", "'++'", "'--'", "'~'", "'!'", "'this'", "'null'", "'true'", 
-    "'false'", "'\\/'"
+    "'||'", "'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'==='", "'!=='", 
+    "'delete'", "'void'", "'typeof'", "'++'", "'--'", "'~'", "'!'", "'this'", 
+    "'null'", "'true'", "'false'", "'\\/'"
 ]
 
 
@@ -1047,7 +1049,7 @@ class JavaScriptParser(Parser):
 
 
                 # AST Rewrite
-                # elements: formalParameterList, Identifier, functionBody
+                # elements: Identifier, functionBody, formalParameterList
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -1602,7 +1604,7 @@ class JavaScriptParser(Parser):
                 alt21 = 2
                 LA21_0 = self.input.LA(1)
 
-                if ((Identifier <= LA21_0 <= NumericLiteral) or LA21_0 == 52 or LA21_0 == 54 or LA21_0 == 57 or LA21_0 == 59 or LA21_0 == 61 or (63 <= LA21_0 <= 65) or (67 <= LA21_0 <= 70) or LA21_0 == 72 or (75 <= LA21_0 <= 76) or (79 <= LA21_0 <= 80) or (96 <= LA21_0 <= 97) or (108 <= LA21_0 <= 119)) :
+                if ((Identifier <= LA21_0 <= NumericLiteral) or LA21_0 == 52 or LA21_0 == 54 or LA21_0 == 57 or LA21_0 == 59 or LA21_0 == 61 or (63 <= LA21_0 <= 65) or (67 <= LA21_0 <= 70) or LA21_0 == 72 or (75 <= LA21_0 <= 76) or (79 <= LA21_0 <= 80) or (96 <= LA21_0 <= 97) or (110 <= LA21_0 <= 121)) :
                     alt21 = 1
                 if alt21 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: sourceElements
@@ -1773,7 +1775,7 @@ class JavaScriptParser(Parser):
 
                         raise nvae
 
-                elif ((FUNCTION <= LA23_0 <= 57) or (59 <= LA23_0 <= 119)) :
+                elif ((FUNCTION <= LA23_0 <= 57) or (59 <= LA23_0 <= 121)) :
                     alt23 = 2
                 else:
                     if self._state.backtracking > 0:
@@ -2146,7 +2148,7 @@ class JavaScriptParser(Parser):
                 alt26 = 2
                 LA26_0 = self.input.LA(1)
 
-                if ((Identifier <= LA26_0 <= NumericLiteral) or LA26_0 == 52 or LA26_0 == 54 or LA26_0 == 57 or LA26_0 == 59 or LA26_0 == 61 or (63 <= LA26_0 <= 65) or (67 <= LA26_0 <= 70) or LA26_0 == 72 or (75 <= LA26_0 <= 76) or (79 <= LA26_0 <= 80) or (96 <= LA26_0 <= 97) or (108 <= LA26_0 <= 119)) :
+                if ((Identifier <= LA26_0 <= NumericLiteral) or LA26_0 == 52 or LA26_0 == 54 or LA26_0 == 57 or LA26_0 == 59 or LA26_0 == 61 or (63 <= LA26_0 <= 65) or (67 <= LA26_0 <= 70) or LA26_0 == 72 or (75 <= LA26_0 <= 76) or (79 <= LA26_0 <= 80) or (96 <= LA26_0 <= 97) or (110 <= LA26_0 <= 121)) :
                     alt26 = 1
                 if alt26 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -2750,7 +2752,7 @@ class JavaScriptParser(Parser):
                         stream_initialiser.add(initialiser81.tree)
 
                     # AST Rewrite
-                    # elements: Identifier, initialiser
+                    # elements: initialiser, Identifier
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -4534,7 +4536,7 @@ class JavaScriptParser(Parser):
                 alt79 = 2
                 LA79_0 = self.input.LA(1)
 
-                if ((Identifier <= LA79_0 <= NumericLiteral) or LA79_0 == 52 or LA79_0 == 54 or LA79_0 == 57 or (79 <= LA79_0 <= 80) or (96 <= LA79_0 <= 97) or (108 <= LA79_0 <= 119)) :
+                if ((Identifier <= LA79_0 <= NumericLiteral) or LA79_0 == 52 or LA79_0 == 54 or LA79_0 == 57 or (79 <= LA79_0 <= 80) or (96 <= LA79_0 <= 97) or (110 <= LA79_0 <= 121)) :
                     alt79 = 1
                 elif (LA79_0 == 59) :
                     alt79 = 2
@@ -4907,7 +4909,7 @@ class JavaScriptParser(Parser):
                 alt88 = 2
                 LA88_0 = self.input.LA(1)
 
-                if ((Identifier <= LA88_0 <= NumericLiteral) or LA88_0 == 52 or LA88_0 == 54 or LA88_0 == 57 or (79 <= LA88_0 <= 80) or (115 <= LA88_0 <= 119)) :
+                if ((Identifier <= LA88_0 <= NumericLiteral) or LA88_0 == 52 or LA88_0 == 54 or LA88_0 == 57 or (79 <= LA88_0 <= 80) or (117 <= LA88_0 <= 121)) :
                     alt88 = 1
                 elif (LA88_0 == 59) :
                     alt88 = 2
@@ -5257,7 +5259,7 @@ class JavaScriptParser(Parser):
                 alt93 = 2
                 LA93_0 = self.input.LA(1)
 
-                if ((Identifier <= LA93_0 <= NumericLiteral) or LA93_0 == 52 or LA93_0 == 54 or LA93_0 == 57 or (79 <= LA93_0 <= 80) or (96 <= LA93_0 <= 97) or (108 <= LA93_0 <= 119)) :
+                if ((Identifier <= LA93_0 <= NumericLiteral) or LA93_0 == 52 or LA93_0 == 54 or LA93_0 == 57 or (79 <= LA93_0 <= 80) or (96 <= LA93_0 <= 97) or (110 <= LA93_0 <= 121)) :
                     alt93 = 1
                 if alt93 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: expression
@@ -6134,7 +6136,7 @@ class JavaScriptParser(Parser):
                 alt116 = 2
                 LA116_0 = self.input.LA(1)
 
-                if ((Identifier <= LA116_0 <= NumericLiteral) or LA116_0 == 52 or LA116_0 == 54 or LA116_0 == 57 or LA116_0 == 59 or LA116_0 == 61 or (63 <= LA116_0 <= 65) or (67 <= LA116_0 <= 70) or LA116_0 == 72 or (75 <= LA116_0 <= 76) or (79 <= LA116_0 <= 80) or (96 <= LA116_0 <= 97) or (108 <= LA116_0 <= 119)) :
+                if ((Identifier <= LA116_0 <= NumericLiteral) or LA116_0 == 52 or LA116_0 == 54 or LA116_0 == 57 or LA116_0 == 59 or LA116_0 == 61 or (63 <= LA116_0 <= 65) or (67 <= LA116_0 <= 70) or LA116_0 == 72 or (75 <= LA116_0 <= 76) or (79 <= LA116_0 <= 80) or (96 <= LA116_0 <= 97) or (110 <= LA116_0 <= 121)) :
                     alt116 = 1
                 if alt116 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -6271,7 +6273,7 @@ class JavaScriptParser(Parser):
                 alt119 = 2
                 LA119_0 = self.input.LA(1)
 
-                if ((Identifier <= LA119_0 <= NumericLiteral) or LA119_0 == 52 or LA119_0 == 54 or LA119_0 == 57 or LA119_0 == 59 or LA119_0 == 61 or (63 <= LA119_0 <= 65) or (67 <= LA119_0 <= 70) or LA119_0 == 72 or (75 <= LA119_0 <= 76) or (79 <= LA119_0 <= 80) or (96 <= LA119_0 <= 97) or (108 <= LA119_0 <= 119)) :
+                if ((Identifier <= LA119_0 <= NumericLiteral) or LA119_0 == 52 or LA119_0 == 54 or LA119_0 == 57 or LA119_0 == 59 or LA119_0 == 61 or (63 <= LA119_0 <= 65) or (67 <= LA119_0 <= 70) or LA119_0 == 72 or (75 <= LA119_0 <= 76) or (79 <= LA119_0 <= 80) or (96 <= LA119_0 <= 97) or (110 <= LA119_0 <= 121)) :
                     alt119 = 1
                 if alt119 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -7295,7 +7297,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression274.tree)
 
                     # AST Rewrite
-                    # elements: assignmentExpression, nonAssignmentOperator, leftHandSideExpression
+                    # elements: leftHandSideExpression, assignmentExpression, nonAssignmentOperator
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -7406,7 +7408,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression279.tree)
 
                     # AST Rewrite
-                    # elements: leftHandSideExpression, assignmentOperator, assignmentExpression
+                    # elements: assignmentOperator, assignmentExpression, leftHandSideExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -7925,7 +7927,7 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:289:4: ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments )
                 alt149 = 3
                 LA149 = self.input.LA(1)
-                if LA149 == Identifier or LA149 == StringLiteral or LA149 == NumericLiteral or LA149 == 54 or LA149 == 57 or LA149 == 80 or LA149 == 115 or LA149 == 116 or LA149 == 117 or LA149 == 118 or LA149 == 119:
+                if LA149 == Identifier or LA149 == StringLiteral or LA149 == NumericLiteral or LA149 == 54 or LA149 == 57 or LA149 == 80 or LA149 == 117 or LA149 == 118 or LA149 == 119 or LA149 == 120 or LA149 == 121:
                     alt149 = 1
                 elif LA149 == 52:
                     alt149 = 2
@@ -8287,7 +8289,7 @@ class JavaScriptParser(Parser):
                         break #loop155
 
                 # AST Rewrite
-                # elements: memberExpression, callExpressionSuffix, arguments
+                # elements: callExpressionSuffix, arguments, memberExpression
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -9336,7 +9338,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression343.tree)
 
                     # AST Rewrite
-                    # elements: assignmentExpression, leftHandSideExpression, nonAssignmentOperator
+                    # elements: leftHandSideExpression, nonAssignmentOperator, assignmentExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -9428,7 +9430,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "nonAssignmentOperator"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:339:1: nonAssignmentOperator : ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '?' | ':' );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:339:1: nonAssignmentOperator : ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' );
     def nonAssignmentOperator(self, ):
 
         retval = self.nonAssignmentOperator_return()
@@ -9448,13 +9450,13 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:340:5: ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '?' | ':' )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:340:5: ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:
                 pass 
                 root_0 = self._adaptor.nil()
 
                 set345 = self.input.LT(1)
-                if self.input.LA(1) == SingleSlash or self.input.LA(1) == 71 or (94 <= self.input.LA(1) <= 107):
+                if self.input.LA(1) == SingleSlash or self.input.LA(1) == 71 or (94 <= self.input.LA(1) <= 109):
                     self.input.consume()
                     if self._state.backtracking == 0:
                         self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set345))
@@ -9531,9 +9533,9 @@ class JavaScriptParser(Parser):
                 alt174 = 2
                 LA174_0 = self.input.LA(1)
 
-                if ((Identifier <= LA174_0 <= NumericLiteral) or LA174_0 == 52 or LA174_0 == 54 or LA174_0 == 57 or (79 <= LA174_0 <= 80) or (115 <= LA174_0 <= 119)) :
+                if ((Identifier <= LA174_0 <= NumericLiteral) or LA174_0 == 52 or LA174_0 == 54 or LA174_0 == 57 or (79 <= LA174_0 <= 80) or (117 <= LA174_0 <= 121)) :
                     alt174 = 1
-                elif ((96 <= LA174_0 <= 97) or (108 <= LA174_0 <= 114)) :
+                elif ((96 <= LA174_0 <= 97) or (110 <= LA174_0 <= 116)) :
                     alt174 = 2
                 else:
                     if self._state.backtracking > 0:
@@ -9548,7 +9550,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_postfixExpression_in_unaryExpression2454)
+                    self._state.following.append(self.FOLLOW_postfixExpression_in_unaryExpression2462)
                     postfixExpression346 = self.postfixExpression()
 
                     self._state.following.pop()
@@ -9562,7 +9564,7 @@ class JavaScriptParser(Parser):
                     root_0 = self._adaptor.nil()
 
                     set347 = self.input.LT(1)
-                    if (96 <= self.input.LA(1) <= 97) or (108 <= self.input.LA(1) <= 114):
+                    if (96 <= self.input.LA(1) <= 97) or (110 <= self.input.LA(1) <= 116):
                         self.input.consume()
                         if self._state.backtracking == 0:
                             self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set347))
@@ -9576,7 +9578,7 @@ class JavaScriptParser(Parser):
                         raise mse
 
 
-                    self._state.following.append(self.FOLLOW_unaryExpression_in_unaryExpression2495)
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_unaryExpression2503)
                     unaryExpression348 = self.unaryExpression()
 
                     self._state.following.pop()
@@ -9643,7 +9645,7 @@ class JavaScriptParser(Parser):
                 pass 
                 root_0 = self._adaptor.nil()
 
-                self._state.following.append(self.FOLLOW_leftHandSideExpression_in_postfixExpression2506)
+                self._state.following.append(self.FOLLOW_leftHandSideExpression_in_postfixExpression2514)
                 leftHandSideExpression349 = self.leftHandSideExpression()
 
                 self._state.following.pop()
@@ -9653,13 +9655,13 @@ class JavaScriptParser(Parser):
                 alt175 = 2
                 LA175_0 = self.input.LA(1)
 
-                if ((111 <= LA175_0 <= 112)) :
+                if ((113 <= LA175_0 <= 114)) :
                     alt175 = 1
                 if alt175 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:
                     pass 
                     set350 = self.input.LT(1)
-                    if (111 <= self.input.LA(1) <= 112):
+                    if (113 <= self.input.LA(1) <= 114):
                         self.input.consume()
                         if self._state.backtracking == 0:
                             self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set350))
@@ -9752,11 +9754,11 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:354:2: ( 'this' | Identifier | literal | arrayLiteral | objectLiteral | '(' ( LT )* expression ( LT )* ')' )
                 alt178 = 6
                 LA178 = self.input.LA(1)
-                if LA178 == 115:
+                if LA178 == 117:
                     alt178 = 1
                 elif LA178 == Identifier:
                     alt178 = 2
-                elif LA178 == StringLiteral or LA178 == NumericLiteral or LA178 == 116 or LA178 == 117 or LA178 == 118 or LA178 == 119:
+                elif LA178 == StringLiteral or LA178 == NumericLiteral or LA178 == 118 or LA178 == 119 or LA178 == 120 or LA178 == 121:
                     alt178 = 3
                 elif LA178 == 80:
                     alt178 = 4
@@ -9777,7 +9779,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal351=self.match(self.input, 115, self.FOLLOW_115_in_primaryExpression2526)
+                    string_literal351=self.match(self.input, 117, self.FOLLOW_117_in_primaryExpression2534)
                     if self._state.backtracking == 0:
 
                         string_literal351_tree = self._adaptor.createWithPayload(string_literal351)
@@ -9790,7 +9792,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    Identifier352=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_primaryExpression2531)
+                    Identifier352=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_primaryExpression2539)
                     if self._state.backtracking == 0:
 
                         Identifier352_tree = self._adaptor.createWithPayload(Identifier352)
@@ -9803,7 +9805,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_literal_in_primaryExpression2536)
+                    self._state.following.append(self.FOLLOW_literal_in_primaryExpression2544)
                     literal353 = self.literal()
 
                     self._state.following.pop()
@@ -9816,7 +9818,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_arrayLiteral_in_primaryExpression2541)
+                    self._state.following.append(self.FOLLOW_arrayLiteral_in_primaryExpression2549)
                     arrayLiteral354 = self.arrayLiteral()
 
                     self._state.following.pop()
@@ -9829,7 +9831,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_objectLiteral_in_primaryExpression2546)
+                    self._state.following.append(self.FOLLOW_objectLiteral_in_primaryExpression2554)
                     objectLiteral355 = self.objectLiteral()
 
                     self._state.following.pop()
@@ -9842,7 +9844,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    char_literal356=self.match(self.input, 54, self.FOLLOW_54_in_primaryExpression2551)
+                    char_literal356=self.match(self.input, 54, self.FOLLOW_54_in_primaryExpression2559)
                     if self._state.backtracking == 0:
 
                         char_literal356_tree = self._adaptor.createWithPayload(char_literal356)
@@ -9860,12 +9862,12 @@ class JavaScriptParser(Parser):
                         if alt176 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT357=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2553)
+                            LT357=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2561)
 
 
                         else:
                             break #loop176
-                    self._state.following.append(self.FOLLOW_expression_in_primaryExpression2557)
+                    self._state.following.append(self.FOLLOW_expression_in_primaryExpression2565)
                     expression358 = self.expression()
 
                     self._state.following.pop()
@@ -9883,12 +9885,12 @@ class JavaScriptParser(Parser):
                         if alt177 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT359=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2559)
+                            LT359=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2567)
 
 
                         else:
                             break #loop177
-                    char_literal360=self.match(self.input, 56, self.FOLLOW_56_in_primaryExpression2563)
+                    char_literal360=self.match(self.input, 56, self.FOLLOW_56_in_primaryExpression2571)
                     if self._state.backtracking == 0:
 
                         char_literal360_tree = self._adaptor.createWithPayload(char_literal360)
@@ -9971,7 +9973,7 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:364:2: ( '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']' -> ^( ARRAY ( assignmentExpression )* ) )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:364:4: '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']'
                 pass 
-                char_literal361=self.match(self.input, 80, self.FOLLOW_80_in_arrayLiteral2575) 
+                char_literal361=self.match(self.input, 80, self.FOLLOW_80_in_arrayLiteral2583) 
                 if self._state.backtracking == 0:
                     stream_80.add(char_literal361)
                 # ../src/checkjs/parsers/antlr/JavaScript.g:364:8: ( LT )*
@@ -9982,7 +9984,7 @@ class JavaScriptParser(Parser):
                     if (LA179_0 == LT) :
                         LA179_2 = self.input.LA(2)
 
-                        if (self.synpred235_JavaScript()) :
+                        if (self.synpred237_JavaScript()) :
                             alt179 = 1
 
 
@@ -9991,7 +9993,7 @@ class JavaScriptParser(Parser):
                     if alt179 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT362=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2577) 
+                        LT362=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2585) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT362)
 
@@ -10002,12 +10004,12 @@ class JavaScriptParser(Parser):
                 alt180 = 2
                 LA180_0 = self.input.LA(1)
 
-                if ((Identifier <= LA180_0 <= NumericLiteral) or LA180_0 == 52 or LA180_0 == 54 or LA180_0 == 57 or (79 <= LA180_0 <= 80) or (96 <= LA180_0 <= 97) or (108 <= LA180_0 <= 119)) :
+                if ((Identifier <= LA180_0 <= NumericLiteral) or LA180_0 == 52 or LA180_0 == 54 or LA180_0 == 57 or (79 <= LA180_0 <= 80) or (96 <= LA180_0 <= 97) or (110 <= LA180_0 <= 121)) :
                     alt180 = 1
                 if alt180 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2580)
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2588)
                     assignmentExpression363 = self.assignmentExpression()
 
                     self._state.following.pop()
@@ -10035,14 +10037,14 @@ class JavaScriptParser(Parser):
                             if alt181 == 1:
                                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                 pass 
-                                LT364=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2584) 
+                                LT364=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2592) 
                                 if self._state.backtracking == 0:
                                     stream_LT.add(LT364)
 
 
                             else:
                                 break #loop181
-                        char_literal365=self.match(self.input, 55, self.FOLLOW_55_in_arrayLiteral2587) 
+                        char_literal365=self.match(self.input, 55, self.FOLLOW_55_in_arrayLiteral2595) 
                         if self._state.backtracking == 0:
                             stream_55.add(char_literal365)
                         # ../src/checkjs/parsers/antlr/JavaScript.g:364:43: ( ( LT )* assignmentExpression )?
@@ -10063,14 +10065,14 @@ class JavaScriptParser(Parser):
                                 if alt182 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT366=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2590) 
+                                    LT366=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2598) 
                                     if self._state.backtracking == 0:
                                         stream_LT.add(LT366)
 
 
                                 else:
                                     break #loop182
-                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2593)
+                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2601)
                             assignmentExpression367 = self.assignmentExpression()
 
                             self._state.following.pop()
@@ -10095,14 +10097,14 @@ class JavaScriptParser(Parser):
                     if alt185 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT368=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2599) 
+                        LT368=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2607) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT368)
 
 
                     else:
                         break #loop185
-                char_literal369=self.match(self.input, 81, self.FOLLOW_81_in_arrayLiteral2602) 
+                char_literal369=self.match(self.input, 81, self.FOLLOW_81_in_arrayLiteral2610) 
                 if self._state.backtracking == 0:
                     stream_81.add(char_literal369)
 
@@ -10219,7 +10221,7 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:370:2: ( '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}' -> ^( OBJECT ( propertyNameAndValue )* ) )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:370:4: '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}'
                 pass 
-                char_literal370=self.match(self.input, 57, self.FOLLOW_57_in_objectLiteral2632) 
+                char_literal370=self.match(self.input, 57, self.FOLLOW_57_in_objectLiteral2640) 
                 if self._state.backtracking == 0:
                     stream_57.add(char_literal370)
                 # ../src/checkjs/parsers/antlr/JavaScript.g:370:8: ( LT )*
@@ -10230,7 +10232,7 @@ class JavaScriptParser(Parser):
                     if (LA186_0 == LT) :
                         LA186_2 = self.input.LA(2)
 
-                        if (self.synpred242_JavaScript()) :
+                        if (self.synpred244_JavaScript()) :
                             alt186 = 1
 
 
@@ -10239,7 +10241,7 @@ class JavaScriptParser(Parser):
                     if alt186 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT371=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2634) 
+                        LT371=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2642) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT371)
 
@@ -10255,7 +10257,7 @@ class JavaScriptParser(Parser):
                 if alt190 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:370:13: propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )*
                     pass 
-                    self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2638)
+                    self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2646)
                     propertyNameAndValue372 = self.propertyNameAndValue()
 
                     self._state.following.pop()
@@ -10280,14 +10282,14 @@ class JavaScriptParser(Parser):
                                 if alt187 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT373=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2641) 
+                                    LT373=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2649) 
                                     if self._state.backtracking == 0:
                                         stream_LT.add(LT373)
 
 
                                 else:
                                     break #loop187
-                            char_literal374=self.match(self.input, 55, self.FOLLOW_55_in_objectLiteral2644) 
+                            char_literal374=self.match(self.input, 55, self.FOLLOW_55_in_objectLiteral2652) 
                             if self._state.backtracking == 0:
                                 stream_55.add(char_literal374)
                             # ../src/checkjs/parsers/antlr/JavaScript.g:370:43: ( LT )*
@@ -10302,14 +10304,14 @@ class JavaScriptParser(Parser):
                                 if alt188 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT375=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2646) 
+                                    LT375=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2654) 
                                     if self._state.backtracking == 0:
                                         stream_LT.add(LT375)
 
 
                                 else:
                                     break #loop188
-                            self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2649)
+                            self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2657)
                             propertyNameAndValue376 = self.propertyNameAndValue()
 
                             self._state.following.pop()
@@ -10334,14 +10336,14 @@ class JavaScriptParser(Parser):
                     if alt191 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT377=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2655) 
+                        LT377=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2663) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT377)
 
 
                     else:
                         break #loop191
-                char_literal378=self.match(self.input, 58, self.FOLLOW_58_in_objectLiteral2658) 
+                char_literal378=self.match(self.input, 58, self.FOLLOW_58_in_objectLiteral2666) 
                 if self._state.backtracking == 0:
                     stream_58.add(char_literal378)
 
@@ -10449,7 +10451,7 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:375:2: ( propertyName ( LT )* ':' ( LT )* assignmentExpression -> ^( PROPERTY propertyName assignmentExpression ) )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:375:4: propertyName ( LT )* ':' ( LT )* assignmentExpression
                 pass 
-                self._state.following.append(self.FOLLOW_propertyName_in_propertyNameAndValue2687)
+                self._state.following.append(self.FOLLOW_propertyName_in_propertyNameAndValue2695)
                 propertyName379 = self.propertyName()
 
                 self._state.following.pop()
@@ -10467,14 +10469,14 @@ class JavaScriptParser(Parser):
                     if alt192 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT380=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2689) 
+                        LT380=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2697) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT380)
 
 
                     else:
                         break #loop192
-                char_literal381=self.match(self.input, 71, self.FOLLOW_71_in_propertyNameAndValue2692) 
+                char_literal381=self.match(self.input, 71, self.FOLLOW_71_in_propertyNameAndValue2700) 
                 if self._state.backtracking == 0:
                     stream_71.add(char_literal381)
                 # ../src/checkjs/parsers/antlr/JavaScript.g:375:25: ( LT )*
@@ -10489,14 +10491,14 @@ class JavaScriptParser(Parser):
                     if alt193 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT382=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2694) 
+                        LT382=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2702) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT382)
 
 
                     else:
                         break #loop193
-                self._state.following.append(self.FOLLOW_assignmentExpression_in_propertyNameAndValue2697)
+                self._state.following.append(self.FOLLOW_assignmentExpression_in_propertyNameAndValue2705)
                 assignmentExpression383 = self.assignmentExpression()
 
                 self._state.following.pop()
@@ -10504,7 +10506,7 @@ class JavaScriptParser(Parser):
                     stream_assignmentExpression.add(assignmentExpression383.tree)
 
                 # AST Rewrite
-                # elements: assignmentExpression, propertyName
+                # elements: propertyName, assignmentExpression
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -10677,17 +10679,17 @@ class JavaScriptParser(Parser):
                 # ../src/checkjs/parsers/antlr/JavaScript.g:387:2: ( 'null' | 'true' | 'false' | StringLiteral | NumericLiteral | regexpLiteral )
                 alt194 = 6
                 LA194 = self.input.LA(1)
-                if LA194 == 116:
+                if LA194 == 118:
                     alt194 = 1
-                elif LA194 == 117:
+                elif LA194 == 119:
                     alt194 = 2
-                elif LA194 == 118:
+                elif LA194 == 120:
                     alt194 = 3
                 elif LA194 == StringLiteral:
                     alt194 = 4
                 elif LA194 == NumericLiteral:
                     alt194 = 5
-                elif LA194 == 119:
+                elif LA194 == 121:
                     alt194 = 6
                 else:
                     if self._state.backtracking > 0:
@@ -10702,7 +10704,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal385=self.match(self.input, 116, self.FOLLOW_116_in_literal2749)
+                    string_literal385=self.match(self.input, 118, self.FOLLOW_118_in_literal2757)
                     if self._state.backtracking == 0:
 
                         string_literal385_tree = self._adaptor.createWithPayload(string_literal385)
@@ -10715,7 +10717,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal386=self.match(self.input, 117, self.FOLLOW_117_in_literal2754)
+                    string_literal386=self.match(self.input, 119, self.FOLLOW_119_in_literal2762)
                     if self._state.backtracking == 0:
 
                         string_literal386_tree = self._adaptor.createWithPayload(string_literal386)
@@ -10728,7 +10730,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal387=self.match(self.input, 118, self.FOLLOW_118_in_literal2759)
+                    string_literal387=self.match(self.input, 120, self.FOLLOW_120_in_literal2767)
                     if self._state.backtracking == 0:
 
                         string_literal387_tree = self._adaptor.createWithPayload(string_literal387)
@@ -10741,7 +10743,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    StringLiteral388=self.match(self.input, StringLiteral, self.FOLLOW_StringLiteral_in_literal2764)
+                    StringLiteral388=self.match(self.input, StringLiteral, self.FOLLOW_StringLiteral_in_literal2772)
                     if self._state.backtracking == 0:
 
                         StringLiteral388_tree = self._adaptor.createWithPayload(StringLiteral388)
@@ -10754,7 +10756,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    NumericLiteral389=self.match(self.input, NumericLiteral, self.FOLLOW_NumericLiteral_in_literal2769)
+                    NumericLiteral389=self.match(self.input, NumericLiteral, self.FOLLOW_NumericLiteral_in_literal2777)
                     if self._state.backtracking == 0:
 
                         NumericLiteral389_tree = self._adaptor.createWithPayload(NumericLiteral389)
@@ -10767,7 +10769,7 @@ class JavaScriptParser(Parser):
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_regexpLiteral_in_literal2777)
+                    self._state.following.append(self.FOLLOW_regexpLiteral_in_literal2785)
                     regexpLiteral390 = self.regexpLiteral()
 
                     self._state.following.pop()
@@ -10836,14 +10838,14 @@ class JavaScriptParser(Parser):
                 pass 
                 root_0 = self._adaptor.nil()
 
-                char_literal391=self.match(self.input, 119, self.FOLLOW_119_in_regexpLiteral2790)
+                char_literal391=self.match(self.input, 121, self.FOLLOW_121_in_regexpLiteral2798)
                 if self._state.backtracking == 0:
 
                     char_literal391_tree = self._adaptor.createWithPayload(char_literal391)
                     self._adaptor.addChild(root_0, char_literal391_tree)
 
                 set392 = self.input.LT(1)
-                if (FUNCTION <= self.input.LA(1) <= 118):
+                if (FUNCTION <= self.input.LA(1) <= 120):
                     self.input.consume()
                     if self._state.backtracking == 0:
                         self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set392))
@@ -10857,7 +10859,7 @@ class JavaScriptParser(Parser):
                     raise mse
 
 
-                char_literal393=self.match(self.input, 119, self.FOLLOW_119_in_regexpLiteral2795)
+                char_literal393=self.match(self.input, 121, self.FOLLOW_121_in_regexpLiteral2803)
                 if self._state.backtracking == 0:
 
                     char_literal393_tree = self._adaptor.createWithPayload(char_literal393)
@@ -11454,27 +11456,27 @@ class JavaScriptParser(Parser):
 
 
 
-    # $ANTLR start "synpred235_JavaScript"
-    def synpred235_JavaScript_fragment(self, ):
+    # $ANTLR start "synpred237_JavaScript"
+    def synpred237_JavaScript_fragment(self, ):
         # ../src/checkjs/parsers/antlr/JavaScript.g:364:8: ( LT )
         # ../src/checkjs/parsers/antlr/JavaScript.g:364:8: LT
         pass 
-        self.match(self.input, LT, self.FOLLOW_LT_in_synpred235_JavaScript2577)
+        self.match(self.input, LT, self.FOLLOW_LT_in_synpred237_JavaScript2585)
 
 
-    # $ANTLR end "synpred235_JavaScript"
+    # $ANTLR end "synpred237_JavaScript"
 
 
 
-    # $ANTLR start "synpred242_JavaScript"
-    def synpred242_JavaScript_fragment(self, ):
+    # $ANTLR start "synpred244_JavaScript"
+    def synpred244_JavaScript_fragment(self, ):
         # ../src/checkjs/parsers/antlr/JavaScript.g:370:8: ( LT )
         # ../src/checkjs/parsers/antlr/JavaScript.g:370:8: LT
         pass 
-        self.match(self.input, LT, self.FOLLOW_LT_in_synpred242_JavaScript2634)
+        self.match(self.input, LT, self.FOLLOW_LT_in_synpred244_JavaScript2642)
 
 
-    # $ANTLR end "synpred242_JavaScript"
+    # $ANTLR end "synpred244_JavaScript"
 
 
 
@@ -11533,11 +11535,11 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred242_JavaScript(self):
+    def synpred157_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
         try:
-            self.synpred242_JavaScript_fragment()
+            self.synpred157_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11546,11 +11548,11 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred157_JavaScript(self):
+    def synpred237_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
         try:
-            self.synpred157_JavaScript_fragment()
+            self.synpred237_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11728,19 +11730,6 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred235_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred235_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
     def synpred51_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
@@ -11759,6 +11748,19 @@ class JavaScriptParser(Parser):
         start = self.input.mark()
         try:
             self.synpred35_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
+    def synpred244_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred244_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11862,7 +11864,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA4_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA4_accept = DFA.unpack(
@@ -11877,10 +11879,10 @@ class JavaScriptParser(Parser):
     DFA4_transition = [
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
         u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\uffff\2\3"
-        u"\2\uffff\2\3\17\uffff\2\3\12\uffff\14\3"),
+        u"\2\uffff\2\3\17\uffff\2\3\14\uffff\14\3"),
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
         u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\uffff\2\3"
-        u"\2\uffff\2\3\17\uffff\2\3\12\uffff\14\3"),
+        u"\2\uffff\2\3\17\uffff\2\3\14\uffff\14\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -11906,7 +11908,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA5_max = DFA.unpack(
-        u"\1\167\1\0\32\uffff"
+        u"\1\171\1\0\32\uffff"
         )
 
     DFA5_accept = DFA.unpack(
@@ -11921,7 +11923,7 @@ class JavaScriptParser(Parser):
     DFA5_transition = [
         DFA.unpack(u"\3\2\32\uffff\1\1\1\uffff\1\2\2\uffff\1\2\1\uffff\1"
         u"\2\1\uffff\1\2\1\uffff\3\2\1\uffff\4\2\1\uffff\1\2\2\uffff\2\2"
-        u"\2\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\2\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12085,7 +12087,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA24_max = DFA.unpack(
-        u"\1\167\2\uffff\1\0\30\uffff"
+        u"\1\171\2\uffff\1\0\30\uffff"
         )
 
     DFA24_accept = DFA.unpack(
@@ -12101,7 +12103,7 @@ class JavaScriptParser(Parser):
     DFA24_transition = [
         DFA.unpack(u"\1\3\2\2\32\uffff\1\2\1\uffff\1\2\2\uffff\1\2\1\uffff"
         u"\1\1\1\uffff\1\20\1\uffff\3\21\1\uffff\1\24\1\25\1\26\1\27\1\uffff"
-        u"\1\30\2\uffff\1\31\1\32\2\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\1\30\2\uffff\1\31\1\32\2\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u"\1\uffff"),
@@ -12185,7 +12187,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA29_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA29_accept = DFA.unpack(
@@ -12200,10 +12202,10 @@ class JavaScriptParser(Parser):
     DFA29_transition = [
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
         u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\2\2\3\2\uffff"
-        u"\2\3\17\uffff\2\3\12\uffff\14\3"),
+        u"\2\3\17\uffff\2\3\14\uffff\14\3"),
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
         u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\2\2\3\2\uffff"
-        u"\2\3\17\uffff\2\3\12\uffff\14\3"),
+        u"\2\3\17\uffff\2\3\14\uffff\14\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12350,7 +12352,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA50_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA50_accept = DFA.unpack(
@@ -12365,7 +12367,7 @@ class JavaScriptParser(Parser):
     DFA50_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12449,7 +12451,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA53_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA53_accept = DFA.unpack(
@@ -12464,7 +12466,7 @@ class JavaScriptParser(Parser):
     DFA53_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12548,7 +12550,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA57_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA57_accept = DFA.unpack(
@@ -12563,7 +12565,7 @@ class JavaScriptParser(Parser):
     DFA57_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12647,7 +12649,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA65_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA65_accept = DFA.unpack(
@@ -12662,7 +12664,7 @@ class JavaScriptParser(Parser):
     DFA65_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12746,7 +12748,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA68_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA68_accept = DFA.unpack(
@@ -12760,9 +12762,9 @@ class JavaScriptParser(Parser):
             
     DFA68_transition = [
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\3\1\2\2\uffff\1\2\1\uffff\1"
-        u"\2\23\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\2\23\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\3\1\2\2\uffff\1\2\1\uffff\1"
-        u"\2\23\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\2\23\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12788,7 +12790,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA71_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA71_accept = DFA.unpack(
@@ -12802,9 +12804,9 @@ class JavaScriptParser(Parser):
             
     DFA71_transition = [
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\3\1\2\2\uffff\1\2\25\uffff\2"
-        u"\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\3\1\2\2\uffff\1\2\25\uffff"
-        u"\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12830,7 +12832,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA74_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA74_accept = DFA.unpack(
@@ -12844,9 +12846,9 @@ class JavaScriptParser(Parser):
             
     DFA74_transition = [
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\25"
-        u"\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\25"
-        u"\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12872,7 +12874,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA77_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA77_accept = DFA.unpack(
@@ -12887,7 +12889,7 @@ class JavaScriptParser(Parser):
     DFA77_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12971,7 +12973,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA86_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA86_accept = DFA.unpack(
@@ -12986,7 +12988,7 @@ class JavaScriptParser(Parser):
     DFA86_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -13070,7 +13072,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA99_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA99_accept = DFA.unpack(
@@ -13085,7 +13087,7 @@ class JavaScriptParser(Parser):
     DFA99_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -13289,7 +13291,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA124_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA124_accept = DFA.unpack(
@@ -13303,10 +13305,10 @@ class JavaScriptParser(Parser):
             
     DFA124_transition = [
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\3\3\1\uffff"
-        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\2\3\17\uffff\2\3\12\uffff"
+        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\2\3\17\uffff\2\3\14\uffff"
         u"\14\3"),
         DFA.unpack(u"\1\1\3\3\32\uffff\1\3\1\uffff\1\3\2\uffff\3\3\1\uffff"
-        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\2\3\17\uffff\2\3\12\uffff"
+        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\2\3\17\uffff\2\3\14\uffff"
         u"\14\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
@@ -13415,7 +13417,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA141_max = DFA.unpack(
-        u"\1\167\15\0\5\uffff"
+        u"\1\171\15\0\5\uffff"
         )
 
     DFA141_accept = DFA.unpack(
@@ -13430,7 +13432,7 @@ class JavaScriptParser(Parser):
             
     DFA141_transition = [
         DFA.unpack(u"\1\2\1\6\1\7\32\uffff\1\14\1\uffff\1\13\2\uffff\1\12"
-        u"\25\uffff\1\15\1\11\17\uffff\2\16\12\uffff\7\16\1\1\1\3\1\4\1\5"
+        u"\25\uffff\1\15\1\11\17\uffff\2\16\14\uffff\7\16\1\1\1\3\1\4\1\5"
         u"\1\10"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -13827,7 +13829,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA144_max = DFA.unpack(
-        u"\1\167\15\0\2\uffff"
+        u"\1\171\15\0\2\uffff"
         )
 
     DFA144_accept = DFA.unpack(
@@ -13842,7 +13844,7 @@ class JavaScriptParser(Parser):
             
     DFA144_transition = [
         DFA.unpack(u"\1\2\1\6\1\7\32\uffff\1\14\1\uffff\1\13\2\uffff\1\12"
-        u"\25\uffff\1\15\1\11\17\uffff\2\16\12\uffff\7\16\1\1\1\3\1\4\1\5"
+        u"\25\uffff\1\15\1\11\17\uffff\2\16\14\uffff\7\16\1\1\1\3\1\4\1\5"
         u"\1\10"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -14119,7 +14121,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA146_max = DFA.unpack(
-        u"\1\167\14\uffff\1\0\1\uffff"
+        u"\1\171\14\uffff\1\0\1\uffff"
         )
 
     DFA146_accept = DFA.unpack(
@@ -14133,7 +14135,7 @@ class JavaScriptParser(Parser):
             
     DFA146_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\1\25\uffff\1"
-        u"\15\1\1\42\uffff\5\1"),
+        u"\15\1\1\44\uffff\5\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -14204,7 +14206,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA151_max = DFA.unpack(
-        u"\1\160\1\153\2\uffff"
+        u"\1\162\1\155\2\uffff"
         )
 
     DFA151_accept = DFA.unpack(
@@ -14218,10 +14220,10 @@ class JavaScriptParser(Parser):
             
     DFA151_transition = [
         DFA.unpack(u"\1\1\31\uffff\1\2\4\uffff\4\2\1\uffff\1\2\1\uffff\1"
-        u"\2\5\uffff\1\2\4\uffff\1\2\10\uffff\1\3\1\2\1\3\31\2\3\uffff\2"
+        u"\2\5\uffff\1\2\4\uffff\1\2\10\uffff\1\3\1\2\1\3\33\2\3\uffff\2"
         u"\2"),
         DFA.unpack(u"\1\1\31\uffff\1\2\4\uffff\4\2\1\uffff\1\2\1\uffff\1"
-        u"\2\5\uffff\1\2\4\uffff\1\2\10\uffff\1\3\1\2\1\3\31\2"),
+        u"\2\5\uffff\1\2\4\uffff\1\2\10\uffff\1\3\1\2\1\3\33\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -14289,7 +14291,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA161_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA161_accept = DFA.unpack(
@@ -14303,9 +14305,9 @@ class JavaScriptParser(Parser):
             
     DFA161_transition = [
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\25"
-        u"\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\25"
-        u"\uffff\2\2\17\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\17\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -14413,7 +14415,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA173_max = DFA.unpack(
-        u"\1\167\15\0\2\uffff"
+        u"\1\171\15\0\2\uffff"
         )
 
     DFA173_accept = DFA.unpack(
@@ -14428,7 +14430,7 @@ class JavaScriptParser(Parser):
             
     DFA173_transition = [
         DFA.unpack(u"\1\2\1\6\1\7\32\uffff\1\14\1\uffff\1\13\2\uffff\1\12"
-        u"\25\uffff\1\15\1\11\17\uffff\2\16\12\uffff\7\16\1\1\1\3\1\4\1\5"
+        u"\25\uffff\1\15\1\11\17\uffff\2\16\14\uffff\7\16\1\1\1\3\1\4\1\5"
         u"\1\10"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -14745,7 +14747,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA183_max = DFA.unpack(
-        u"\2\167\2\uffff"
+        u"\2\171\2\uffff"
         )
 
     DFA183_accept = DFA.unpack(
@@ -14759,9 +14761,9 @@ class JavaScriptParser(Parser):
             
     DFA183_transition = [
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\3\1\uffff\1\2\25"
-        u"\uffff\2\2\1\3\16\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\1\3\16\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u"\1\1\3\2\32\uffff\1\2\1\uffff\1\2\1\3\1\uffff\1\2\25"
-        u"\uffff\2\2\1\3\16\uffff\2\2\12\uffff\14\2"),
+        u"\uffff\2\2\1\3\16\uffff\2\2\14\uffff\14\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -14827,7 +14829,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA210_max = DFA.unpack(
-        u"\1\167\12\uffff\1\0\20\uffff"
+        u"\1\171\12\uffff\1\0\20\uffff"
         )
 
     DFA210_accept = DFA.unpack(
@@ -14842,7 +14844,7 @@ class JavaScriptParser(Parser):
     DFA210_transition = [
         DFA.unpack(u"\3\1\32\uffff\1\1\1\uffff\1\1\2\uffff\1\13\1\uffff\1"
         u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\2\uffff\2\1\17\uffff\2\1\12\uffff\14\1"),
+        u"\2\uffff\2\1\17\uffff\2\1\14\uffff\14\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -14913,13 +14915,13 @@ class JavaScriptParser(Parser):
             raise nvae
  
 
-    FOLLOW_LT_in_program187 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_LT_in_program187 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_sourceElements_in_program191 = frozenset([22])
     FOLLOW_LT_in_program193 = frozenset([22])
     FOLLOW_EOF_in_program197 = frozenset([1])
-    FOLLOW_sourceElement_in_sourceElements209 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_sourceElements212 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_sourceElement_in_sourceElements216 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_sourceElement_in_sourceElements209 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_sourceElements212 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_sourceElement_in_sourceElements216 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_functionDeclaration_in_sourceElement229 = frozenset([1])
     FOLLOW_statement_in_sourceElement234 = frozenset([1])
     FOLLOW_52_in_functionDeclaration246 = frozenset([22, 23])
@@ -14946,13 +14948,13 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_formalParameterList362 = frozenset([22, 55, 56])
     FOLLOW_LT_in_formalParameterList368 = frozenset([22, 56])
     FOLLOW_56_in_formalParameterList371 = frozenset([1])
-    FOLLOW_57_in_functionBody400 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_functionBody402 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_57_in_functionBody400 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_functionBody402 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_sourceElements_in_functionBody405 = frozenset([22, 58])
     FOLLOW_LT_in_functionBody408 = frozenset([22, 58])
     FOLLOW_58_in_functionBody411 = frozenset([1])
     FOLLOW_57_in_djangoVariable441 = frozenset([57])
-    FOLLOW_57_in_djangoVariable443 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_57_in_djangoVariable443 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_58_in_djangoVariable446 = frozenset([58])
     FOLLOW_58_in_djangoVariable448 = frozenset([1])
     FOLLOW_variableStatement_in_statement474 = frozenset([1])
@@ -14967,14 +14969,14 @@ class JavaScriptParser(Parser):
     FOLLOW_switchStatement_in_statement526 = frozenset([1])
     FOLLOW_throwStatement_in_statement531 = frozenset([1])
     FOLLOW_tryStatement_in_statement536 = frozenset([1])
-    FOLLOW_57_in_statementBlock547 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_statementBlock549 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_57_in_statementBlock547 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_statementBlock549 = frozenset([22, 23, 24, 25, 52, 54, 57, 58, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementList_in_statementBlock553 = frozenset([22, 58])
     FOLLOW_LT_in_statementBlock556 = frozenset([22, 58])
     FOLLOW_58_in_statementBlock560 = frozenset([1])
-    FOLLOW_statement_in_statementList571 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_statementList574 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_statement_in_statementList578 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_statement_in_statementList571 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_statementList574 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_statement_in_statementList578 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_59_in_variableStatement591 = frozenset([22, 23])
     FOLLOW_LT_in_variableStatement594 = frozenset([22, 23])
     FOLLOW_variableDeclarationList_in_variableStatement598 = frozenset([22, 53])
@@ -14998,11 +15000,11 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_variableDeclarationNoIn714 = frozenset([1, 22, 60])
     FOLLOW_LT_in_variableDeclarationNoIn716 = frozenset([1, 22, 60])
     FOLLOW_initialiserNoIn_in_variableDeclarationNoIn719 = frozenset([1])
-    FOLLOW_60_in_initialiser750 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_initialiser753 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_60_in_initialiser750 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_initialiser753 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_initialiser757 = frozenset([1])
-    FOLLOW_60_in_initialiserNoIn768 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_initialiserNoIn771 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_60_in_initialiserNoIn768 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_initialiserNoIn771 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpressionNoIn_in_initialiserNoIn775 = frozenset([1])
     FOLLOW_53_in_emptyStatement786 = frozenset([1])
     FOLLOW_expression_in_expressionStatement797 = frozenset([22, 53])
@@ -15010,61 +15012,61 @@ class JavaScriptParser(Parser):
     FOLLOW_53_in_expressionStatement803 = frozenset([1])
     FOLLOW_61_in_ifStatement815 = frozenset([22, 54])
     FOLLOW_LT_in_ifStatement817 = frozenset([22, 54])
-    FOLLOW_54_in_ifStatement821 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_ifStatement823 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_ifStatement821 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_ifStatement823 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_ifStatement827 = frozenset([22, 56])
     FOLLOW_LT_in_ifStatement829 = frozenset([22, 56])
-    FOLLOW_56_in_ifStatement833 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_ifStatement835 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_ifStatement833 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_ifStatement835 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_ifStatement840 = frozenset([1, 22, 62])
     FOLLOW_statementBlock_in_ifStatement844 = frozenset([1, 22, 62])
     FOLLOW_LT_in_ifStatement848 = frozenset([22, 62])
-    FOLLOW_62_in_ifStatement852 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_ifStatement854 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_62_in_ifStatement852 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_ifStatement854 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_ifStatement859 = frozenset([1])
     FOLLOW_statementBlock_in_ifStatement863 = frozenset([1])
     FOLLOW_doWhileStatement_in_iterationStatement877 = frozenset([1])
     FOLLOW_whileStatement_in_iterationStatement882 = frozenset([1])
     FOLLOW_forStatement_in_iterationStatement887 = frozenset([1])
     FOLLOW_forInStatement_in_iterationStatement892 = frozenset([1])
-    FOLLOW_63_in_doWhileStatement903 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_doWhileStatement905 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_63_in_doWhileStatement903 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_doWhileStatement905 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_doWhileStatement910 = frozenset([22, 64])
     FOLLOW_statementBlock_in_doWhileStatement914 = frozenset([22, 64])
     FOLLOW_LT_in_doWhileStatement917 = frozenset([22, 64])
     FOLLOW_64_in_doWhileStatement921 = frozenset([22, 54])
     FOLLOW_LT_in_doWhileStatement923 = frozenset([22, 54])
-    FOLLOW_54_in_doWhileStatement927 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_doWhileStatement927 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_doWhileStatement929 = frozenset([56])
     FOLLOW_56_in_doWhileStatement931 = frozenset([22, 53])
     FOLLOW_LT_in_doWhileStatement933 = frozenset([22, 53])
     FOLLOW_53_in_doWhileStatement937 = frozenset([1])
     FOLLOW_64_in_whileStatement949 = frozenset([22, 54])
     FOLLOW_LT_in_whileStatement951 = frozenset([22, 54])
-    FOLLOW_54_in_whileStatement955 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_whileStatement957 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_whileStatement955 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_whileStatement957 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_whileStatement961 = frozenset([22, 56])
     FOLLOW_LT_in_whileStatement963 = frozenset([22, 56])
-    FOLLOW_56_in_whileStatement967 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_whileStatement969 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_whileStatement967 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_whileStatement969 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_whileStatement974 = frozenset([1])
     FOLLOW_statementBlock_in_whileStatement978 = frozenset([1])
     FOLLOW_65_in_forStatement990 = frozenset([22, 54])
     FOLLOW_LT_in_forStatement992 = frozenset([22, 54])
-    FOLLOW_54_in_forStatement996 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 59, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forStatement999 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_forStatement996 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 59, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forStatement999 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_forStatementInitialiserPart_in_forStatement1003 = frozenset([22, 53])
     FOLLOW_LT_in_forStatement1007 = frozenset([22, 53])
-    FOLLOW_53_in_forStatement1011 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forStatement1015 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_53_in_forStatement1011 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forStatement1015 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_forStatement1019 = frozenset([22, 53])
     FOLLOW_LT_in_forStatement1023 = frozenset([22, 53])
-    FOLLOW_53_in_forStatement1027 = frozenset([22, 23, 24, 25, 52, 54, 56, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forStatement1031 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_53_in_forStatement1027 = frozenset([22, 23, 24, 25, 52, 54, 56, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forStatement1031 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_forStatement1035 = frozenset([22, 56])
     FOLLOW_LT_in_forStatement1039 = frozenset([22, 56])
-    FOLLOW_56_in_forStatement1043 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forStatement1045 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_forStatement1043 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forStatement1045 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_forStatement1050 = frozenset([1])
     FOLLOW_statementBlock_in_forStatement1054 = frozenset([1])
     FOLLOW_expressionNoIn_in_forStatementInitialiserPart1066 = frozenset([1])
@@ -15073,16 +15075,16 @@ class JavaScriptParser(Parser):
     FOLLOW_variableDeclarationListNoIn_in_forStatementInitialiserPart1077 = frozenset([1])
     FOLLOW_65_in_forInStatement1088 = frozenset([22, 54])
     FOLLOW_LT_in_forInStatement1090 = frozenset([22, 54])
-    FOLLOW_54_in_forInStatement1094 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forInStatement1096 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_forInStatement1094 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forInStatement1096 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 79, 80, 117, 118, 119, 120, 121])
     FOLLOW_forInStatementInitialiserPart_in_forInStatement1100 = frozenset([22, 66])
     FOLLOW_LT_in_forInStatement1102 = frozenset([22, 66])
-    FOLLOW_66_in_forInStatement1106 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forInStatement1108 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_66_in_forInStatement1106 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forInStatement1108 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_forInStatement1112 = frozenset([22, 56])
     FOLLOW_LT_in_forInStatement1114 = frozenset([22, 56])
-    FOLLOW_56_in_forInStatement1118 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_forInStatement1120 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_forInStatement1118 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_forInStatement1120 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_forInStatement1125 = frozenset([1])
     FOLLOW_statementBlock_in_forInStatement1129 = frozenset([1])
     FOLLOW_leftHandSideExpression_in_forInStatementInitialiserPart1141 = frozenset([1])
@@ -15097,29 +15099,29 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_breakStatement1186 = frozenset([22, 53])
     FOLLOW_LT_in_breakStatement1189 = frozenset([22, 53])
     FOLLOW_53_in_breakStatement1193 = frozenset([1])
-    FOLLOW_69_in_returnStatement1205 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_69_in_returnStatement1205 = frozenset([22, 23, 24, 25, 52, 53, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_returnStatement1207 = frozenset([22, 53])
     FOLLOW_LT_in_returnStatement1210 = frozenset([22, 53])
     FOLLOW_53_in_returnStatement1214 = frozenset([1])
     FOLLOW_70_in_withStatement1226 = frozenset([22, 54])
     FOLLOW_LT_in_withStatement1228 = frozenset([22, 54])
-    FOLLOW_54_in_withStatement1232 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_withStatement1234 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_withStatement1232 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_withStatement1234 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_withStatement1238 = frozenset([22, 56])
     FOLLOW_LT_in_withStatement1240 = frozenset([22, 56])
-    FOLLOW_56_in_withStatement1244 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_withStatement1246 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_withStatement1244 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_withStatement1246 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_withStatement1251 = frozenset([1])
     FOLLOW_statementBlock_in_withStatement1255 = frozenset([1])
     FOLLOW_Identifier_in_labelledStatement1267 = frozenset([22, 71])
     FOLLOW_LT_in_labelledStatement1269 = frozenset([22, 71])
-    FOLLOW_71_in_labelledStatement1273 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_labelledStatement1275 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_71_in_labelledStatement1273 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_labelledStatement1275 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_labelledStatement1279 = frozenset([1])
     FOLLOW_72_in_switchStatement1290 = frozenset([22, 54])
     FOLLOW_LT_in_switchStatement1292 = frozenset([22, 54])
-    FOLLOW_54_in_switchStatement1296 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_switchStatement1298 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_switchStatement1296 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_switchStatement1298 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_switchStatement1302 = frozenset([22, 56])
     FOLLOW_LT_in_switchStatement1304 = frozenset([22, 56])
     FOLLOW_56_in_switchStatement1308 = frozenset([22, 57])
@@ -15134,24 +15136,24 @@ class JavaScriptParser(Parser):
     FOLLOW_caseClause_in_caseBlock1348 = frozenset([22, 58, 73])
     FOLLOW_LT_in_caseBlock1354 = frozenset([22, 58])
     FOLLOW_58_in_caseBlock1358 = frozenset([1])
-    FOLLOW_73_in_caseClause1369 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_caseClause1371 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_73_in_caseClause1369 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_caseClause1371 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_caseClause1375 = frozenset([22, 71])
     FOLLOW_LT_in_caseClause1377 = frozenset([22, 71])
-    FOLLOW_71_in_caseClause1381 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_caseClause1383 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_71_in_caseClause1381 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_caseClause1383 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementList_in_caseClause1387 = frozenset([1])
     FOLLOW_74_in_defaultClause1399 = frozenset([22, 71])
     FOLLOW_LT_in_defaultClause1401 = frozenset([22, 71])
-    FOLLOW_71_in_defaultClause1405 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_defaultClause1407 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_71_in_defaultClause1405 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_defaultClause1407 = frozenset([1, 22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementList_in_defaultClause1411 = frozenset([1])
-    FOLLOW_75_in_throwStatement1423 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_75_in_throwStatement1423 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_throwStatement1425 = frozenset([22, 53])
     FOLLOW_LT_in_throwStatement1427 = frozenset([22, 53])
     FOLLOW_53_in_throwStatement1431 = frozenset([1])
-    FOLLOW_76_in_tryStatement1443 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_tryStatement1445 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_76_in_tryStatement1443 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_tryStatement1445 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementBlock_in_tryStatement1449 = frozenset([22, 77, 78])
     FOLLOW_LT_in_tryStatement1451 = frozenset([22, 77, 78])
     FOLLOW_finallyClause_in_tryStatement1456 = frozenset([1])
@@ -15164,50 +15166,50 @@ class JavaScriptParser(Parser):
     FOLLOW_LT_in_catchClause1489 = frozenset([22, 23])
     FOLLOW_Identifier_in_catchClause1493 = frozenset([22, 56])
     FOLLOW_LT_in_catchClause1495 = frozenset([22, 56])
-    FOLLOW_56_in_catchClause1499 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_catchClause1501 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_56_in_catchClause1499 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_catchClause1501 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementBlock_in_catchClause1505 = frozenset([1])
-    FOLLOW_78_in_finallyClause1516 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_finallyClause1518 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_78_in_finallyClause1516 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_finallyClause1518 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statementBlock_in_finallyClause1522 = frozenset([1])
     FOLLOW_assignmentExpression_in_expression1534 = frozenset([1, 22, 55])
     FOLLOW_LT_in_expression1537 = frozenset([22, 55])
-    FOLLOW_55_in_expression1541 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_expression1543 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_55_in_expression1541 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_expression1543 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_expression1547 = frozenset([1, 22, 55])
     FOLLOW_assignmentExpressionNoIn_in_expressionNoIn1560 = frozenset([1, 22, 55])
     FOLLOW_LT_in_expressionNoIn1563 = frozenset([22, 55])
-    FOLLOW_55_in_expressionNoIn1567 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_expressionNoIn1569 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_55_in_expressionNoIn1567 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_expressionNoIn1569 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpressionNoIn_in_expressionNoIn1573 = frozenset([1, 22, 55])
     FOLLOW_callExpression_in_assignmentExpression1594 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_assignmentExpression1612 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_LT_in_assignmentExpression1614 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_nonAssignmentOperator_in_assignmentExpression1617 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_assignmentExpression1619 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_leftHandSideExpression_in_assignmentExpression1612 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_LT_in_assignmentExpression1614 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_nonAssignmentOperator_in_assignmentExpression1617 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_assignmentExpression1619 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_assignmentExpression1622 = frozenset([1])
     FOLLOW_leftHandSideExpression_in_assignmentExpression1717 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
     FOLLOW_LT_in_assignmentExpression1719 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
-    FOLLOW_assignmentOperator_in_assignmentExpression1722 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_assignmentExpression1724 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_assignmentOperator_in_assignmentExpression1722 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_assignmentExpression1724 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_assignmentExpression1727 = frozenset([1])
     FOLLOW_unaryExpression_in_assignmentExpression1821 = frozenset([1])
     FOLLOW_newExpression_in_assignmentExpression1829 = frozenset([1])
     FOLLOW_conditionalExpression_in_assignmentExpressionNoIn1852 = frozenset([1])
     FOLLOW_leftHandSideExpression_in_assignmentExpressionNoIn1857 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
     FOLLOW_LT_in_assignmentExpressionNoIn1859 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
-    FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1863 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_assignmentExpressionNoIn1865 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1863 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_assignmentExpressionNoIn1865 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpressionNoIn_in_assignmentExpressionNoIn1869 = frozenset([1])
     FOLLOW_memberExpression_in_leftHandSideExpression1880 = frozenset([1])
     FOLLOW_memberExpression_in_newExpression1900 = frozenset([1])
-    FOLLOW_79_in_newExpression1905 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_newExpression1907 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_79_in_newExpression1905 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_newExpression1907 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_newExpression_in_newExpression1911 = frozenset([1])
     FOLLOW_primaryExpression_in_memberExpression1923 = frozenset([1, 22, 80, 82])
     FOLLOW_functionExpression_in_memberExpression1927 = frozenset([1, 22, 80, 82])
-    FOLLOW_79_in_memberExpression1931 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_memberExpression1933 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 115, 116, 117, 118, 119])
+    FOLLOW_79_in_memberExpression1931 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_memberExpression1933 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 117, 118, 119, 120, 121])
     FOLLOW_memberExpression_in_memberExpression1937 = frozenset([22, 54])
     FOLLOW_LT_in_memberExpression1939 = frozenset([22, 54])
     FOLLOW_arguments_in_memberExpression1943 = frozenset([1, 22, 80, 82])
@@ -15223,17 +15225,17 @@ class JavaScriptParser(Parser):
     FOLLOW_arguments_in_callExpressionSuffix2029 = frozenset([1])
     FOLLOW_indexSuffix_in_callExpressionSuffix2034 = frozenset([1])
     FOLLOW_propertyReferenceSuffix_in_callExpressionSuffix2039 = frozenset([1])
-    FOLLOW_54_in_arguments2050 = frozenset([22, 23, 24, 25, 52, 54, 56, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_arguments2053 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_54_in_arguments2050 = frozenset([22, 23, 24, 25, 52, 54, 56, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_arguments2053 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_arguments2056 = frozenset([22, 55, 56])
     FOLLOW_LT_in_arguments2059 = frozenset([22, 55])
-    FOLLOW_55_in_arguments2062 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_arguments2064 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_55_in_arguments2062 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_arguments2064 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_arguments2067 = frozenset([22, 55, 56])
     FOLLOW_LT_in_arguments2074 = frozenset([22, 56])
     FOLLOW_56_in_arguments2077 = frozenset([1])
-    FOLLOW_80_in_indexSuffix2106 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_indexSuffix2108 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_80_in_indexSuffix2106 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_indexSuffix2108 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_expression_in_indexSuffix2111 = frozenset([22, 81])
     FOLLOW_LT_in_indexSuffix2113 = frozenset([22, 81])
     FOLLOW_81_in_indexSuffix2116 = frozenset([1])
@@ -15243,68 +15245,68 @@ class JavaScriptParser(Parser):
     FOLLOW_set_in_assignmentOperator0 = frozenset([1])
     FOLLOW_operatorExpression_in_conditionalExpression2216 = frozenset([1, 22, 94])
     FOLLOW_LT_in_conditionalExpression2219 = frozenset([22, 94])
-    FOLLOW_94_in_conditionalExpression2223 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_conditionalExpression2225 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_94_in_conditionalExpression2223 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_conditionalExpression2225 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_operatorExpression_in_conditionalExpression2229 = frozenset([22, 71])
     FOLLOW_LT_in_conditionalExpression2231 = frozenset([22, 71])
-    FOLLOW_71_in_conditionalExpression2235 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_conditionalExpression2237 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_71_in_conditionalExpression2235 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_conditionalExpression2237 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_operatorExpression_in_conditionalExpression2241 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_operatorExpression2258 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_LT_in_operatorExpression2260 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_nonAssignmentOperator_in_operatorExpression2263 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_operatorExpression2265 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_leftHandSideExpression_in_operatorExpression2258 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_LT_in_operatorExpression2260 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_nonAssignmentOperator_in_operatorExpression2263 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_operatorExpression2265 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_operatorExpression2268 = frozenset([1])
     FOLLOW_unaryExpression_in_operatorExpression2362 = frozenset([1])
     FOLLOW_set_in_nonAssignmentOperator0 = frozenset([1])
-    FOLLOW_postfixExpression_in_unaryExpression2454 = frozenset([1])
-    FOLLOW_set_in_unaryExpression2459 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_unaryExpression_in_unaryExpression2495 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_postfixExpression2506 = frozenset([1, 111, 112])
-    FOLLOW_set_in_postfixExpression2508 = frozenset([1])
-    FOLLOW_115_in_primaryExpression2526 = frozenset([1])
-    FOLLOW_Identifier_in_primaryExpression2531 = frozenset([1])
-    FOLLOW_literal_in_primaryExpression2536 = frozenset([1])
-    FOLLOW_arrayLiteral_in_primaryExpression2541 = frozenset([1])
-    FOLLOW_objectLiteral_in_primaryExpression2546 = frozenset([1])
-    FOLLOW_54_in_primaryExpression2551 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_primaryExpression2553 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_expression_in_primaryExpression2557 = frozenset([22, 56])
-    FOLLOW_LT_in_primaryExpression2559 = frozenset([22, 56])
-    FOLLOW_56_in_primaryExpression2563 = frozenset([1])
-    FOLLOW_80_in_arrayLiteral2575 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_arrayLiteral2577 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_assignmentExpression_in_arrayLiteral2580 = frozenset([22, 55, 81])
-    FOLLOW_LT_in_arrayLiteral2584 = frozenset([22, 55])
-    FOLLOW_55_in_arrayLiteral2587 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_arrayLiteral2590 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_assignmentExpression_in_arrayLiteral2593 = frozenset([22, 55, 81])
-    FOLLOW_LT_in_arrayLiteral2599 = frozenset([22, 81])
-    FOLLOW_81_in_arrayLiteral2602 = frozenset([1])
-    FOLLOW_57_in_objectLiteral2632 = frozenset([22, 23, 24, 25, 58])
-    FOLLOW_LT_in_objectLiteral2634 = frozenset([22, 23, 24, 25, 58])
-    FOLLOW_propertyNameAndValue_in_objectLiteral2638 = frozenset([22, 55, 58])
-    FOLLOW_LT_in_objectLiteral2641 = frozenset([22, 55])
-    FOLLOW_55_in_objectLiteral2644 = frozenset([22, 23, 24, 25])
-    FOLLOW_LT_in_objectLiteral2646 = frozenset([22, 23, 24, 25])
-    FOLLOW_propertyNameAndValue_in_objectLiteral2649 = frozenset([22, 55, 58])
-    FOLLOW_LT_in_objectLiteral2655 = frozenset([22, 58])
-    FOLLOW_58_in_objectLiteral2658 = frozenset([1])
-    FOLLOW_propertyName_in_propertyNameAndValue2687 = frozenset([22, 71])
-    FOLLOW_LT_in_propertyNameAndValue2689 = frozenset([22, 71])
-    FOLLOW_71_in_propertyNameAndValue2692 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_propertyNameAndValue2694 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_assignmentExpression_in_propertyNameAndValue2697 = frozenset([1])
+    FOLLOW_postfixExpression_in_unaryExpression2462 = frozenset([1])
+    FOLLOW_set_in_unaryExpression2467 = frozenset([23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_unaryExpression_in_unaryExpression2503 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_postfixExpression2514 = frozenset([1, 113, 114])
+    FOLLOW_set_in_postfixExpression2516 = frozenset([1])
+    FOLLOW_117_in_primaryExpression2534 = frozenset([1])
+    FOLLOW_Identifier_in_primaryExpression2539 = frozenset([1])
+    FOLLOW_literal_in_primaryExpression2544 = frozenset([1])
+    FOLLOW_arrayLiteral_in_primaryExpression2549 = frozenset([1])
+    FOLLOW_objectLiteral_in_primaryExpression2554 = frozenset([1])
+    FOLLOW_54_in_primaryExpression2559 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_primaryExpression2561 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_expression_in_primaryExpression2565 = frozenset([22, 56])
+    FOLLOW_LT_in_primaryExpression2567 = frozenset([22, 56])
+    FOLLOW_56_in_primaryExpression2571 = frozenset([1])
+    FOLLOW_80_in_arrayLiteral2583 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_arrayLiteral2585 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_assignmentExpression_in_arrayLiteral2588 = frozenset([22, 55, 81])
+    FOLLOW_LT_in_arrayLiteral2592 = frozenset([22, 55])
+    FOLLOW_55_in_arrayLiteral2595 = frozenset([22, 23, 24, 25, 52, 54, 55, 57, 79, 80, 81, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_arrayLiteral2598 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_assignmentExpression_in_arrayLiteral2601 = frozenset([22, 55, 81])
+    FOLLOW_LT_in_arrayLiteral2607 = frozenset([22, 81])
+    FOLLOW_81_in_arrayLiteral2610 = frozenset([1])
+    FOLLOW_57_in_objectLiteral2640 = frozenset([22, 23, 24, 25, 58])
+    FOLLOW_LT_in_objectLiteral2642 = frozenset([22, 23, 24, 25, 58])
+    FOLLOW_propertyNameAndValue_in_objectLiteral2646 = frozenset([22, 55, 58])
+    FOLLOW_LT_in_objectLiteral2649 = frozenset([22, 55])
+    FOLLOW_55_in_objectLiteral2652 = frozenset([22, 23, 24, 25])
+    FOLLOW_LT_in_objectLiteral2654 = frozenset([22, 23, 24, 25])
+    FOLLOW_propertyNameAndValue_in_objectLiteral2657 = frozenset([22, 55, 58])
+    FOLLOW_LT_in_objectLiteral2663 = frozenset([22, 58])
+    FOLLOW_58_in_objectLiteral2666 = frozenset([1])
+    FOLLOW_propertyName_in_propertyNameAndValue2695 = frozenset([22, 71])
+    FOLLOW_LT_in_propertyNameAndValue2697 = frozenset([22, 71])
+    FOLLOW_71_in_propertyNameAndValue2700 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_propertyNameAndValue2702 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_assignmentExpression_in_propertyNameAndValue2705 = frozenset([1])
     FOLLOW_set_in_propertyName0 = frozenset([1])
-    FOLLOW_116_in_literal2749 = frozenset([1])
-    FOLLOW_117_in_literal2754 = frozenset([1])
-    FOLLOW_118_in_literal2759 = frozenset([1])
-    FOLLOW_StringLiteral_in_literal2764 = frozenset([1])
-    FOLLOW_NumericLiteral_in_literal2769 = frozenset([1])
-    FOLLOW_regexpLiteral_in_literal2777 = frozenset([1])
-    FOLLOW_119_in_regexpLiteral2790 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118])
-    FOLLOW_set_in_regexpLiteral2792 = frozenset([119])
-    FOLLOW_119_in_regexpLiteral2795 = frozenset([1])
+    FOLLOW_118_in_literal2757 = frozenset([1])
+    FOLLOW_119_in_literal2762 = frozenset([1])
+    FOLLOW_120_in_literal2767 = frozenset([1])
+    FOLLOW_StringLiteral_in_literal2772 = frozenset([1])
+    FOLLOW_NumericLiteral_in_literal2777 = frozenset([1])
+    FOLLOW_regexpLiteral_in_literal2785 = frozenset([1])
+    FOLLOW_121_in_regexpLiteral2798 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120])
+    FOLLOW_set_in_regexpLiteral2800 = frozenset([121])
+    FOLLOW_121_in_regexpLiteral2803 = frozenset([1])
     FOLLOW_functionDeclaration_in_synpred5_JavaScript229 = frozenset([1])
     FOLLOW_LT_in_synpred10_JavaScript301 = frozenset([1])
     FOLLOW_LT_in_synpred20_JavaScript402 = frozenset([1])
@@ -15316,8 +15318,8 @@ class JavaScriptParser(Parser):
     FOLLOW_statement_in_synpred60_JavaScript840 = frozenset([1])
     FOLLOW_statement_in_synpred63_JavaScript859 = frozenset([1])
     FOLLOW_LT_in_synpred64_JavaScript848 = frozenset([22, 62])
-    FOLLOW_62_in_synpred64_JavaScript852 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_synpred64_JavaScript854 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_62_in_synpred64_JavaScript852 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_synpred64_JavaScript854 = frozenset([22, 23, 24, 25, 52, 54, 57, 59, 61, 63, 64, 65, 67, 68, 69, 70, 72, 75, 76, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_statement_in_synpred64_JavaScript859 = frozenset([1])
     FOLLOW_statementBlock_in_synpred64_JavaScript863 = frozenset([1])
     FOLLOW_forStatement_in_synpred67_JavaScript887 = frozenset([1])
@@ -15329,26 +15331,26 @@ class JavaScriptParser(Parser):
     FOLLOW_LT_in_synpred127_JavaScript1383 = frozenset([1])
     FOLLOW_LT_in_synpred130_JavaScript1407 = frozenset([1])
     FOLLOW_callExpression_in_synpred149_JavaScript1594 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred152_JavaScript1612 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_LT_in_synpred152_JavaScript1614 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_nonAssignmentOperator_in_synpred152_JavaScript1617 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_synpred152_JavaScript1619 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_leftHandSideExpression_in_synpred152_JavaScript1612 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_LT_in_synpred152_JavaScript1614 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_nonAssignmentOperator_in_synpred152_JavaScript1617 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_synpred152_JavaScript1619 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_synpred152_JavaScript1622 = frozenset([1])
     FOLLOW_leftHandSideExpression_in_synpred155_JavaScript1717 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
     FOLLOW_LT_in_synpred155_JavaScript1719 = frozenset([22, 60, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93])
-    FOLLOW_assignmentOperator_in_synpred155_JavaScript1722 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_synpred155_JavaScript1724 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_assignmentOperator_in_synpred155_JavaScript1722 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_synpred155_JavaScript1724 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_synpred155_JavaScript1727 = frozenset([1])
     FOLLOW_unaryExpression_in_synpred156_JavaScript1821 = frozenset([1])
     FOLLOW_conditionalExpression_in_synpred157_JavaScript1852 = frozenset([1])
     FOLLOW_memberExpression_in_synpred160_JavaScript1900 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred201_JavaScript2258 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_LT_in_synpred201_JavaScript2260 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107])
-    FOLLOW_nonAssignmentOperator_in_synpred201_JavaScript2263 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
-    FOLLOW_LT_in_synpred201_JavaScript2265 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119])
+    FOLLOW_leftHandSideExpression_in_synpred201_JavaScript2258 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_LT_in_synpred201_JavaScript2260 = frozenset([22, 48, 71, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109])
+    FOLLOW_nonAssignmentOperator_in_synpred201_JavaScript2263 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
+    FOLLOW_LT_in_synpred201_JavaScript2265 = frozenset([22, 23, 24, 25, 52, 54, 57, 79, 80, 96, 97, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121])
     FOLLOW_assignmentExpression_in_synpred201_JavaScript2268 = frozenset([1])
-    FOLLOW_LT_in_synpred235_JavaScript2577 = frozenset([1])
-    FOLLOW_LT_in_synpred242_JavaScript2634 = frozenset([1])
+    FOLLOW_LT_in_synpred237_JavaScript2585 = frozenset([1])
+    FOLLOW_LT_in_synpred244_JavaScript2642 = frozenset([1])
 
 
 

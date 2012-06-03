@@ -27,15 +27,19 @@ tokens
     ARRAY;
     MEMBER;
 
+    ASSIGNMENT;
     ASSIGNMENT_EXPR;
 
     OPERATOR_ARG;
+    OPERATOR_ARGS;
 
     CALL;
     CALL_IDENTIFIER;
     CALL_ARGUMENTS;
 
     INDEX;
+
+    MEMBER_EXPR;
 }
 
 program
@@ -258,9 +262,9 @@ assignmentExpression
             )
         )
     | (leftHandSideExpression LT* assignmentOperator LT* assignmentExpression ->
-            ^( assignmentOperator
-                ^(OPERATOR_ARG leftHandSideExpression)
-                ^(OPERATOR_ARG assignmentExpression)
+            ^( ASSIGNMENT
+                ^(assignmentOperator)
+                ^(OPERATOR_ARGS leftHandSideExpression assignmentExpression)
             )
         )
     | unaryExpression
@@ -273,7 +277,7 @@ assignmentExpressionNoIn
 	;
 
 leftHandSideExpression
-	: memberExpression
+	: memberExpression -> ^( MEMBER_EXPR memberExpression)
 	;
 
 newExpression

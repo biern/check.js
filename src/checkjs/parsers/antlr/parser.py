@@ -6,7 +6,9 @@ import antlr3
 
 from JavaScriptLexer import JavaScriptLexer, \
      CALL, CALL_IDENTIFIER, CALL_ARGUMENTS, FUNCTION, \
-     FUNCTION_EXPR, FUNCTION_PARAMETERS, VARIABLE_DECL
+     FUNCTION_EXPR, FUNCTION_PARAMETERS, VARIABLE_DECL, \
+     MEMBER, MEMBER_EXPR, ASSIGNMENT, OPERATOR_ARGS, \
+     VARIABLE_DECL
 from JavaScriptParser import JavaScriptParser, tokenNames
 
 
@@ -15,7 +17,14 @@ from checkjs.parser import Parser, Node
 
 class AntlrParser(Parser):
     tokens_map = {
-        CALL: ('Call', ['identifier', 'arguments'])
+        CALL: ('Call', ['identifier', 'arguments']),
+        MEMBER: ('Member', ['identifier']),
+        FUNCTION: ('FunctionDeclaration', ['identifier', 'params', 'body']),
+        FUNCTION_EXPR: ('FunctionExpression', ['params', 'body']),  # TODO
+        ASSIGNMENT: ('Assignment', ['operator', 'args']),
+        OPERATOR_ARGS: ('OperatorArguments', ['left', 'right']),
+        MEMBER_EXPR: ('MemberExpr', ['base']),
+        VARIABLE_DECL: ('VariableDecl', ['identifier', 'value']),
     }
 
     def parse_file(self, path):
@@ -29,7 +38,7 @@ class AntlrParser(Parser):
 
     def print_tree_info(self, tree, indent=0):
         print('{}{}: {}'.format(' ' * 2 * indent,
-                                tree.name,
+                                tree.type,
                                 tree.text))
         for c in tree:
             self.print_tree_info(c, indent + 1)
@@ -42,10 +51,21 @@ class AntlrParser(Parser):
         try:
             data = self.tokens_map[tree.type]
         except KeyError:
-            data = (tokenNames[tree.type], [])
+            data = (tokenNames[tree.type], [], True)
 
-        return Node(data[0], codecs.encode(tree.text or '', 'utf-8'),
+        if len(data) > 2:
+            text = (tree.text or '') if data[2] else ''
+            if data[0] == 'StringLiteral':
+                text = text[1:-1]
+        else:
+            text = ''
+
+        node = Node(data[0], codecs.encode(text, 'utf-8'),
                     children, data[1])
+        for c in node:
+            c.parent = node
+
+        return node
 
 if __name__ == '__main__':
     p = AntlrParser()

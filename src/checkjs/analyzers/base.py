@@ -32,3 +32,9 @@ class Analyzer(object):
             ident.append(c.identifier.text)
 
         return ident
+
+    def clean(self):
+        self.errors = []
+
+    def error(self, msg, node=None):
+        self.errors.append((msg, node))

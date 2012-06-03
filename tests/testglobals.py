@@ -1,22 +1,18 @@
 # -*- coding: utf-8 -*-
-
 import unittest
-import sys
 
-sys.path.insert(0, '../src')
+from testbase import ParseTest
 
-from checkjs.parsers.antlr.parser import AntlrParser
 from checkjs.analyzers.checkglobals import CheckGlobals
 
 
-class TestGlobals(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        p = AntlrParser()
-        cls.tree = p.parse_file('test_inputs/globals_test.js')
-        cls.analyzer = CheckGlobals()
+class TestGlobals(ParseTest):
+    filename = 'test_inputs/test_globals.js'
 
-    def test_analyze(self):
+    def setUp(self):
+        self.analyzer = CheckGlobals()
+
+    def test_globals(self):
         self.analyzer.analyze(self.tree)
         self.analyzer.print_result()
         self.assertEqual(

@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
+
 import unittest
 
 from testbase import ParseTest
 
-from checkjs.analyzers.checkglobals import CheckGlobals
+from checkjs.analyzers.globals import GlobalsAnalyzer
 
 
 class TestGlobals(ParseTest):
     filename = 'test_inputs/test_globals.js'
 
     def setUp(self):
-        self.analyzer = CheckGlobals()
+        self.analyzer = GlobalsAnalyzer()
 
     def test_globals(self):
         self.analyzer.analyze(self.tree)

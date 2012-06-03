@@ -3,13 +3,13 @@
 from checkjs.analyzers.base import Analyzer
 
 
-class CheckGlobals(Analyzer):
+class GlobalsAnalyzer(Analyzer):
 
     def analyze(self, tree):
         self.defines = []
         self.depends = []
         self.tree_recur(tree, {'defined': []})
-        self.depends = list(set(self.depends))
+        self.depends = list(set(self.depends) - set(['this']))
         self.defines = list(set(self.defines))
 
     def tree_recur(self, node, kwargs):

@@ -1,4 +1,4 @@
-# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-04 19:58:17
+# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-04 20:10:28
 
 import sys
 from antlr3 import *
@@ -1249,7 +1249,7 @@ class JavaScriptParser(Parser):
                     stream_functionBody.add(functionBody24.tree)
 
                 # AST Rewrite
-                # elements: formalParameterList, functionBody
+                # elements: functionBody, formalParameterList
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -2956,7 +2956,7 @@ class JavaScriptParser(Parser):
 
 
                 # AST Rewrite
-                # elements: initialiserNoIn, Identifier
+                # elements: Identifier, initialiserNoIn
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -7409,7 +7409,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression279.tree)
 
                     # AST Rewrite
-                    # elements: assignmentExpression, leftHandSideExpression, assignmentOperator
+                    # elements: leftHandSideExpression, assignmentOperator, assignmentExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -8290,7 +8290,7 @@ class JavaScriptParser(Parser):
                         break #loop155
 
                 # AST Rewrite
-                # elements: callExpressionSuffix, arguments, memberExpression
+                # elements: memberExpression, callExpressionSuffix, arguments
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -9339,7 +9339,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression343.tree)
 
                     # AST Rewrite
-                    # elements: nonAssignmentOperator, assignmentExpression, leftHandSideExpression
+                    # elements: assignmentExpression, leftHandSideExpression, nonAssignmentOperator
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -10507,7 +10507,7 @@ class JavaScriptParser(Parser):
                     stream_assignmentExpression.add(assignmentExpression383.tree)
 
                 # AST Rewrite
-                # elements: propertyName, assignmentExpression
+                # elements: assignmentExpression, propertyName
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 

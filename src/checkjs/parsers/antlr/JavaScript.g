@@ -394,7 +394,7 @@ literal
 	;
 
 RegexpLiteral
-	: '/' RegexpCharacter+ '/' RegexpFlag*
+	: '(' '/' RegexpCharacter+ '/' RegexpFlag* ')'
 	;
 
 fragment RegexpCharacter

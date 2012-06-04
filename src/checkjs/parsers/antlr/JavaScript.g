@@ -255,8 +255,7 @@ expressionNoIn
 	;
 
 assignmentExpression
-    // : conditionalExpression -> ^( ASSIGNMENT_EXPR conditionalExpression)
-    : RegexpLiteral 'g'?
+    : RegexpLiteral RegexpFlags? ('.' callExpression)?
     | callExpression -> ^( ASSIGNMENT_EXPR callExpression)
     | (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
@@ -407,8 +406,8 @@ fragment RegexpCharacter
 	| '\\' EscapeSequence
     ;
 
-fragment RegexpFlags
-    : 'g' | 's'
+RegexpFlags
+    : ('g' | 'i' | 'm' | 'y')+
     ;
 
 StringLiteral

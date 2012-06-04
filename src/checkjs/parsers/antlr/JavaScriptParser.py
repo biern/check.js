@@ -1,4 +1,4 @@
-# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-04 19:25:06
+# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-04 19:41:48
 
 import sys
 from antlr3 import *
@@ -42,7 +42,7 @@ UnicodeCombiningMark=49
 T__95=95
 UnicodeDigit=47
 T__80=80
-NumericLiteral=27
+NumericLiteral=28
 T__81=81
 T__82=82
 T__83=83
@@ -65,7 +65,7 @@ CharacterEscapeSequence=33
 T__76=76
 T__75=75
 T__74=74
-EscapeSequence=29
+EscapeSequence=30
 T__73=73
 T__79=79
 UnicodeConnectorPunctuation=48
@@ -87,7 +87,6 @@ T__116=116
 T__117=117
 T__114=114
 T__115=115
-T__123=123
 LineComment=51
 T__122=122
 T__121=121
@@ -124,9 +123,9 @@ T__102=102
 T__101=101
 T__100=100
 DecimalLiteral=41
-RegexpFlags=30
-RegexpCharacter=28
-StringLiteral=26
+RegexpCharacter=29
+RegexpFlags=26
+StringLiteral=27
 OPERATOR_ARG=15
 CALL_ARGUMENTS=19
 HexIntegerLiteral=42
@@ -141,8 +140,8 @@ tokenNames = [
     "VARIABLE_DECL", "OBJECT", "PROPERTY", "ARRAY", "MEMBER", "ASSIGNMENT", 
     "ASSIGNMENT_EXPR", "OPERATOR_ARG", "OPERATOR_ARGS", "CALL", "CALL_IDENTIFIER", 
     "CALL_ARGUMENTS", "INDEX", "MEMBER_EXPR", "REGEXP", "LT", "Identifier", 
-    "RegexpLiteral", "StringLiteral", "NumericLiteral", "RegexpCharacter", 
-    "EscapeSequence", "RegexpFlags", "DoubleStringCharacter", "SingleStringCharacter", 
+    "RegexpLiteral", "RegexpFlags", "StringLiteral", "NumericLiteral", "RegexpCharacter", 
+    "EscapeSequence", "DoubleStringCharacter", "SingleStringCharacter", 
     "CharacterEscapeSequence", "HexEscapeSequence", "UnicodeEscapeSequence", 
     "SingleEscapeCharacter", "NonEscapeCharacter", "EscapeCharacter", "DecimalDigit", 
     "HexDigit", "DecimalLiteral", "HexIntegerLiteral", "ExponentPart", "IdentifierStart", 
@@ -151,12 +150,12 @@ tokenNames = [
     "';'", "'('", "','", "')'", "'{'", "'}'", "'var'", "'='", "'if'", "'else'", 
     "'do'", "'while'", "'for'", "'in'", "'continue'", "'break'", "'return'", 
     "'with'", "':'", "'switch'", "'case'", "'default'", "'throw'", "'try'", 
-    "'catch'", "'finally'", "'g'", "'new'", "'['", "']'", "'.'", "'*='", 
-    "'/='", "'%='", "'+='", "'-='", "'<<='", "'>>='", "'>>>='", "'&='", 
-    "'^='", "'|='", "'?'", "'*'", "'-'", "'+'", "'/'", "'&'", "'&&'", "'|'", 
-    "'||'", "'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'==='", "'!=='", 
-    "'delete'", "'void'", "'typeof'", "'++'", "'--'", "'~'", "'!'", "'this'", 
-    "'null'", "'true'", "'false'"
+    "'catch'", "'finally'", "'.'", "'new'", "'['", "']'", "'*='", "'/='", 
+    "'%='", "'+='", "'-='", "'<<='", "'>>='", "'>>>='", "'&='", "'^='", 
+    "'|='", "'?'", "'*'", "'-'", "'+'", "'/'", "'&'", "'&&'", "'|'", "'||'", 
+    "'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'==='", "'!=='", "'delete'", 
+    "'void'", "'typeof'", "'++'", "'--'", "'~'", "'!'", "'this'", "'null'", 
+    "'true'", "'false'"
 ]
 
 
@@ -450,59 +449,70 @@ class JavaScriptParser(Parser):
             transition = self.DFA136_transition
             )
 
-        self.dfa142 = self.DFA142(
-            self, 142,
-            eot = self.DFA142_eot,
-            eof = self.DFA142_eof,
-            min = self.DFA142_min,
-            max = self.DFA142_max,
-            accept = self.DFA142_accept,
-            special = self.DFA142_special,
-            transition = self.DFA142_transition
+        self.dfa143 = self.DFA143(
+            self, 143,
+            eot = self.DFA143_eot,
+            eof = self.DFA143_eof,
+            min = self.DFA143_min,
+            max = self.DFA143_max,
+            accept = self.DFA143_accept,
+            special = self.DFA143_special,
+            transition = self.DFA143_transition
             )
 
-        self.dfa145 = self.DFA145(
-            self, 145,
-            eot = self.DFA145_eot,
-            eof = self.DFA145_eof,
-            min = self.DFA145_min,
-            max = self.DFA145_max,
-            accept = self.DFA145_accept,
-            special = self.DFA145_special,
-            transition = self.DFA145_transition
+        self.dfa146 = self.DFA146(
+            self, 146,
+            eot = self.DFA146_eot,
+            eof = self.DFA146_eof,
+            min = self.DFA146_min,
+            max = self.DFA146_max,
+            accept = self.DFA146_accept,
+            special = self.DFA146_special,
+            transition = self.DFA146_transition
             )
 
-        self.dfa147 = self.DFA147(
-            self, 147,
-            eot = self.DFA147_eot,
-            eof = self.DFA147_eof,
-            min = self.DFA147_min,
-            max = self.DFA147_max,
-            accept = self.DFA147_accept,
-            special = self.DFA147_special,
-            transition = self.DFA147_transition
+        self.dfa148 = self.DFA148(
+            self, 148,
+            eot = self.DFA148_eot,
+            eof = self.DFA148_eof,
+            min = self.DFA148_min,
+            max = self.DFA148_max,
+            accept = self.DFA148_accept,
+            special = self.DFA148_special,
+            transition = self.DFA148_transition
             )
 
-        self.dfa152 = self.DFA152(
-            self, 152,
-            eot = self.DFA152_eot,
-            eof = self.DFA152_eof,
-            min = self.DFA152_min,
-            max = self.DFA152_max,
-            accept = self.DFA152_accept,
-            special = self.DFA152_special,
-            transition = self.DFA152_transition
+        self.dfa153 = self.DFA153(
+            self, 153,
+            eot = self.DFA153_eot,
+            eof = self.DFA153_eof,
+            min = self.DFA153_min,
+            max = self.DFA153_max,
+            accept = self.DFA153_accept,
+            special = self.DFA153_special,
+            transition = self.DFA153_transition
             )
 
-        self.dfa156 = self.DFA156(
-            self, 156,
-            eot = self.DFA156_eot,
-            eof = self.DFA156_eof,
-            min = self.DFA156_min,
-            max = self.DFA156_max,
-            accept = self.DFA156_accept,
-            special = self.DFA156_special,
-            transition = self.DFA156_transition
+        self.dfa157 = self.DFA157(
+            self, 157,
+            eot = self.DFA157_eot,
+            eof = self.DFA157_eof,
+            min = self.DFA157_min,
+            max = self.DFA157_max,
+            accept = self.DFA157_accept,
+            special = self.DFA157_special,
+            transition = self.DFA157_transition
+            )
+
+        self.dfa163 = self.DFA163(
+            self, 163,
+            eot = self.DFA163_eot,
+            eof = self.DFA163_eof,
+            min = self.DFA163_min,
+            max = self.DFA163_max,
+            accept = self.DFA163_accept,
+            special = self.DFA163_special,
+            transition = self.DFA163_transition
             )
 
         self.dfa162 = self.DFA162(
@@ -516,37 +526,37 @@ class JavaScriptParser(Parser):
             transition = self.DFA162_transition
             )
 
-        self.dfa161 = self.DFA161(
-            self, 161,
-            eot = self.DFA161_eot,
-            eof = self.DFA161_eof,
-            min = self.DFA161_min,
-            max = self.DFA161_max,
-            accept = self.DFA161_accept,
-            special = self.DFA161_special,
-            transition = self.DFA161_transition
+        self.dfa172 = self.DFA172(
+            self, 172,
+            eot = self.DFA172_eot,
+            eof = self.DFA172_eof,
+            min = self.DFA172_min,
+            max = self.DFA172_max,
+            accept = self.DFA172_accept,
+            special = self.DFA172_special,
+            transition = self.DFA172_transition
             )
 
-        self.dfa171 = self.DFA171(
-            self, 171,
-            eot = self.DFA171_eot,
-            eof = self.DFA171_eof,
-            min = self.DFA171_min,
-            max = self.DFA171_max,
-            accept = self.DFA171_accept,
-            special = self.DFA171_special,
-            transition = self.DFA171_transition
+        self.dfa175 = self.DFA175(
+            self, 175,
+            eot = self.DFA175_eot,
+            eof = self.DFA175_eof,
+            min = self.DFA175_min,
+            max = self.DFA175_max,
+            accept = self.DFA175_accept,
+            special = self.DFA175_special,
+            transition = self.DFA175_transition
             )
 
-        self.dfa174 = self.DFA174(
-            self, 174,
-            eot = self.DFA174_eot,
-            eof = self.DFA174_eof,
-            min = self.DFA174_min,
-            max = self.DFA174_max,
-            accept = self.DFA174_accept,
-            special = self.DFA174_special,
-            transition = self.DFA174_transition
+        self.dfa186 = self.DFA186(
+            self, 186,
+            eot = self.DFA186_eot,
+            eof = self.DFA186_eof,
+            min = self.DFA186_min,
+            max = self.DFA186_max,
+            accept = self.DFA186_accept,
+            special = self.DFA186_special,
+            transition = self.DFA186_transition
             )
 
         self.dfa185 = self.DFA185(
@@ -560,37 +570,26 @@ class JavaScriptParser(Parser):
             transition = self.DFA185_transition
             )
 
-        self.dfa184 = self.DFA184(
-            self, 184,
-            eot = self.DFA184_eot,
-            eof = self.DFA184_eof,
-            min = self.DFA184_min,
-            max = self.DFA184_max,
-            accept = self.DFA184_accept,
-            special = self.DFA184_special,
-            transition = self.DFA184_transition
+        self.dfa191 = self.DFA191(
+            self, 191,
+            eot = self.DFA191_eot,
+            eof = self.DFA191_eof,
+            min = self.DFA191_min,
+            max = self.DFA191_max,
+            accept = self.DFA191_accept,
+            special = self.DFA191_special,
+            transition = self.DFA191_transition
             )
 
-        self.dfa190 = self.DFA190(
-            self, 190,
-            eot = self.DFA190_eot,
-            eof = self.DFA190_eof,
-            min = self.DFA190_min,
-            max = self.DFA190_max,
-            accept = self.DFA190_accept,
-            special = self.DFA190_special,
-            transition = self.DFA190_transition
-            )
-
-        self.dfa210 = self.DFA210(
-            self, 210,
-            eot = self.DFA210_eot,
-            eof = self.DFA210_eof,
-            min = self.DFA210_min,
-            max = self.DFA210_max,
-            accept = self.DFA210_accept,
-            special = self.DFA210_special,
-            transition = self.DFA210_transition
+        self.dfa211 = self.DFA211(
+            self, 211,
+            eot = self.DFA211_eot,
+            eof = self.DFA211_eof,
+            min = self.DFA211_min,
+            max = self.DFA211_max,
+            accept = self.DFA211_accept,
+            special = self.DFA211_special,
+            transition = self.DFA211_transition
             )
 
 
@@ -1606,7 +1605,7 @@ class JavaScriptParser(Parser):
                 alt21 = 2
                 LA21_0 = self.input.LA(1)
 
-                if ((Identifier <= LA21_0 <= NumericLiteral) or LA21_0 == 53 or LA21_0 == 55 or LA21_0 == 58 or LA21_0 == 60 or LA21_0 == 62 or (64 <= LA21_0 <= 66) or (68 <= LA21_0 <= 71) or LA21_0 == 73 or (76 <= LA21_0 <= 77) or (81 <= LA21_0 <= 82) or (98 <= LA21_0 <= 99) or (113 <= LA21_0 <= 123)) :
+                if ((Identifier <= LA21_0 <= RegexpLiteral) or (StringLiteral <= LA21_0 <= NumericLiteral) or LA21_0 == 53 or LA21_0 == 55 or LA21_0 == 58 or LA21_0 == 60 or LA21_0 == 62 or (64 <= LA21_0 <= 66) or (68 <= LA21_0 <= 71) or LA21_0 == 73 or (76 <= LA21_0 <= 77) or (81 <= LA21_0 <= 82) or (97 <= LA21_0 <= 98) or (112 <= LA21_0 <= 122)) :
                     alt21 = 1
                 if alt21 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: sourceElements
@@ -1777,7 +1776,7 @@ class JavaScriptParser(Parser):
 
                         raise nvae
 
-                elif ((FUNCTION <= LA23_0 <= 58) or (60 <= LA23_0 <= 123)) :
+                elif ((FUNCTION <= LA23_0 <= 58) or (60 <= LA23_0 <= 122)) :
                     alt23 = 2
                 else:
                     if self._state.backtracking > 0:
@@ -2150,7 +2149,7 @@ class JavaScriptParser(Parser):
                 alt26 = 2
                 LA26_0 = self.input.LA(1)
 
-                if ((Identifier <= LA26_0 <= NumericLiteral) or LA26_0 == 53 or LA26_0 == 55 or LA26_0 == 58 or LA26_0 == 60 or LA26_0 == 62 or (64 <= LA26_0 <= 66) or (68 <= LA26_0 <= 71) or LA26_0 == 73 or (76 <= LA26_0 <= 77) or (81 <= LA26_0 <= 82) or (98 <= LA26_0 <= 99) or (113 <= LA26_0 <= 123)) :
+                if ((Identifier <= LA26_0 <= RegexpLiteral) or (StringLiteral <= LA26_0 <= NumericLiteral) or LA26_0 == 53 or LA26_0 == 55 or LA26_0 == 58 or LA26_0 == 60 or LA26_0 == 62 or (64 <= LA26_0 <= 66) or (68 <= LA26_0 <= 71) or LA26_0 == 73 or (76 <= LA26_0 <= 77) or (81 <= LA26_0 <= 82) or (97 <= LA26_0 <= 98) or (112 <= LA26_0 <= 122)) :
                     alt26 = 1
                 if alt26 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -2754,7 +2753,7 @@ class JavaScriptParser(Parser):
                         stream_initialiser.add(initialiser81.tree)
 
                     # AST Rewrite
-                    # elements: initialiser, Identifier
+                    # elements: Identifier, initialiser
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -4538,7 +4537,7 @@ class JavaScriptParser(Parser):
                 alt79 = 2
                 LA79_0 = self.input.LA(1)
 
-                if (LA79_0 == Identifier or (StringLiteral <= LA79_0 <= NumericLiteral) or LA79_0 == 53 or LA79_0 == 55 or LA79_0 == 58 or (81 <= LA79_0 <= 82) or (98 <= LA79_0 <= 99) or (113 <= LA79_0 <= 123)) :
+                if (LA79_0 == Identifier or (StringLiteral <= LA79_0 <= NumericLiteral) or LA79_0 == 53 or LA79_0 == 55 or LA79_0 == 58 or (81 <= LA79_0 <= 82) or (97 <= LA79_0 <= 98) or (112 <= LA79_0 <= 122)) :
                     alt79 = 1
                 elif (LA79_0 == 60) :
                     alt79 = 2
@@ -4911,7 +4910,7 @@ class JavaScriptParser(Parser):
                 alt88 = 2
                 LA88_0 = self.input.LA(1)
 
-                if (LA88_0 == Identifier or (StringLiteral <= LA88_0 <= NumericLiteral) or LA88_0 == 53 or LA88_0 == 55 or LA88_0 == 58 or (81 <= LA88_0 <= 82) or (120 <= LA88_0 <= 123)) :
+                if (LA88_0 == Identifier or (StringLiteral <= LA88_0 <= NumericLiteral) or LA88_0 == 53 or LA88_0 == 55 or LA88_0 == 58 or (81 <= LA88_0 <= 82) or (119 <= LA88_0 <= 122)) :
                     alt88 = 1
                 elif (LA88_0 == 60) :
                     alt88 = 2
@@ -5261,7 +5260,7 @@ class JavaScriptParser(Parser):
                 alt93 = 2
                 LA93_0 = self.input.LA(1)
 
-                if ((Identifier <= LA93_0 <= NumericLiteral) or LA93_0 == 53 or LA93_0 == 55 or LA93_0 == 58 or (81 <= LA93_0 <= 82) or (98 <= LA93_0 <= 99) or (113 <= LA93_0 <= 123)) :
+                if ((Identifier <= LA93_0 <= RegexpLiteral) or (StringLiteral <= LA93_0 <= NumericLiteral) or LA93_0 == 53 or LA93_0 == 55 or LA93_0 == 58 or (81 <= LA93_0 <= 82) or (97 <= LA93_0 <= 98) or (112 <= LA93_0 <= 122)) :
                     alt93 = 1
                 if alt93 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: expression
@@ -6138,7 +6137,7 @@ class JavaScriptParser(Parser):
                 alt116 = 2
                 LA116_0 = self.input.LA(1)
 
-                if ((Identifier <= LA116_0 <= NumericLiteral) or LA116_0 == 53 or LA116_0 == 55 or LA116_0 == 58 or LA116_0 == 60 or LA116_0 == 62 or (64 <= LA116_0 <= 66) or (68 <= LA116_0 <= 71) or LA116_0 == 73 or (76 <= LA116_0 <= 77) or (81 <= LA116_0 <= 82) or (98 <= LA116_0 <= 99) or (113 <= LA116_0 <= 123)) :
+                if ((Identifier <= LA116_0 <= RegexpLiteral) or (StringLiteral <= LA116_0 <= NumericLiteral) or LA116_0 == 53 or LA116_0 == 55 or LA116_0 == 58 or LA116_0 == 60 or LA116_0 == 62 or (64 <= LA116_0 <= 66) or (68 <= LA116_0 <= 71) or LA116_0 == 73 or (76 <= LA116_0 <= 77) or (81 <= LA116_0 <= 82) or (97 <= LA116_0 <= 98) or (112 <= LA116_0 <= 122)) :
                     alt116 = 1
                 if alt116 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -6275,7 +6274,7 @@ class JavaScriptParser(Parser):
                 alt119 = 2
                 LA119_0 = self.input.LA(1)
 
-                if ((Identifier <= LA119_0 <= NumericLiteral) or LA119_0 == 53 or LA119_0 == 55 or LA119_0 == 58 or LA119_0 == 60 or LA119_0 == 62 or (64 <= LA119_0 <= 66) or (68 <= LA119_0 <= 71) or LA119_0 == 73 or (76 <= LA119_0 <= 77) or (81 <= LA119_0 <= 82) or (98 <= LA119_0 <= 99) or (113 <= LA119_0 <= 123)) :
+                if ((Identifier <= LA119_0 <= RegexpLiteral) or (StringLiteral <= LA119_0 <= NumericLiteral) or LA119_0 == 53 or LA119_0 == 55 or LA119_0 == 58 or LA119_0 == 60 or LA119_0 == 62 or (64 <= LA119_0 <= 66) or (68 <= LA119_0 <= 71) or LA119_0 == 73 or (76 <= LA119_0 <= 77) or (81 <= LA119_0 <= 82) or (97 <= LA119_0 <= 98) or (112 <= LA119_0 <= 122)) :
                     alt119 = 1
                 if alt119 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: statementList
@@ -7140,7 +7139,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "assignmentExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:257:1: assignmentExpression : ( RegexpLiteral ( 'g' )? | callExpression -> ^( ASSIGNMENT_EXPR callExpression ) | ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:257:1: assignmentExpression : ( RegexpLiteral ( RegexpFlags )? ( '.' callExpression )? | callExpression -> ^( ASSIGNMENT_EXPR callExpression ) | ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) );
     def assignmentExpression(self, ):
 
         retval = self.assignmentExpression_return()
@@ -7149,36 +7148,40 @@ class JavaScriptParser(Parser):
         root_0 = None
 
         RegexpLiteral269 = None
-        char_literal270 = None
-        LT273 = None
+        RegexpFlags270 = None
+        char_literal271 = None
         LT275 = None
-        LT278 = None
+        LT277 = None
         LT280 = None
-        callExpression271 = None
+        LT282 = None
+        callExpression272 = None
 
-        leftHandSideExpression272 = None
+        callExpression273 = None
 
-        nonAssignmentOperator274 = None
+        leftHandSideExpression274 = None
 
-        assignmentExpression276 = None
+        nonAssignmentOperator276 = None
 
-        leftHandSideExpression277 = None
+        assignmentExpression278 = None
 
-        assignmentOperator279 = None
+        leftHandSideExpression279 = None
 
-        assignmentExpression281 = None
+        assignmentOperator281 = None
 
-        unaryExpression282 = None
+        assignmentExpression283 = None
 
-        newExpression283 = None
+        unaryExpression284 = None
+
+        newExpression285 = None
 
 
         RegexpLiteral269_tree = None
-        char_literal270_tree = None
-        LT273_tree = None
+        RegexpFlags270_tree = None
+        char_literal271_tree = None
         LT275_tree = None
-        LT278_tree = None
+        LT277_tree = None
         LT280_tree = None
+        LT282_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_assignmentOperator = RewriteRuleSubtreeStream(self._adaptor, "rule assignmentOperator")
         stream_leftHandSideExpression = RewriteRuleSubtreeStream(self._adaptor, "rule leftHandSideExpression")
@@ -7194,49 +7197,73 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:259:5: ( RegexpLiteral ( 'g' )? | callExpression -> ^( ASSIGNMENT_EXPR callExpression ) | ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) )
-                alt142 = 6
-                alt142 = self.dfa142.predict(self.input)
-                if alt142 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:259:7: RegexpLiteral ( 'g' )?
+                # ../src/checkjs/parsers/antlr/JavaScript.g:258:5: ( RegexpLiteral ( RegexpFlags )? ( '.' callExpression )? | callExpression -> ^( ASSIGNMENT_EXPR callExpression ) | ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) )
+                alt143 = 6
+                alt143 = self.dfa143.predict(self.input)
+                if alt143 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: RegexpLiteral ( RegexpFlags )? ( '.' callExpression )?
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    RegexpLiteral269=self.match(self.input, RegexpLiteral, self.FOLLOW_RegexpLiteral_in_assignmentExpression1602)
+                    RegexpLiteral269=self.match(self.input, RegexpLiteral, self.FOLLOW_RegexpLiteral_in_assignmentExpression1597)
                     if self._state.backtracking == 0:
 
                         RegexpLiteral269_tree = self._adaptor.createWithPayload(RegexpLiteral269)
                         self._adaptor.addChild(root_0, RegexpLiteral269_tree)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:259:21: ( 'g' )?
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:21: ( RegexpFlags )?
                     alt137 = 2
                     LA137_0 = self.input.LA(1)
 
-                    if (LA137_0 == 80) :
+                    if (LA137_0 == RegexpFlags) :
                         alt137 = 1
                     if alt137 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: 'g'
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: RegexpFlags
                         pass 
-                        char_literal270=self.match(self.input, 80, self.FOLLOW_80_in_assignmentExpression1604)
+                        RegexpFlags270=self.match(self.input, RegexpFlags, self.FOLLOW_RegexpFlags_in_assignmentExpression1599)
                         if self._state.backtracking == 0:
 
-                            char_literal270_tree = self._adaptor.createWithPayload(char_literal270)
-                            self._adaptor.addChild(root_0, char_literal270_tree)
+                            RegexpFlags270_tree = self._adaptor.createWithPayload(RegexpFlags270)
+                            self._adaptor.addChild(root_0, RegexpFlags270_tree)
+
+
+
+
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:34: ( '.' callExpression )?
+                    alt138 = 2
+                    LA138_0 = self.input.LA(1)
+
+                    if (LA138_0 == 80) :
+                        alt138 = 1
+                    if alt138 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:258:35: '.' callExpression
+                        pass 
+                        char_literal271=self.match(self.input, 80, self.FOLLOW_80_in_assignmentExpression1603)
+                        if self._state.backtracking == 0:
+
+                            char_literal271_tree = self._adaptor.createWithPayload(char_literal271)
+                            self._adaptor.addChild(root_0, char_literal271_tree)
+
+                        self._state.following.append(self.FOLLOW_callExpression_in_assignmentExpression1605)
+                        callExpression272 = self.callExpression()
+
+                        self._state.following.pop()
+                        if self._state.backtracking == 0:
+                            self._adaptor.addChild(root_0, callExpression272.tree)
 
 
 
 
 
-
-                elif alt142 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: callExpression
+                elif alt143 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:259:7: callExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_callExpression_in_assignmentExpression1613)
-                    callExpression271 = self.callExpression()
+                    self._state.following.append(self.FOLLOW_callExpression_in_assignmentExpression1615)
+                    callExpression273 = self.callExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_callExpression.add(callExpression271.tree)
+                        stream_callExpression.add(callExpression273.tree)
 
                     # AST Rewrite
                     # elements: callExpression
@@ -7256,8 +7283,8 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 260:22: -> ^( ASSIGNMENT_EXPR callExpression )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:260:25: ^( ASSIGNMENT_EXPR callExpression )
+                        # 259:22: -> ^( ASSIGNMENT_EXPR callExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:259:25: ^( ASSIGNMENT_EXPR callExpression )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(ASSIGNMENT_EXPR, "ASSIGNMENT_EXPR"), root_1)
 
@@ -7270,44 +7297,19 @@ class JavaScriptParser(Parser):
                         retval.tree = root_0
 
 
-                elif alt142 == 3:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:261:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                elif alt143 == 3:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:261:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:261:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1631)
-                    leftHandSideExpression272 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1633)
+                    leftHandSideExpression274 = self.leftHandSideExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression272.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:261:31: ( LT )*
-                    while True: #loop138
-                        alt138 = 2
-                        LA138_0 = self.input.LA(1)
-
-                        if (LA138_0 == LT) :
-                            alt138 = 1
-
-
-                        if alt138 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT273=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1633) 
-                            if self._state.backtracking == 0:
-                                stream_LT.add(LT273)
-
-
-                        else:
-                            break #loop138
-                    self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_assignmentExpression1636)
-                    nonAssignmentOperator274 = self.nonAssignmentOperator()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        stream_nonAssignmentOperator.add(nonAssignmentOperator274.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:261:57: ( LT )*
+                        stream_leftHandSideExpression.add(leftHandSideExpression274.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:31: ( LT )*
                     while True: #loop139
                         alt139 = 2
                         LA139_0 = self.input.LA(1)
@@ -7319,19 +7321,44 @@ class JavaScriptParser(Parser):
                         if alt139 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT275=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1638) 
+                            LT275=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1635) 
                             if self._state.backtracking == 0:
                                 stream_LT.add(LT275)
 
 
                         else:
                             break #loop139
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_assignmentExpression1641)
-                    assignmentExpression276 = self.assignmentExpression()
+                    self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_assignmentExpression1638)
+                    nonAssignmentOperator276 = self.nonAssignmentOperator()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_assignmentExpression.add(assignmentExpression276.tree)
+                        stream_nonAssignmentOperator.add(nonAssignmentOperator276.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:260:57: ( LT )*
+                    while True: #loop140
+                        alt140 = 2
+                        LA140_0 = self.input.LA(1)
+
+                        if (LA140_0 == LT) :
+                            alt140 = 1
+
+
+                        if alt140 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT277=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1640) 
+                            if self._state.backtracking == 0:
+                                stream_LT.add(LT277)
+
+
+                        else:
+                            break #loop140
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_assignmentExpression1643)
+                    assignmentExpression278 = self.assignmentExpression()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        stream_assignmentExpression.add(assignmentExpression278.tree)
 
                     # AST Rewrite
                     # elements: assignmentExpression, nonAssignmentOperator, leftHandSideExpression
@@ -7351,19 +7378,19 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 261:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:262:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # 260:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:261:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(stream_nonAssignmentOperator.nextNode(), root_1)
 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:263:17: ^( OPERATOR_ARG leftHandSideExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:262:17: ^( OPERATOR_ARG leftHandSideExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
                         self._adaptor.addChild(root_2, stream_leftHandSideExpression.nextTree())
 
                         self._adaptor.addChild(root_1, root_2)
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:264:17: ^( OPERATOR_ARG assignmentExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:263:17: ^( OPERATOR_ARG assignmentExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
@@ -7381,44 +7408,19 @@ class JavaScriptParser(Parser):
 
 
 
-                elif alt142 == 4:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:267:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
+                elif alt143 == 4:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:266:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:267:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:267:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:266:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:266:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1736)
-                    leftHandSideExpression277 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1738)
+                    leftHandSideExpression279 = self.leftHandSideExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression277.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:267:31: ( LT )*
-                    while True: #loop140
-                        alt140 = 2
-                        LA140_0 = self.input.LA(1)
-
-                        if (LA140_0 == LT) :
-                            alt140 = 1
-
-
-                        if alt140 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT278=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1738) 
-                            if self._state.backtracking == 0:
-                                stream_LT.add(LT278)
-
-
-                        else:
-                            break #loop140
-                    self._state.following.append(self.FOLLOW_assignmentOperator_in_assignmentExpression1741)
-                    assignmentOperator279 = self.assignmentOperator()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        stream_assignmentOperator.add(assignmentOperator279.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:267:54: ( LT )*
+                        stream_leftHandSideExpression.add(leftHandSideExpression279.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:266:31: ( LT )*
                     while True: #loop141
                         alt141 = 2
                         LA141_0 = self.input.LA(1)
@@ -7430,19 +7432,44 @@ class JavaScriptParser(Parser):
                         if alt141 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT280=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1743) 
+                            LT280=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1740) 
                             if self._state.backtracking == 0:
                                 stream_LT.add(LT280)
 
 
                         else:
                             break #loop141
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_assignmentExpression1746)
-                    assignmentExpression281 = self.assignmentExpression()
+                    self._state.following.append(self.FOLLOW_assignmentOperator_in_assignmentExpression1743)
+                    assignmentOperator281 = self.assignmentOperator()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_assignmentExpression.add(assignmentExpression281.tree)
+                        stream_assignmentOperator.add(assignmentOperator281.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:266:54: ( LT )*
+                    while True: #loop142
+                        alt142 = 2
+                        LA142_0 = self.input.LA(1)
+
+                        if (LA142_0 == LT) :
+                            alt142 = 1
+
+
+                        if alt142 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT282=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpression1745) 
+                            if self._state.backtracking == 0:
+                                stream_LT.add(LT282)
+
+
+                        else:
+                            break #loop142
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_assignmentExpression1748)
+                    assignmentExpression283 = self.assignmentExpression()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        stream_assignmentExpression.add(assignmentExpression283.tree)
 
                     # AST Rewrite
                     # elements: assignmentExpression, leftHandSideExpression, assignmentOperator
@@ -7462,17 +7489,17 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 267:79: -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:268:13: ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
+                        # 266:79: -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:267:13: ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(ASSIGNMENT, "ASSIGNMENT"), root_1)
 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:269:17: ^( assignmentOperator )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:268:17: ^( assignmentOperator )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(stream_assignmentOperator.nextNode(), root_2)
 
                         self._adaptor.addChild(root_1, root_2)
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:270:17: ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:269:17: ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARGS, "OPERATOR_ARGS"), root_2)
 
@@ -7491,28 +7518,28 @@ class JavaScriptParser(Parser):
 
 
 
-                elif alt142 == 5:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:273:7: unaryExpression
+                elif alt143 == 5:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:272:7: unaryExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_unaryExpression_in_assignmentExpression1840)
-                    unaryExpression282 = self.unaryExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_assignmentExpression1842)
+                    unaryExpression284 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, unaryExpression282.tree)
+                        self._adaptor.addChild(root_0, unaryExpression284.tree)
 
 
-                elif alt142 == 6:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:274:7: newExpression
+                elif alt143 == 6:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:273:7: newExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_newExpression_in_assignmentExpression1848)
-                    newExpression283 = self.newExpression()
+                    self._state.following.append(self.FOLLOW_newExpression_in_assignmentExpression1850)
+                    newExpression285 = self.newExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_newExpression.add(newExpression283.tree)
+                        stream_newExpression.add(newExpression285.tree)
 
                     # AST Rewrite
                     # elements: newExpression
@@ -7532,8 +7559,8 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 274:21: -> ^( ASSIGNMENT_EXPR newExpression )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:274:24: ^( ASSIGNMENT_EXPR newExpression )
+                        # 273:21: -> ^( ASSIGNMENT_EXPR newExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:273:24: ^( ASSIGNMENT_EXPR newExpression )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(ASSIGNMENT_EXPR, "ASSIGNMENT_EXPR"), root_1)
 
@@ -7578,7 +7605,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "assignmentExpressionNoIn"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:277:1: assignmentExpressionNoIn : ( conditionalExpression | leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:276:1: assignmentExpressionNoIn : ( conditionalExpression | leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn );
     def assignmentExpressionNoIn(self, ):
 
         retval = self.assignmentExpressionNoIn_return()
@@ -7586,19 +7613,19 @@ class JavaScriptParser(Parser):
         assignmentExpressionNoIn_StartIndex = self.input.index()
         root_0 = None
 
-        LT286 = None
         LT288 = None
-        conditionalExpression284 = None
+        LT290 = None
+        conditionalExpression286 = None
 
-        leftHandSideExpression285 = None
+        leftHandSideExpression287 = None
 
-        assignmentOperator287 = None
+        assignmentOperator289 = None
 
-        assignmentExpressionNoIn289 = None
+        assignmentExpressionNoIn291 = None
 
 
-        LT286_tree = None
         LT288_tree = None
+        LT290_tree = None
 
         success = False
         try:
@@ -7608,57 +7635,34 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:278:2: ( conditionalExpression | leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn )
-                alt145 = 2
-                alt145 = self.dfa145.predict(self.input)
-                if alt145 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:278:4: conditionalExpression
+                # ../src/checkjs/parsers/antlr/JavaScript.g:277:2: ( conditionalExpression | leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn )
+                alt146 = 2
+                alt146 = self.dfa146.predict(self.input)
+                if alt146 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:277:4: conditionalExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_conditionalExpression_in_assignmentExpressionNoIn1871)
-                    conditionalExpression284 = self.conditionalExpression()
+                    self._state.following.append(self.FOLLOW_conditionalExpression_in_assignmentExpressionNoIn1873)
+                    conditionalExpression286 = self.conditionalExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, conditionalExpression284.tree)
+                        self._adaptor.addChild(root_0, conditionalExpression286.tree)
 
 
-                elif alt145 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:279:4: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn
+                elif alt146 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:278:4: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpressionNoIn
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpressionNoIn1876)
-                    leftHandSideExpression285 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpressionNoIn1878)
+                    leftHandSideExpression287 = self.leftHandSideExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, leftHandSideExpression285.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:279:29: ( LT )*
-                    while True: #loop143
-                        alt143 = 2
-                        LA143_0 = self.input.LA(1)
-
-                        if (LA143_0 == LT) :
-                            alt143 = 1
-
-
-                        if alt143 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT286=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpressionNoIn1878)
-
-
-                        else:
-                            break #loop143
-                    self._state.following.append(self.FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1882)
-                    assignmentOperator287 = self.assignmentOperator()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, assignmentOperator287.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:279:53: ( LT )*
+                        self._adaptor.addChild(root_0, leftHandSideExpression287.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:278:29: ( LT )*
                     while True: #loop144
                         alt144 = 2
                         LA144_0 = self.input.LA(1)
@@ -7670,17 +7674,40 @@ class JavaScriptParser(Parser):
                         if alt144 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT288=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpressionNoIn1884)
+                            LT288=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpressionNoIn1880)
 
 
                         else:
                             break #loop144
-                    self._state.following.append(self.FOLLOW_assignmentExpressionNoIn_in_assignmentExpressionNoIn1888)
-                    assignmentExpressionNoIn289 = self.assignmentExpressionNoIn()
+                    self._state.following.append(self.FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1884)
+                    assignmentOperator289 = self.assignmentOperator()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, assignmentExpressionNoIn289.tree)
+                        self._adaptor.addChild(root_0, assignmentOperator289.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:278:53: ( LT )*
+                    while True: #loop145
+                        alt145 = 2
+                        LA145_0 = self.input.LA(1)
+
+                        if (LA145_0 == LT) :
+                            alt145 = 1
+
+
+                        if alt145 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT290=self.match(self.input, LT, self.FOLLOW_LT_in_assignmentExpressionNoIn1886)
+
+
+                        else:
+                            break #loop145
+                    self._state.following.append(self.FOLLOW_assignmentExpressionNoIn_in_assignmentExpressionNoIn1890)
+                    assignmentExpressionNoIn291 = self.assignmentExpressionNoIn()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        self._adaptor.addChild(root_0, assignmentExpressionNoIn291.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -7715,7 +7742,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "leftHandSideExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:282:1: leftHandSideExpression : memberExpression -> ^( MEMBER_EXPR memberExpression ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:281:1: leftHandSideExpression : memberExpression -> ^( MEMBER_EXPR memberExpression ) ;
     def leftHandSideExpression(self, ):
 
         retval = self.leftHandSideExpression_return()
@@ -7723,7 +7750,7 @@ class JavaScriptParser(Parser):
         leftHandSideExpression_StartIndex = self.input.index()
         root_0 = None
 
-        memberExpression290 = None
+        memberExpression292 = None
 
 
         stream_memberExpression = RewriteRuleSubtreeStream(self._adaptor, "rule memberExpression")
@@ -7735,15 +7762,15 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:283:2: ( memberExpression -> ^( MEMBER_EXPR memberExpression ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:283:4: memberExpression
+                # ../src/checkjs/parsers/antlr/JavaScript.g:282:2: ( memberExpression -> ^( MEMBER_EXPR memberExpression ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:282:4: memberExpression
                 pass 
-                self._state.following.append(self.FOLLOW_memberExpression_in_leftHandSideExpression1899)
-                memberExpression290 = self.memberExpression()
+                self._state.following.append(self.FOLLOW_memberExpression_in_leftHandSideExpression1901)
+                memberExpression292 = self.memberExpression()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_memberExpression.add(memberExpression290.tree)
+                    stream_memberExpression.add(memberExpression292.tree)
 
                 # AST Rewrite
                 # elements: memberExpression
@@ -7763,8 +7790,8 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 283:21: -> ^( MEMBER_EXPR memberExpression )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:283:24: ^( MEMBER_EXPR memberExpression )
+                    # 282:21: -> ^( MEMBER_EXPR memberExpression )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:282:24: ^( MEMBER_EXPR memberExpression )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(MEMBER_EXPR, "MEMBER_EXPR"), root_1)
 
@@ -7810,7 +7837,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "newExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:286:1: newExpression : ( memberExpression | 'new' ( LT )* newExpression );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:285:1: newExpression : ( memberExpression | 'new' ( LT )* newExpression );
     def newExpression(self, ):
 
         retval = self.newExpression_return()
@@ -7818,15 +7845,15 @@ class JavaScriptParser(Parser):
         newExpression_StartIndex = self.input.index()
         root_0 = None
 
-        string_literal292 = None
-        LT293 = None
-        memberExpression291 = None
+        string_literal294 = None
+        LT295 = None
+        memberExpression293 = None
 
-        newExpression294 = None
+        newExpression296 = None
 
 
-        string_literal292_tree = None
-        LT293_tree = None
+        string_literal294_tree = None
+        LT295_tree = None
 
         success = False
         try:
@@ -7836,56 +7863,56 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:287:2: ( memberExpression | 'new' ( LT )* newExpression )
-                alt147 = 2
-                alt147 = self.dfa147.predict(self.input)
-                if alt147 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:287:4: memberExpression
+                # ../src/checkjs/parsers/antlr/JavaScript.g:286:2: ( memberExpression | 'new' ( LT )* newExpression )
+                alt148 = 2
+                alt148 = self.dfa148.predict(self.input)
+                if alt148 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:286:4: memberExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_memberExpression_in_newExpression1919)
-                    memberExpression291 = self.memberExpression()
+                    self._state.following.append(self.FOLLOW_memberExpression_in_newExpression1921)
+                    memberExpression293 = self.memberExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, memberExpression291.tree)
+                        self._adaptor.addChild(root_0, memberExpression293.tree)
 
 
-                elif alt147 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:288:4: 'new' ( LT )* newExpression
+                elif alt148 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:287:4: 'new' ( LT )* newExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal292=self.match(self.input, 81, self.FOLLOW_81_in_newExpression1924)
+                    string_literal294=self.match(self.input, 81, self.FOLLOW_81_in_newExpression1926)
                     if self._state.backtracking == 0:
 
-                        string_literal292_tree = self._adaptor.createWithPayload(string_literal292)
-                        self._adaptor.addChild(root_0, string_literal292_tree)
+                        string_literal294_tree = self._adaptor.createWithPayload(string_literal294)
+                        self._adaptor.addChild(root_0, string_literal294_tree)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:288:12: ( LT )*
-                    while True: #loop146
-                        alt146 = 2
-                        LA146_0 = self.input.LA(1)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:287:12: ( LT )*
+                    while True: #loop147
+                        alt147 = 2
+                        LA147_0 = self.input.LA(1)
 
-                        if (LA146_0 == LT) :
-                            alt146 = 1
+                        if (LA147_0 == LT) :
+                            alt147 = 1
 
 
-                        if alt146 == 1:
+                        if alt147 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT293=self.match(self.input, LT, self.FOLLOW_LT_in_newExpression1926)
+                            LT295=self.match(self.input, LT, self.FOLLOW_LT_in_newExpression1928)
 
 
                         else:
-                            break #loop146
-                    self._state.following.append(self.FOLLOW_newExpression_in_newExpression1930)
-                    newExpression294 = self.newExpression()
+                            break #loop147
+                    self._state.following.append(self.FOLLOW_newExpression_in_newExpression1932)
+                    newExpression296 = self.newExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, newExpression294.tree)
+                        self._adaptor.addChild(root_0, newExpression296.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -7920,7 +7947,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "memberExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:291:1: memberExpression : ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )* ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:290:1: memberExpression : ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )* ;
     def memberExpression(self, ):
 
         retval = self.memberExpression_return()
@@ -7928,25 +7955,25 @@ class JavaScriptParser(Parser):
         memberExpression_StartIndex = self.input.index()
         root_0 = None
 
-        string_literal297 = None
-        LT298 = None
+        string_literal299 = None
         LT300 = None
         LT302 = None
-        primaryExpression295 = None
+        LT304 = None
+        primaryExpression297 = None
 
-        functionExpression296 = None
+        functionExpression298 = None
 
-        memberExpression299 = None
+        memberExpression301 = None
 
-        arguments301 = None
+        arguments303 = None
 
-        memberExpressionSuffix303 = None
+        memberExpressionSuffix305 = None
 
 
-        string_literal297_tree = None
-        LT298_tree = None
+        string_literal299_tree = None
         LT300_tree = None
         LT302_tree = None
+        LT304_tree = None
 
         success = False
         try:
@@ -7956,83 +7983,60 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:292:2: ( ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )* )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:292:4: ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )*
+                # ../src/checkjs/parsers/antlr/JavaScript.g:291:2: ( ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )* )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:291:4: ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments ) ( ( LT )* memberExpressionSuffix )*
                 pass 
                 root_0 = self._adaptor.nil()
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:292:4: ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments )
-                alt150 = 3
-                LA150 = self.input.LA(1)
-                if LA150 == Identifier or LA150 == StringLiteral or LA150 == NumericLiteral or LA150 == 55 or LA150 == 58 or LA150 == 82 or LA150 == 120 or LA150 == 121 or LA150 == 122 or LA150 == 123:
-                    alt150 = 1
-                elif LA150 == 53:
-                    alt150 = 2
-                elif LA150 == 81:
-                    alt150 = 3
+                # ../src/checkjs/parsers/antlr/JavaScript.g:291:4: ( primaryExpression | functionExpression | 'new' ( LT )* memberExpression ( LT )* arguments )
+                alt151 = 3
+                LA151 = self.input.LA(1)
+                if LA151 == Identifier or LA151 == StringLiteral or LA151 == NumericLiteral or LA151 == 55 or LA151 == 58 or LA151 == 82 or LA151 == 119 or LA151 == 120 or LA151 == 121 or LA151 == 122:
+                    alt151 = 1
+                elif LA151 == 53:
+                    alt151 = 2
+                elif LA151 == 81:
+                    alt151 = 3
                 else:
                     if self._state.backtracking > 0:
                         raise BacktrackingFailed
 
-                    nvae = NoViableAltException("", 150, 0, self.input)
+                    nvae = NoViableAltException("", 151, 0, self.input)
 
                     raise nvae
 
-                if alt150 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:292:5: primaryExpression
+                if alt151 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:291:5: primaryExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_primaryExpression_in_memberExpression1942)
-                    primaryExpression295 = self.primaryExpression()
+                    self._state.following.append(self.FOLLOW_primaryExpression_in_memberExpression1944)
+                    primaryExpression297 = self.primaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, primaryExpression295.tree)
+                        self._adaptor.addChild(root_0, primaryExpression297.tree)
 
 
-                elif alt150 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:292:25: functionExpression
+                elif alt151 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:291:25: functionExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_functionExpression_in_memberExpression1946)
-                    functionExpression296 = self.functionExpression()
+                    self._state.following.append(self.FOLLOW_functionExpression_in_memberExpression1948)
+                    functionExpression298 = self.functionExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, functionExpression296.tree)
+                        self._adaptor.addChild(root_0, functionExpression298.tree)
 
 
-                elif alt150 == 3:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:292:46: 'new' ( LT )* memberExpression ( LT )* arguments
+                elif alt151 == 3:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:291:46: 'new' ( LT )* memberExpression ( LT )* arguments
                     pass 
-                    string_literal297=self.match(self.input, 81, self.FOLLOW_81_in_memberExpression1950)
+                    string_literal299=self.match(self.input, 81, self.FOLLOW_81_in_memberExpression1952)
                     if self._state.backtracking == 0:
 
-                        string_literal297_tree = self._adaptor.createWithPayload(string_literal297)
-                        self._adaptor.addChild(root_0, string_literal297_tree)
+                        string_literal299_tree = self._adaptor.createWithPayload(string_literal299)
+                        self._adaptor.addChild(root_0, string_literal299_tree)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:292:54: ( LT )*
-                    while True: #loop148
-                        alt148 = 2
-                        LA148_0 = self.input.LA(1)
-
-                        if (LA148_0 == LT) :
-                            alt148 = 1
-
-
-                        if alt148 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT298=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1952)
-
-
-                        else:
-                            break #loop148
-                    self._state.following.append(self.FOLLOW_memberExpression_in_memberExpression1956)
-                    memberExpression299 = self.memberExpression()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, memberExpression299.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:292:76: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:291:54: ( LT )*
                     while True: #loop149
                         alt149 = 2
                         LA149_0 = self.input.LA(1)
@@ -8044,54 +8048,77 @@ class JavaScriptParser(Parser):
                         if alt149 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT300=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1958)
+                            LT300=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1954)
 
 
                         else:
                             break #loop149
-                    self._state.following.append(self.FOLLOW_arguments_in_memberExpression1962)
-                    arguments301 = self.arguments()
+                    self._state.following.append(self.FOLLOW_memberExpression_in_memberExpression1958)
+                    memberExpression301 = self.memberExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, arguments301.tree)
+                        self._adaptor.addChild(root_0, memberExpression301.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:291:76: ( LT )*
+                    while True: #loop150
+                        alt150 = 2
+                        LA150_0 = self.input.LA(1)
+
+                        if (LA150_0 == LT) :
+                            alt150 = 1
+
+
+                        if alt150 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT302=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1960)
+
+
+                        else:
+                            break #loop150
+                    self._state.following.append(self.FOLLOW_arguments_in_memberExpression1964)
+                    arguments303 = self.arguments()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        self._adaptor.addChild(root_0, arguments303.tree)
 
 
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:292:90: ( ( LT )* memberExpressionSuffix )*
-                while True: #loop152
-                    alt152 = 2
-                    alt152 = self.dfa152.predict(self.input)
-                    if alt152 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:292:91: ( LT )* memberExpressionSuffix
+                # ../src/checkjs/parsers/antlr/JavaScript.g:291:90: ( ( LT )* memberExpressionSuffix )*
+                while True: #loop153
+                    alt153 = 2
+                    alt153 = self.dfa153.predict(self.input)
+                    if alt153 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:291:91: ( LT )* memberExpressionSuffix
                         pass 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:292:93: ( LT )*
-                        while True: #loop151
-                            alt151 = 2
-                            LA151_0 = self.input.LA(1)
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:291:93: ( LT )*
+                        while True: #loop152
+                            alt152 = 2
+                            LA152_0 = self.input.LA(1)
 
-                            if (LA151_0 == LT) :
-                                alt151 = 1
+                            if (LA152_0 == LT) :
+                                alt152 = 1
 
 
-                            if alt151 == 1:
+                            if alt152 == 1:
                                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                 pass 
-                                LT302=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1966)
+                                LT304=self.match(self.input, LT, self.FOLLOW_LT_in_memberExpression1968)
 
 
                             else:
-                                break #loop151
-                        self._state.following.append(self.FOLLOW_memberExpressionSuffix_in_memberExpression1970)
-                        memberExpressionSuffix303 = self.memberExpressionSuffix()
+                                break #loop152
+                        self._state.following.append(self.FOLLOW_memberExpressionSuffix_in_memberExpression1972)
+                        memberExpressionSuffix305 = self.memberExpressionSuffix()
 
                         self._state.following.pop()
                         if self._state.backtracking == 0:
-                            self._adaptor.addChild(root_0, memberExpressionSuffix303.tree)
+                            self._adaptor.addChild(root_0, memberExpressionSuffix305.tree)
 
 
                     else:
-                        break #loop152
+                        break #loop153
 
 
 
@@ -8127,7 +8154,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "memberExpressionSuffix"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:295:1: memberExpressionSuffix : ( indexSuffix | propertyReferenceSuffix );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:294:1: memberExpressionSuffix : ( indexSuffix | propertyReferenceSuffix );
     def memberExpressionSuffix(self, ):
 
         retval = self.memberExpressionSuffix_return()
@@ -8135,9 +8162,9 @@ class JavaScriptParser(Parser):
         memberExpressionSuffix_StartIndex = self.input.index()
         root_0 = None
 
-        indexSuffix304 = None
+        indexSuffix306 = None
 
-        propertyReferenceSuffix305 = None
+        propertyReferenceSuffix307 = None
 
 
 
@@ -8149,46 +8176,46 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:296:2: ( indexSuffix | propertyReferenceSuffix )
-                alt153 = 2
-                LA153_0 = self.input.LA(1)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:295:2: ( indexSuffix | propertyReferenceSuffix )
+                alt154 = 2
+                LA154_0 = self.input.LA(1)
 
-                if (LA153_0 == 82) :
-                    alt153 = 1
-                elif (LA153_0 == 84) :
-                    alt153 = 2
+                if (LA154_0 == 82) :
+                    alt154 = 1
+                elif (LA154_0 == 80) :
+                    alt154 = 2
                 else:
                     if self._state.backtracking > 0:
                         raise BacktrackingFailed
 
-                    nvae = NoViableAltException("", 153, 0, self.input)
+                    nvae = NoViableAltException("", 154, 0, self.input)
 
                     raise nvae
 
-                if alt153 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:296:4: indexSuffix
+                if alt154 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:295:4: indexSuffix
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_indexSuffix_in_memberExpressionSuffix1983)
-                    indexSuffix304 = self.indexSuffix()
+                    self._state.following.append(self.FOLLOW_indexSuffix_in_memberExpressionSuffix1985)
+                    indexSuffix306 = self.indexSuffix()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, indexSuffix304.tree)
+                        self._adaptor.addChild(root_0, indexSuffix306.tree)
 
 
-                elif alt153 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:297:4: propertyReferenceSuffix
+                elif alt154 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:296:4: propertyReferenceSuffix
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_propertyReferenceSuffix_in_memberExpressionSuffix1988)
-                    propertyReferenceSuffix305 = self.propertyReferenceSuffix()
+                    self._state.following.append(self.FOLLOW_propertyReferenceSuffix_in_memberExpressionSuffix1990)
+                    propertyReferenceSuffix307 = self.propertyReferenceSuffix()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, propertyReferenceSuffix305.tree)
+                        self._adaptor.addChild(root_0, propertyReferenceSuffix307.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -8223,7 +8250,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "callExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:300:1: callExpression : memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )* -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:299:1: callExpression : memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )* -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* ) ;
     def callExpression(self, ):
 
         retval = self.callExpression_return()
@@ -8231,17 +8258,17 @@ class JavaScriptParser(Parser):
         callExpression_StartIndex = self.input.index()
         root_0 = None
 
-        LT307 = None
         LT309 = None
-        memberExpression306 = None
+        LT311 = None
+        memberExpression308 = None
 
-        arguments308 = None
+        arguments310 = None
 
-        callExpressionSuffix310 = None
+        callExpressionSuffix312 = None
 
 
-        LT307_tree = None
         LT309_tree = None
+        LT311_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_memberExpression = RewriteRuleSubtreeStream(self._adaptor, "rule memberExpression")
         stream_arguments = RewriteRuleSubtreeStream(self._adaptor, "rule arguments")
@@ -8254,79 +8281,79 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:301:2: ( memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )* -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:301:4: memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )*
+                # ../src/checkjs/parsers/antlr/JavaScript.g:300:2: ( memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )* -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:300:4: memberExpression ( LT )* arguments ( ( LT )* callExpressionSuffix )*
                 pass 
-                self._state.following.append(self.FOLLOW_memberExpression_in_callExpression1999)
-                memberExpression306 = self.memberExpression()
+                self._state.following.append(self.FOLLOW_memberExpression_in_callExpression2001)
+                memberExpression308 = self.memberExpression()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_memberExpression.add(memberExpression306.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:301:21: ( LT )*
-                while True: #loop154
-                    alt154 = 2
-                    LA154_0 = self.input.LA(1)
+                    stream_memberExpression.add(memberExpression308.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:300:21: ( LT )*
+                while True: #loop155
+                    alt155 = 2
+                    LA155_0 = self.input.LA(1)
 
-                    if (LA154_0 == LT) :
-                        alt154 = 1
+                    if (LA155_0 == LT) :
+                        alt155 = 1
 
 
-                    if alt154 == 1:
+                    if alt155 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT307=self.match(self.input, LT, self.FOLLOW_LT_in_callExpression2001) 
+                        LT309=self.match(self.input, LT, self.FOLLOW_LT_in_callExpression2003) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT307)
+                            stream_LT.add(LT309)
 
 
                     else:
-                        break #loop154
-                self._state.following.append(self.FOLLOW_arguments_in_callExpression2004)
-                arguments308 = self.arguments()
+                        break #loop155
+                self._state.following.append(self.FOLLOW_arguments_in_callExpression2006)
+                arguments310 = self.arguments()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_arguments.add(arguments308.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:301:35: ( ( LT )* callExpressionSuffix )*
-                while True: #loop156
-                    alt156 = 2
-                    alt156 = self.dfa156.predict(self.input)
-                    if alt156 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:301:36: ( LT )* callExpressionSuffix
+                    stream_arguments.add(arguments310.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:300:35: ( ( LT )* callExpressionSuffix )*
+                while True: #loop157
+                    alt157 = 2
+                    alt157 = self.dfa157.predict(self.input)
+                    if alt157 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:300:36: ( LT )* callExpressionSuffix
                         pass 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:301:36: ( LT )*
-                        while True: #loop155
-                            alt155 = 2
-                            LA155_0 = self.input.LA(1)
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:300:36: ( LT )*
+                        while True: #loop156
+                            alt156 = 2
+                            LA156_0 = self.input.LA(1)
 
-                            if (LA155_0 == LT) :
-                                alt155 = 1
+                            if (LA156_0 == LT) :
+                                alt156 = 1
 
 
-                            if alt155 == 1:
+                            if alt156 == 1:
                                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                 pass 
-                                LT309=self.match(self.input, LT, self.FOLLOW_LT_in_callExpression2007) 
+                                LT311=self.match(self.input, LT, self.FOLLOW_LT_in_callExpression2009) 
                                 if self._state.backtracking == 0:
-                                    stream_LT.add(LT309)
+                                    stream_LT.add(LT311)
 
 
                             else:
-                                break #loop155
-                        self._state.following.append(self.FOLLOW_callExpressionSuffix_in_callExpression2010)
-                        callExpressionSuffix310 = self.callExpressionSuffix()
+                                break #loop156
+                        self._state.following.append(self.FOLLOW_callExpressionSuffix_in_callExpression2012)
+                        callExpressionSuffix312 = self.callExpressionSuffix()
 
                         self._state.following.pop()
                         if self._state.backtracking == 0:
-                            stream_callExpressionSuffix.add(callExpressionSuffix310.tree)
+                            stream_callExpressionSuffix.add(callExpressionSuffix312.tree)
 
 
                     else:
-                        break #loop156
+                        break #loop157
 
                 # AST Rewrite
-                # elements: callExpressionSuffix, arguments, memberExpression
+                # elements: callExpressionSuffix, memberExpression, arguments
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -8343,12 +8370,12 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 301:63: -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:302:9: ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* )
+                    # 300:63: -> ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:301:9: ^( CALL ^( CALL_IDENTIFIER memberExpression ) arguments ( callExpressionSuffix )* )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(CALL, "CALL"), root_1)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:302:16: ^( CALL_IDENTIFIER memberExpression )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:301:16: ^( CALL_IDENTIFIER memberExpression )
                     root_2 = self._adaptor.nil()
                     root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(CALL_IDENTIFIER, "CALL_IDENTIFIER"), root_2)
 
@@ -8356,7 +8383,7 @@ class JavaScriptParser(Parser):
 
                     self._adaptor.addChild(root_1, root_2)
                     self._adaptor.addChild(root_1, stream_arguments.nextTree())
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:302:62: ( callExpressionSuffix )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:301:62: ( callExpressionSuffix )*
                     while stream_callExpressionSuffix.hasNext():
                         self._adaptor.addChild(root_1, stream_callExpressionSuffix.nextTree())
 
@@ -8403,7 +8430,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "callExpressionSuffix"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:305:1: callExpressionSuffix : ( arguments | indexSuffix | propertyReferenceSuffix );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:304:1: callExpressionSuffix : ( arguments | indexSuffix | propertyReferenceSuffix );
     def callExpressionSuffix(self, ):
 
         retval = self.callExpressionSuffix_return()
@@ -8411,11 +8438,11 @@ class JavaScriptParser(Parser):
         callExpressionSuffix_StartIndex = self.input.index()
         root_0 = None
 
-        arguments311 = None
+        arguments313 = None
 
-        indexSuffix312 = None
+        indexSuffix314 = None
 
-        propertyReferenceSuffix313 = None
+        propertyReferenceSuffix315 = None
 
 
 
@@ -8427,60 +8454,60 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:306:2: ( arguments | indexSuffix | propertyReferenceSuffix )
-                alt157 = 3
-                LA157 = self.input.LA(1)
-                if LA157 == 55:
-                    alt157 = 1
-                elif LA157 == 82:
-                    alt157 = 2
-                elif LA157 == 84:
-                    alt157 = 3
+                # ../src/checkjs/parsers/antlr/JavaScript.g:305:2: ( arguments | indexSuffix | propertyReferenceSuffix )
+                alt158 = 3
+                LA158 = self.input.LA(1)
+                if LA158 == 55:
+                    alt158 = 1
+                elif LA158 == 82:
+                    alt158 = 2
+                elif LA158 == 80:
+                    alt158 = 3
                 else:
                     if self._state.backtracking > 0:
                         raise BacktrackingFailed
 
-                    nvae = NoViableAltException("", 157, 0, self.input)
+                    nvae = NoViableAltException("", 158, 0, self.input)
 
                     raise nvae
 
-                if alt157 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:306:4: arguments
+                if alt158 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:305:4: arguments
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_arguments_in_callExpressionSuffix2048)
-                    arguments311 = self.arguments()
+                    self._state.following.append(self.FOLLOW_arguments_in_callExpressionSuffix2050)
+                    arguments313 = self.arguments()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, arguments311.tree)
+                        self._adaptor.addChild(root_0, arguments313.tree)
 
 
-                elif alt157 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:307:4: indexSuffix
+                elif alt158 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:306:4: indexSuffix
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_indexSuffix_in_callExpressionSuffix2053)
-                    indexSuffix312 = self.indexSuffix()
+                    self._state.following.append(self.FOLLOW_indexSuffix_in_callExpressionSuffix2055)
+                    indexSuffix314 = self.indexSuffix()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, indexSuffix312.tree)
+                        self._adaptor.addChild(root_0, indexSuffix314.tree)
 
 
-                elif alt157 == 3:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:308:4: propertyReferenceSuffix
+                elif alt158 == 3:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:307:4: propertyReferenceSuffix
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_propertyReferenceSuffix_in_callExpressionSuffix2058)
-                    propertyReferenceSuffix313 = self.propertyReferenceSuffix()
+                    self._state.following.append(self.FOLLOW_propertyReferenceSuffix_in_callExpressionSuffix2060)
+                    propertyReferenceSuffix315 = self.propertyReferenceSuffix()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, propertyReferenceSuffix313.tree)
+                        self._adaptor.addChild(root_0, propertyReferenceSuffix315.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -8515,7 +8542,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "arguments"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:311:1: arguments : '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')' -> ^( CALL_ARGUMENTS ( assignmentExpression )* ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:310:1: arguments : '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')' -> ^( CALL_ARGUMENTS ( assignmentExpression )* ) ;
     def arguments(self, ):
 
         retval = self.arguments_return()
@@ -8523,25 +8550,25 @@ class JavaScriptParser(Parser):
         arguments_StartIndex = self.input.index()
         root_0 = None
 
-        char_literal314 = None
-        LT315 = None
+        char_literal316 = None
         LT317 = None
-        char_literal318 = None
         LT319 = None
+        char_literal320 = None
         LT321 = None
-        char_literal322 = None
-        assignmentExpression316 = None
+        LT323 = None
+        char_literal324 = None
+        assignmentExpression318 = None
 
-        assignmentExpression320 = None
+        assignmentExpression322 = None
 
 
-        char_literal314_tree = None
-        LT315_tree = None
+        char_literal316_tree = None
         LT317_tree = None
-        char_literal318_tree = None
         LT319_tree = None
+        char_literal320_tree = None
         LT321_tree = None
-        char_literal322_tree = None
+        LT323_tree = None
+        char_literal324_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_57 = RewriteRuleTokenStream(self._adaptor, "token 57")
         stream_56 = RewriteRuleTokenStream(self._adaptor, "token 56")
@@ -8555,73 +8582,51 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:312:2: ( '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')' -> ^( CALL_ARGUMENTS ( assignmentExpression )* ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:312:4: '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')'
+                # ../src/checkjs/parsers/antlr/JavaScript.g:311:2: ( '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')' -> ^( CALL_ARGUMENTS ( assignmentExpression )* ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:311:4: '(' ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )? ( LT )* ')'
                 pass 
-                char_literal314=self.match(self.input, 55, self.FOLLOW_55_in_arguments2069) 
+                char_literal316=self.match(self.input, 55, self.FOLLOW_55_in_arguments2071) 
                 if self._state.backtracking == 0:
-                    stream_55.add(char_literal314)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:312:8: ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )?
-                alt162 = 2
-                alt162 = self.dfa162.predict(self.input)
-                if alt162 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:312:9: ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )*
+                    stream_55.add(char_literal316)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:311:8: ( ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )* )?
+                alt163 = 2
+                alt163 = self.dfa163.predict(self.input)
+                if alt163 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:311:9: ( LT )* assignmentExpression ( ( LT )* ',' ( LT )* assignmentExpression )*
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:312:9: ( LT )*
-                    while True: #loop158
-                        alt158 = 2
-                        LA158_0 = self.input.LA(1)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:311:9: ( LT )*
+                    while True: #loop159
+                        alt159 = 2
+                        LA159_0 = self.input.LA(1)
 
-                        if (LA158_0 == LT) :
-                            alt158 = 1
+                        if (LA159_0 == LT) :
+                            alt159 = 1
 
 
-                        if alt158 == 1:
+                        if alt159 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT315=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2072) 
+                            LT317=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2074) 
                             if self._state.backtracking == 0:
-                                stream_LT.add(LT315)
+                                stream_LT.add(LT317)
 
 
                         else:
-                            break #loop158
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arguments2075)
-                    assignmentExpression316 = self.assignmentExpression()
+                            break #loop159
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arguments2077)
+                    assignmentExpression318 = self.assignmentExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_assignmentExpression.add(assignmentExpression316.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:312:34: ( ( LT )* ',' ( LT )* assignmentExpression )*
-                    while True: #loop161
-                        alt161 = 2
-                        alt161 = self.dfa161.predict(self.input)
-                        if alt161 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:312:35: ( LT )* ',' ( LT )* assignmentExpression
+                        stream_assignmentExpression.add(assignmentExpression318.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:311:34: ( ( LT )* ',' ( LT )* assignmentExpression )*
+                    while True: #loop162
+                        alt162 = 2
+                        alt162 = self.dfa162.predict(self.input)
+                        if alt162 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:311:35: ( LT )* ',' ( LT )* assignmentExpression
                             pass 
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:312:35: ( LT )*
-                            while True: #loop159
-                                alt159 = 2
-                                LA159_0 = self.input.LA(1)
-
-                                if (LA159_0 == LT) :
-                                    alt159 = 1
-
-
-                                if alt159 == 1:
-                                    # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                                    pass 
-                                    LT317=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2078) 
-                                    if self._state.backtracking == 0:
-                                        stream_LT.add(LT317)
-
-
-                                else:
-                                    break #loop159
-                            char_literal318=self.match(self.input, 56, self.FOLLOW_56_in_arguments2081) 
-                            if self._state.backtracking == 0:
-                                stream_56.add(char_literal318)
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:312:43: ( LT )*
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:311:35: ( LT )*
                             while True: #loop160
                                 alt160 = 2
                                 LA160_0 = self.input.LA(1)
@@ -8633,48 +8638,70 @@ class JavaScriptParser(Parser):
                                 if alt160 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT319=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2083) 
+                                    LT319=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2080) 
                                     if self._state.backtracking == 0:
                                         stream_LT.add(LT319)
 
 
                                 else:
                                     break #loop160
-                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arguments2086)
-                            assignmentExpression320 = self.assignmentExpression()
+                            char_literal320=self.match(self.input, 56, self.FOLLOW_56_in_arguments2083) 
+                            if self._state.backtracking == 0:
+                                stream_56.add(char_literal320)
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:311:43: ( LT )*
+                            while True: #loop161
+                                alt161 = 2
+                                LA161_0 = self.input.LA(1)
+
+                                if (LA161_0 == LT) :
+                                    alt161 = 1
+
+
+                                if alt161 == 1:
+                                    # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                                    pass 
+                                    LT321=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2085) 
+                                    if self._state.backtracking == 0:
+                                        stream_LT.add(LT321)
+
+
+                                else:
+                                    break #loop161
+                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arguments2088)
+                            assignmentExpression322 = self.assignmentExpression()
 
                             self._state.following.pop()
                             if self._state.backtracking == 0:
-                                stream_assignmentExpression.add(assignmentExpression320.tree)
+                                stream_assignmentExpression.add(assignmentExpression322.tree)
 
 
                         else:
-                            break #loop161
+                            break #loop162
 
 
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:312:73: ( LT )*
-                while True: #loop163
-                    alt163 = 2
-                    LA163_0 = self.input.LA(1)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:311:73: ( LT )*
+                while True: #loop164
+                    alt164 = 2
+                    LA164_0 = self.input.LA(1)
 
-                    if (LA163_0 == LT) :
-                        alt163 = 1
+                    if (LA164_0 == LT) :
+                        alt164 = 1
 
 
-                    if alt163 == 1:
+                    if alt164 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT321=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2093) 
+                        LT323=self.match(self.input, LT, self.FOLLOW_LT_in_arguments2095) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT321)
+                            stream_LT.add(LT323)
 
 
                     else:
-                        break #loop163
-                char_literal322=self.match(self.input, 57, self.FOLLOW_57_in_arguments2096) 
+                        break #loop164
+                char_literal324=self.match(self.input, 57, self.FOLLOW_57_in_arguments2098) 
                 if self._state.backtracking == 0:
-                    stream_57.add(char_literal322)
+                    stream_57.add(char_literal324)
 
                 # AST Rewrite
                 # elements: assignmentExpression
@@ -8694,12 +8721,12 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 312:81: -> ^( CALL_ARGUMENTS ( assignmentExpression )* )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:313:9: ^( CALL_ARGUMENTS ( assignmentExpression )* )
+                    # 311:81: -> ^( CALL_ARGUMENTS ( assignmentExpression )* )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:312:9: ^( CALL_ARGUMENTS ( assignmentExpression )* )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(CALL_ARGUMENTS, "CALL_ARGUMENTS"), root_1)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:313:27: ( assignmentExpression )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:312:27: ( assignmentExpression )*
                     while stream_assignmentExpression.hasNext():
                         self._adaptor.addChild(root_1, stream_assignmentExpression.nextTree())
 
@@ -8746,7 +8773,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "indexSuffix"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:316:1: indexSuffix : '[' ( LT )* expression ( LT )* ']' -> ^( INDEX expression ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:315:1: indexSuffix : '[' ( LT )* expression ( LT )* ']' -> ^( INDEX expression ) ;
     def indexSuffix(self, ):
 
         retval = self.indexSuffix_return()
@@ -8754,17 +8781,17 @@ class JavaScriptParser(Parser):
         indexSuffix_StartIndex = self.input.index()
         root_0 = None
 
-        char_literal323 = None
-        LT324 = None
+        char_literal325 = None
         LT326 = None
-        char_literal327 = None
-        expression325 = None
+        LT328 = None
+        char_literal329 = None
+        expression327 = None
 
 
-        char_literal323_tree = None
-        LT324_tree = None
+        char_literal325_tree = None
         LT326_tree = None
-        char_literal327_tree = None
+        LT328_tree = None
+        char_literal329_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_82 = RewriteRuleTokenStream(self._adaptor, "token 82")
         stream_83 = RewriteRuleTokenStream(self._adaptor, "token 83")
@@ -8777,38 +8804,13 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:317:2: ( '[' ( LT )* expression ( LT )* ']' -> ^( INDEX expression ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:317:4: '[' ( LT )* expression ( LT )* ']'
+                # ../src/checkjs/parsers/antlr/JavaScript.g:316:2: ( '[' ( LT )* expression ( LT )* ']' -> ^( INDEX expression ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:316:4: '[' ( LT )* expression ( LT )* ']'
                 pass 
-                char_literal323=self.match(self.input, 82, self.FOLLOW_82_in_indexSuffix2125) 
+                char_literal325=self.match(self.input, 82, self.FOLLOW_82_in_indexSuffix2127) 
                 if self._state.backtracking == 0:
-                    stream_82.add(char_literal323)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:317:8: ( LT )*
-                while True: #loop164
-                    alt164 = 2
-                    LA164_0 = self.input.LA(1)
-
-                    if (LA164_0 == LT) :
-                        alt164 = 1
-
-
-                    if alt164 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                        pass 
-                        LT324=self.match(self.input, LT, self.FOLLOW_LT_in_indexSuffix2127) 
-                        if self._state.backtracking == 0:
-                            stream_LT.add(LT324)
-
-
-                    else:
-                        break #loop164
-                self._state.following.append(self.FOLLOW_expression_in_indexSuffix2130)
-                expression325 = self.expression()
-
-                self._state.following.pop()
-                if self._state.backtracking == 0:
-                    stream_expression.add(expression325.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:317:23: ( LT )*
+                    stream_82.add(char_literal325)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:316:8: ( LT )*
                 while True: #loop165
                     alt165 = 2
                     LA165_0 = self.input.LA(1)
@@ -8820,16 +8822,41 @@ class JavaScriptParser(Parser):
                     if alt165 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT326=self.match(self.input, LT, self.FOLLOW_LT_in_indexSuffix2132) 
+                        LT326=self.match(self.input, LT, self.FOLLOW_LT_in_indexSuffix2129) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT326)
 
 
                     else:
                         break #loop165
-                char_literal327=self.match(self.input, 83, self.FOLLOW_83_in_indexSuffix2135) 
+                self._state.following.append(self.FOLLOW_expression_in_indexSuffix2132)
+                expression327 = self.expression()
+
+                self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_83.add(char_literal327)
+                    stream_expression.add(expression327.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:316:23: ( LT )*
+                while True: #loop166
+                    alt166 = 2
+                    LA166_0 = self.input.LA(1)
+
+                    if (LA166_0 == LT) :
+                        alt166 = 1
+
+
+                    if alt166 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                        pass 
+                        LT328=self.match(self.input, LT, self.FOLLOW_LT_in_indexSuffix2134) 
+                        if self._state.backtracking == 0:
+                            stream_LT.add(LT328)
+
+
+                    else:
+                        break #loop166
+                char_literal329=self.match(self.input, 83, self.FOLLOW_83_in_indexSuffix2137) 
+                if self._state.backtracking == 0:
+                    stream_83.add(char_literal329)
 
                 # AST Rewrite
                 # elements: expression
@@ -8849,8 +8876,8 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 317:31: -> ^( INDEX expression )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:317:34: ^( INDEX expression )
+                    # 316:31: -> ^( INDEX expression )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:316:34: ^( INDEX expression )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(INDEX, "INDEX"), root_1)
 
@@ -8896,7 +8923,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "propertyReferenceSuffix"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:320:1: propertyReferenceSuffix : '.' ( LT )* Identifier -> ^( MEMBER Identifier ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:319:1: propertyReferenceSuffix : '.' ( LT )* Identifier -> ^( MEMBER Identifier ) ;
     def propertyReferenceSuffix(self, ):
 
         retval = self.propertyReferenceSuffix_return()
@@ -8904,16 +8931,16 @@ class JavaScriptParser(Parser):
         propertyReferenceSuffix_StartIndex = self.input.index()
         root_0 = None
 
-        char_literal328 = None
-        LT329 = None
-        Identifier330 = None
+        char_literal330 = None
+        LT331 = None
+        Identifier332 = None
 
-        char_literal328_tree = None
-        LT329_tree = None
-        Identifier330_tree = None
+        char_literal330_tree = None
+        LT331_tree = None
+        Identifier332_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
+        stream_80 = RewriteRuleTokenStream(self._adaptor, "token 80")
         stream_Identifier = RewriteRuleTokenStream(self._adaptor, "token Identifier")
-        stream_84 = RewriteRuleTokenStream(self._adaptor, "token 84")
 
         success = False
         try:
@@ -8923,34 +8950,34 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:321:2: ( '.' ( LT )* Identifier -> ^( MEMBER Identifier ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:321:4: '.' ( LT )* Identifier
+                # ../src/checkjs/parsers/antlr/JavaScript.g:320:2: ( '.' ( LT )* Identifier -> ^( MEMBER Identifier ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:320:4: '.' ( LT )* Identifier
                 pass 
-                char_literal328=self.match(self.input, 84, self.FOLLOW_84_in_propertyReferenceSuffix2155) 
+                char_literal330=self.match(self.input, 80, self.FOLLOW_80_in_propertyReferenceSuffix2157) 
                 if self._state.backtracking == 0:
-                    stream_84.add(char_literal328)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:321:8: ( LT )*
-                while True: #loop166
-                    alt166 = 2
-                    LA166_0 = self.input.LA(1)
+                    stream_80.add(char_literal330)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:320:8: ( LT )*
+                while True: #loop167
+                    alt167 = 2
+                    LA167_0 = self.input.LA(1)
 
-                    if (LA166_0 == LT) :
-                        alt166 = 1
+                    if (LA167_0 == LT) :
+                        alt167 = 1
 
 
-                    if alt166 == 1:
+                    if alt167 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT329=self.match(self.input, LT, self.FOLLOW_LT_in_propertyReferenceSuffix2157) 
+                        LT331=self.match(self.input, LT, self.FOLLOW_LT_in_propertyReferenceSuffix2159) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT329)
+                            stream_LT.add(LT331)
 
 
                     else:
-                        break #loop166
-                Identifier330=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_propertyReferenceSuffix2160) 
+                        break #loop167
+                Identifier332=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_propertyReferenceSuffix2162) 
                 if self._state.backtracking == 0:
-                    stream_Identifier.add(Identifier330)
+                    stream_Identifier.add(Identifier332)
 
                 # AST Rewrite
                 # elements: Identifier
@@ -8970,8 +8997,8 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 321:23: -> ^( MEMBER Identifier )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:321:26: ^( MEMBER Identifier )
+                    # 320:23: -> ^( MEMBER Identifier )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:320:26: ^( MEMBER Identifier )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(MEMBER, "MEMBER"), root_1)
 
@@ -9017,7 +9044,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "assignmentOperator"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:324:1: assignmentOperator : ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '>>>=' | '&=' | '^=' | '|=' );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:323:1: assignmentOperator : ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '>>>=' | '&=' | '^=' | '|=' );
     def assignmentOperator(self, ):
 
         retval = self.assignmentOperator_return()
@@ -9025,9 +9052,9 @@ class JavaScriptParser(Parser):
         assignmentOperator_StartIndex = self.input.index()
         root_0 = None
 
-        set331 = None
+        set333 = None
 
-        set331_tree = None
+        set333_tree = None
 
         success = False
         try:
@@ -9037,16 +9064,16 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:325:2: ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '>>>=' | '&=' | '^=' | '|=' )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:324:2: ( '=' | '*=' | '/=' | '%=' | '+=' | '-=' | '<<=' | '>>=' | '>>>=' | '&=' | '^=' | '|=' )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:
                 pass 
                 root_0 = self._adaptor.nil()
 
-                set331 = self.input.LT(1)
-                if self.input.LA(1) == 61 or (85 <= self.input.LA(1) <= 95):
+                set333 = self.input.LT(1)
+                if self.input.LA(1) == 61 or (84 <= self.input.LA(1) <= 94):
                     self.input.consume()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set331))
+                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set333))
                     self._state.errorRecovery = False
 
                 else:
@@ -9092,7 +9119,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "conditionalExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:328:1: conditionalExpression : operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )? ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:327:1: conditionalExpression : operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )? ;
     def conditionalExpression(self, ):
 
         retval = self.conditionalExpression_return()
@@ -9100,25 +9127,25 @@ class JavaScriptParser(Parser):
         conditionalExpression_StartIndex = self.input.index()
         root_0 = None
 
-        LT333 = None
-        char_literal334 = None
         LT335 = None
+        char_literal336 = None
         LT337 = None
-        char_literal338 = None
         LT339 = None
-        operatorExpression332 = None
+        char_literal340 = None
+        LT341 = None
+        operatorExpression334 = None
 
-        operatorExpression336 = None
+        operatorExpression338 = None
 
-        operatorExpression340 = None
+        operatorExpression342 = None
 
 
-        LT333_tree = None
-        char_literal334_tree = None
         LT335_tree = None
+        char_literal336_tree = None
         LT337_tree = None
-        char_literal338_tree = None
         LT339_tree = None
+        char_literal340_tree = None
+        LT341_tree = None
 
         success = False
         try:
@@ -9128,47 +9155,24 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:329:2: ( operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )? )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:329:4: operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )?
+                # ../src/checkjs/parsers/antlr/JavaScript.g:328:2: ( operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )? )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:328:4: operatorExpression ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )?
                 pass 
                 root_0 = self._adaptor.nil()
 
-                self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2235)
-                operatorExpression332 = self.operatorExpression()
+                self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2237)
+                operatorExpression334 = self.operatorExpression()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    self._adaptor.addChild(root_0, operatorExpression332.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:329:23: ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )?
-                alt171 = 2
-                alt171 = self.dfa171.predict(self.input)
-                if alt171 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:329:24: ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression
+                    self._adaptor.addChild(root_0, operatorExpression334.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:328:23: ( ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression )?
+                alt172 = 2
+                alt172 = self.dfa172.predict(self.input)
+                if alt172 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:328:24: ( LT )* '?' ( LT )* operatorExpression ( LT )* ':' ( LT )* operatorExpression
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:329:26: ( LT )*
-                    while True: #loop167
-                        alt167 = 2
-                        LA167_0 = self.input.LA(1)
-
-                        if (LA167_0 == LT) :
-                            alt167 = 1
-
-
-                        if alt167 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT333=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2238)
-
-
-                        else:
-                            break #loop167
-                    char_literal334=self.match(self.input, 96, self.FOLLOW_96_in_conditionalExpression2242)
-                    if self._state.backtracking == 0:
-
-                        char_literal334_tree = self._adaptor.createWithPayload(char_literal334)
-                        self._adaptor.addChild(root_0, char_literal334_tree)
-
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:329:35: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:328:26: ( LT )*
                     while True: #loop168
                         alt168 = 2
                         LA168_0 = self.input.LA(1)
@@ -9180,18 +9184,18 @@ class JavaScriptParser(Parser):
                         if alt168 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT335=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2244)
+                            LT335=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2240)
 
 
                         else:
                             break #loop168
-                    self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2248)
-                    operatorExpression336 = self.operatorExpression()
-
-                    self._state.following.pop()
+                    char_literal336=self.match(self.input, 95, self.FOLLOW_95_in_conditionalExpression2244)
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, operatorExpression336.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:329:59: ( LT )*
+
+                        char_literal336_tree = self._adaptor.createWithPayload(char_literal336)
+                        self._adaptor.addChild(root_0, char_literal336_tree)
+
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:328:35: ( LT )*
                     while True: #loop169
                         alt169 = 2
                         LA169_0 = self.input.LA(1)
@@ -9203,18 +9207,18 @@ class JavaScriptParser(Parser):
                         if alt169 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT337=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2250)
+                            LT337=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2246)
 
 
                         else:
                             break #loop169
-                    char_literal338=self.match(self.input, 72, self.FOLLOW_72_in_conditionalExpression2254)
+                    self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2250)
+                    operatorExpression338 = self.operatorExpression()
+
+                    self._state.following.pop()
                     if self._state.backtracking == 0:
-
-                        char_literal338_tree = self._adaptor.createWithPayload(char_literal338)
-                        self._adaptor.addChild(root_0, char_literal338_tree)
-
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:329:68: ( LT )*
+                        self._adaptor.addChild(root_0, operatorExpression338.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:328:59: ( LT )*
                     while True: #loop170
                         alt170 = 2
                         LA170_0 = self.input.LA(1)
@@ -9226,17 +9230,40 @@ class JavaScriptParser(Parser):
                         if alt170 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT339=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2256)
+                            LT339=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2252)
 
 
                         else:
                             break #loop170
-                    self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2260)
-                    operatorExpression340 = self.operatorExpression()
+                    char_literal340=self.match(self.input, 72, self.FOLLOW_72_in_conditionalExpression2256)
+                    if self._state.backtracking == 0:
+
+                        char_literal340_tree = self._adaptor.createWithPayload(char_literal340)
+                        self._adaptor.addChild(root_0, char_literal340_tree)
+
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:328:68: ( LT )*
+                    while True: #loop171
+                        alt171 = 2
+                        LA171_0 = self.input.LA(1)
+
+                        if (LA171_0 == LT) :
+                            alt171 = 1
+
+
+                        if alt171 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT341=self.match(self.input, LT, self.FOLLOW_LT_in_conditionalExpression2258)
+
+
+                        else:
+                            break #loop171
+                    self._state.following.append(self.FOLLOW_operatorExpression_in_conditionalExpression2262)
+                    operatorExpression342 = self.operatorExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, operatorExpression340.tree)
+                        self._adaptor.addChild(root_0, operatorExpression342.tree)
 
 
 
@@ -9275,7 +9302,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "operatorExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:332:1: operatorExpression : ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:331:1: operatorExpression : ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression );
     def operatorExpression(self, ):
 
         retval = self.operatorExpression_return()
@@ -9283,19 +9310,19 @@ class JavaScriptParser(Parser):
         operatorExpression_StartIndex = self.input.index()
         root_0 = None
 
-        LT342 = None
         LT344 = None
-        leftHandSideExpression341 = None
+        LT346 = None
+        leftHandSideExpression343 = None
 
-        nonAssignmentOperator343 = None
+        nonAssignmentOperator345 = None
 
-        assignmentExpression345 = None
+        assignmentExpression347 = None
 
-        unaryExpression346 = None
+        unaryExpression348 = None
 
 
-        LT342_tree = None
         LT344_tree = None
+        LT346_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_leftHandSideExpression = RewriteRuleSubtreeStream(self._adaptor, "rule leftHandSideExpression")
         stream_nonAssignmentOperator = RewriteRuleSubtreeStream(self._adaptor, "rule nonAssignmentOperator")
@@ -9308,47 +9335,22 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:333:5: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression )
-                alt174 = 2
-                alt174 = self.dfa174.predict(self.input)
-                if alt174 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:333:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:332:5: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression )
+                alt175 = 2
+                alt175 = self.dfa175.predict(self.input)
+                if alt175 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:332:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:333:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:333:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:332:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:332:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_operatorExpression2277)
-                    leftHandSideExpression341 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_operatorExpression2279)
+                    leftHandSideExpression343 = self.leftHandSideExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression341.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:333:31: ( LT )*
-                    while True: #loop172
-                        alt172 = 2
-                        LA172_0 = self.input.LA(1)
-
-                        if (LA172_0 == LT) :
-                            alt172 = 1
-
-
-                        if alt172 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT342=self.match(self.input, LT, self.FOLLOW_LT_in_operatorExpression2279) 
-                            if self._state.backtracking == 0:
-                                stream_LT.add(LT342)
-
-
-                        else:
-                            break #loop172
-                    self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_operatorExpression2282)
-                    nonAssignmentOperator343 = self.nonAssignmentOperator()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        stream_nonAssignmentOperator.add(nonAssignmentOperator343.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:333:57: ( LT )*
+                        stream_leftHandSideExpression.add(leftHandSideExpression343.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:332:31: ( LT )*
                     while True: #loop173
                         alt173 = 2
                         LA173_0 = self.input.LA(1)
@@ -9360,22 +9362,47 @@ class JavaScriptParser(Parser):
                         if alt173 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT344=self.match(self.input, LT, self.FOLLOW_LT_in_operatorExpression2284) 
+                            LT344=self.match(self.input, LT, self.FOLLOW_LT_in_operatorExpression2281) 
                             if self._state.backtracking == 0:
                                 stream_LT.add(LT344)
 
 
                         else:
                             break #loop173
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_operatorExpression2287)
-                    assignmentExpression345 = self.assignmentExpression()
+                    self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_operatorExpression2284)
+                    nonAssignmentOperator345 = self.nonAssignmentOperator()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_assignmentExpression.add(assignmentExpression345.tree)
+                        stream_nonAssignmentOperator.add(nonAssignmentOperator345.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:332:57: ( LT )*
+                    while True: #loop174
+                        alt174 = 2
+                        LA174_0 = self.input.LA(1)
+
+                        if (LA174_0 == LT) :
+                            alt174 = 1
+
+
+                        if alt174 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT346=self.match(self.input, LT, self.FOLLOW_LT_in_operatorExpression2286) 
+                            if self._state.backtracking == 0:
+                                stream_LT.add(LT346)
+
+
+                        else:
+                            break #loop174
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_operatorExpression2289)
+                    assignmentExpression347 = self.assignmentExpression()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        stream_assignmentExpression.add(assignmentExpression347.tree)
 
                     # AST Rewrite
-                    # elements: nonAssignmentOperator, assignmentExpression, leftHandSideExpression
+                    # elements: assignmentExpression, nonAssignmentOperator, leftHandSideExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -9392,19 +9419,19 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 333:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:334:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # 332:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:333:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(stream_nonAssignmentOperator.nextNode(), root_1)
 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:335:17: ^( OPERATOR_ARG leftHandSideExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:334:17: ^( OPERATOR_ARG leftHandSideExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
                         self._adaptor.addChild(root_2, stream_leftHandSideExpression.nextTree())
 
                         self._adaptor.addChild(root_1, root_2)
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:336:17: ^( OPERATOR_ARG assignmentExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:335:17: ^( OPERATOR_ARG assignmentExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
@@ -9422,17 +9449,17 @@ class JavaScriptParser(Parser):
 
 
 
-                elif alt174 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:339:7: unaryExpression
+                elif alt175 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:338:7: unaryExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_unaryExpression_in_operatorExpression2381)
-                    unaryExpression346 = self.unaryExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_operatorExpression2383)
+                    unaryExpression348 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, unaryExpression346.tree)
+                        self._adaptor.addChild(root_0, unaryExpression348.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -9467,7 +9494,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "nonAssignmentOperator"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:342:1: nonAssignmentOperator : ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:341:1: nonAssignmentOperator : ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' );
     def nonAssignmentOperator(self, ):
 
         retval = self.nonAssignmentOperator_return()
@@ -9475,9 +9502,9 @@ class JavaScriptParser(Parser):
         nonAssignmentOperator_StartIndex = self.input.index()
         root_0 = None
 
-        set347 = None
+        set349 = None
 
-        set347_tree = None
+        set349_tree = None
 
         success = False
         try:
@@ -9487,16 +9514,16 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:343:5: ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:342:5: ( '*' | '-' | '+' | '/' | '&' | '&&' | '|' | '||' | '<' | '<=' | '>' | '>=' | '==' | '!=' | '===' | '!==' | '?' | ':' )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:
                 pass 
                 root_0 = self._adaptor.nil()
 
-                set347 = self.input.LT(1)
-                if self.input.LA(1) == 72 or (96 <= self.input.LA(1) <= 112):
+                set349 = self.input.LT(1)
+                if self.input.LA(1) == 72 or (95 <= self.input.LA(1) <= 111):
                     self.input.consume()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set347))
+                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set349))
                     self._state.errorRecovery = False
 
                 else:
@@ -9542,7 +9569,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "unaryExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:347:1: unaryExpression : ( postfixExpression | ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:346:1: unaryExpression : ( postfixExpression | ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression );
     def unaryExpression(self, ):
 
         retval = self.unaryExpression_return()
@@ -9550,13 +9577,13 @@ class JavaScriptParser(Parser):
         unaryExpression_StartIndex = self.input.index()
         root_0 = None
 
-        set349 = None
-        postfixExpression348 = None
+        set351 = None
+        postfixExpression350 = None
 
-        unaryExpression350 = None
+        unaryExpression352 = None
 
 
-        set349_tree = None
+        set351_tree = None
 
         success = False
         try:
@@ -9566,45 +9593,45 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:348:2: ( postfixExpression | ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression )
-                alt175 = 2
-                LA175_0 = self.input.LA(1)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:347:2: ( postfixExpression | ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression )
+                alt176 = 2
+                LA176_0 = self.input.LA(1)
 
-                if (LA175_0 == Identifier or (StringLiteral <= LA175_0 <= NumericLiteral) or LA175_0 == 53 or LA175_0 == 55 or LA175_0 == 58 or (81 <= LA175_0 <= 82) or (120 <= LA175_0 <= 123)) :
-                    alt175 = 1
-                elif ((98 <= LA175_0 <= 99) or (113 <= LA175_0 <= 119)) :
-                    alt175 = 2
+                if (LA176_0 == Identifier or (StringLiteral <= LA176_0 <= NumericLiteral) or LA176_0 == 53 or LA176_0 == 55 or LA176_0 == 58 or (81 <= LA176_0 <= 82) or (119 <= LA176_0 <= 122)) :
+                    alt176 = 1
+                elif ((97 <= LA176_0 <= 98) or (112 <= LA176_0 <= 118)) :
+                    alt176 = 2
                 else:
                     if self._state.backtracking > 0:
                         raise BacktrackingFailed
 
-                    nvae = NoViableAltException("", 175, 0, self.input)
+                    nvae = NoViableAltException("", 176, 0, self.input)
 
                     raise nvae
 
-                if alt175 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:348:4: postfixExpression
+                if alt176 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:347:4: postfixExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_postfixExpression_in_unaryExpression2481)
-                    postfixExpression348 = self.postfixExpression()
+                    self._state.following.append(self.FOLLOW_postfixExpression_in_unaryExpression2483)
+                    postfixExpression350 = self.postfixExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, postfixExpression348.tree)
+                        self._adaptor.addChild(root_0, postfixExpression350.tree)
 
 
-                elif alt175 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:349:4: ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression
+                elif alt176 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:348:4: ( 'delete' | 'void' | 'typeof' | '++' | '--' | '+' | '-' | '~' | '!' ) unaryExpression
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    set349 = self.input.LT(1)
-                    if (98 <= self.input.LA(1) <= 99) or (113 <= self.input.LA(1) <= 119):
+                    set351 = self.input.LT(1)
+                    if (97 <= self.input.LA(1) <= 98) or (112 <= self.input.LA(1) <= 118):
                         self.input.consume()
                         if self._state.backtracking == 0:
-                            self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set349))
+                            self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set351))
                         self._state.errorRecovery = False
 
                     else:
@@ -9615,12 +9642,12 @@ class JavaScriptParser(Parser):
                         raise mse
 
 
-                    self._state.following.append(self.FOLLOW_unaryExpression_in_unaryExpression2522)
-                    unaryExpression350 = self.unaryExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_unaryExpression2524)
+                    unaryExpression352 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, unaryExpression350.tree)
+                        self._adaptor.addChild(root_0, unaryExpression352.tree)
 
 
                 retval.stop = self.input.LT(-1)
@@ -9655,7 +9682,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "postfixExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:352:1: postfixExpression : leftHandSideExpression ( '++' | '--' )? ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:351:1: postfixExpression : leftHandSideExpression ( '++' | '--' )? ;
     def postfixExpression(self, ):
 
         retval = self.postfixExpression_return()
@@ -9663,11 +9690,11 @@ class JavaScriptParser(Parser):
         postfixExpression_StartIndex = self.input.index()
         root_0 = None
 
-        set352 = None
-        leftHandSideExpression351 = None
+        set354 = None
+        leftHandSideExpression353 = None
 
 
-        set352_tree = None
+        set354_tree = None
 
         success = False
         try:
@@ -9677,31 +9704,31 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:353:2: ( leftHandSideExpression ( '++' | '--' )? )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:353:4: leftHandSideExpression ( '++' | '--' )?
+                # ../src/checkjs/parsers/antlr/JavaScript.g:352:2: ( leftHandSideExpression ( '++' | '--' )? )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:352:4: leftHandSideExpression ( '++' | '--' )?
                 pass 
                 root_0 = self._adaptor.nil()
 
-                self._state.following.append(self.FOLLOW_leftHandSideExpression_in_postfixExpression2533)
-                leftHandSideExpression351 = self.leftHandSideExpression()
+                self._state.following.append(self.FOLLOW_leftHandSideExpression_in_postfixExpression2535)
+                leftHandSideExpression353 = self.leftHandSideExpression()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    self._adaptor.addChild(root_0, leftHandSideExpression351.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:353:27: ( '++' | '--' )?
-                alt176 = 2
-                LA176_0 = self.input.LA(1)
+                    self._adaptor.addChild(root_0, leftHandSideExpression353.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:352:27: ( '++' | '--' )?
+                alt177 = 2
+                LA177_0 = self.input.LA(1)
 
-                if ((116 <= LA176_0 <= 117)) :
-                    alt176 = 1
-                if alt176 == 1:
+                if ((115 <= LA177_0 <= 116)) :
+                    alt177 = 1
+                if alt177 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:
                     pass 
-                    set352 = self.input.LT(1)
-                    if (116 <= self.input.LA(1) <= 117):
+                    set354 = self.input.LT(1)
+                    if (115 <= self.input.LA(1) <= 116):
                         self.input.consume()
                         if self._state.backtracking == 0:
-                            self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set352))
+                            self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set354))
                         self._state.errorRecovery = False
 
                     else:
@@ -9750,7 +9777,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "primaryExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:356:1: primaryExpression : ( 'this' | Identifier | literal | arrayLiteral | objectLiteral | '(' ( LT )* expression ( LT )* ')' );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:355:1: primaryExpression : ( 'this' | Identifier | literal | arrayLiteral | objectLiteral | '(' ( LT )* expression ( LT )* ')' );
     def primaryExpression(self, ):
 
         retval = self.primaryExpression_return()
@@ -9758,27 +9785,27 @@ class JavaScriptParser(Parser):
         primaryExpression_StartIndex = self.input.index()
         root_0 = None
 
-        string_literal353 = None
-        Identifier354 = None
-        char_literal358 = None
-        LT359 = None
+        string_literal355 = None
+        Identifier356 = None
+        char_literal360 = None
         LT361 = None
-        char_literal362 = None
-        literal355 = None
+        LT363 = None
+        char_literal364 = None
+        literal357 = None
 
-        arrayLiteral356 = None
+        arrayLiteral358 = None
 
-        objectLiteral357 = None
+        objectLiteral359 = None
 
-        expression360 = None
+        expression362 = None
 
 
-        string_literal353_tree = None
-        Identifier354_tree = None
-        char_literal358_tree = None
-        LT359_tree = None
+        string_literal355_tree = None
+        Identifier356_tree = None
+        char_literal360_tree = None
         LT361_tree = None
-        char_literal362_tree = None
+        LT363_tree = None
+        char_literal364_tree = None
 
         success = False
         try:
@@ -9788,129 +9815,106 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:357:2: ( 'this' | Identifier | literal | arrayLiteral | objectLiteral | '(' ( LT )* expression ( LT )* ')' )
-                alt179 = 6
-                LA179 = self.input.LA(1)
-                if LA179 == 120:
-                    alt179 = 1
-                elif LA179 == Identifier:
-                    alt179 = 2
-                elif LA179 == StringLiteral or LA179 == NumericLiteral or LA179 == 121 or LA179 == 122 or LA179 == 123:
-                    alt179 = 3
-                elif LA179 == 82:
-                    alt179 = 4
-                elif LA179 == 58:
-                    alt179 = 5
-                elif LA179 == 55:
-                    alt179 = 6
+                # ../src/checkjs/parsers/antlr/JavaScript.g:356:2: ( 'this' | Identifier | literal | arrayLiteral | objectLiteral | '(' ( LT )* expression ( LT )* ')' )
+                alt180 = 6
+                LA180 = self.input.LA(1)
+                if LA180 == 119:
+                    alt180 = 1
+                elif LA180 == Identifier:
+                    alt180 = 2
+                elif LA180 == StringLiteral or LA180 == NumericLiteral or LA180 == 120 or LA180 == 121 or LA180 == 122:
+                    alt180 = 3
+                elif LA180 == 82:
+                    alt180 = 4
+                elif LA180 == 58:
+                    alt180 = 5
+                elif LA180 == 55:
+                    alt180 = 6
                 else:
                     if self._state.backtracking > 0:
                         raise BacktrackingFailed
 
-                    nvae = NoViableAltException("", 179, 0, self.input)
+                    nvae = NoViableAltException("", 180, 0, self.input)
 
                     raise nvae
 
-                if alt179 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:357:4: 'this'
+                if alt180 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:356:4: 'this'
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    string_literal353=self.match(self.input, 120, self.FOLLOW_120_in_primaryExpression2553)
+                    string_literal355=self.match(self.input, 119, self.FOLLOW_119_in_primaryExpression2555)
                     if self._state.backtracking == 0:
 
-                        string_literal353_tree = self._adaptor.createWithPayload(string_literal353)
-                        self._adaptor.addChild(root_0, string_literal353_tree)
+                        string_literal355_tree = self._adaptor.createWithPayload(string_literal355)
+                        self._adaptor.addChild(root_0, string_literal355_tree)
 
 
 
-                elif alt179 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:358:4: Identifier
+                elif alt180 == 2:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:357:4: Identifier
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    Identifier354=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_primaryExpression2558)
+                    Identifier356=self.match(self.input, Identifier, self.FOLLOW_Identifier_in_primaryExpression2560)
                     if self._state.backtracking == 0:
 
-                        Identifier354_tree = self._adaptor.createWithPayload(Identifier354)
-                        self._adaptor.addChild(root_0, Identifier354_tree)
+                        Identifier356_tree = self._adaptor.createWithPayload(Identifier356)
+                        self._adaptor.addChild(root_0, Identifier356_tree)
 
 
 
-                elif alt179 == 3:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:359:4: literal
+                elif alt180 == 3:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:358:4: literal
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_literal_in_primaryExpression2563)
-                    literal355 = self.literal()
+                    self._state.following.append(self.FOLLOW_literal_in_primaryExpression2565)
+                    literal357 = self.literal()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, literal355.tree)
+                        self._adaptor.addChild(root_0, literal357.tree)
 
 
-                elif alt179 == 4:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:360:4: arrayLiteral
+                elif alt180 == 4:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:359:4: arrayLiteral
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_arrayLiteral_in_primaryExpression2568)
-                    arrayLiteral356 = self.arrayLiteral()
+                    self._state.following.append(self.FOLLOW_arrayLiteral_in_primaryExpression2570)
+                    arrayLiteral358 = self.arrayLiteral()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, arrayLiteral356.tree)
+                        self._adaptor.addChild(root_0, arrayLiteral358.tree)
 
 
-                elif alt179 == 5:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:361:4: objectLiteral
+                elif alt180 == 5:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:360:4: objectLiteral
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    self._state.following.append(self.FOLLOW_objectLiteral_in_primaryExpression2573)
-                    objectLiteral357 = self.objectLiteral()
+                    self._state.following.append(self.FOLLOW_objectLiteral_in_primaryExpression2575)
+                    objectLiteral359 = self.objectLiteral()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, objectLiteral357.tree)
+                        self._adaptor.addChild(root_0, objectLiteral359.tree)
 
 
-                elif alt179 == 6:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:362:4: '(' ( LT )* expression ( LT )* ')'
+                elif alt180 == 6:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:361:4: '(' ( LT )* expression ( LT )* ')'
                     pass 
                     root_0 = self._adaptor.nil()
 
-                    char_literal358=self.match(self.input, 55, self.FOLLOW_55_in_primaryExpression2578)
+                    char_literal360=self.match(self.input, 55, self.FOLLOW_55_in_primaryExpression2580)
                     if self._state.backtracking == 0:
 
-                        char_literal358_tree = self._adaptor.createWithPayload(char_literal358)
-                        self._adaptor.addChild(root_0, char_literal358_tree)
+                        char_literal360_tree = self._adaptor.createWithPayload(char_literal360)
+                        self._adaptor.addChild(root_0, char_literal360_tree)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:362:10: ( LT )*
-                    while True: #loop177
-                        alt177 = 2
-                        LA177_0 = self.input.LA(1)
-
-                        if (LA177_0 == LT) :
-                            alt177 = 1
-
-
-                        if alt177 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                            pass 
-                            LT359=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2580)
-
-
-                        else:
-                            break #loop177
-                    self._state.following.append(self.FOLLOW_expression_in_primaryExpression2584)
-                    expression360 = self.expression()
-
-                    self._state.following.pop()
-                    if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, expression360.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:362:26: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:361:10: ( LT )*
                     while True: #loop178
                         alt178 = 2
                         LA178_0 = self.input.LA(1)
@@ -9922,16 +9926,39 @@ class JavaScriptParser(Parser):
                         if alt178 == 1:
                             # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                             pass 
-                            LT361=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2586)
+                            LT361=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2582)
 
 
                         else:
                             break #loop178
-                    char_literal362=self.match(self.input, 57, self.FOLLOW_57_in_primaryExpression2590)
+                    self._state.following.append(self.FOLLOW_expression_in_primaryExpression2586)
+                    expression362 = self.expression()
+
+                    self._state.following.pop()
+                    if self._state.backtracking == 0:
+                        self._adaptor.addChild(root_0, expression362.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:361:26: ( LT )*
+                    while True: #loop179
+                        alt179 = 2
+                        LA179_0 = self.input.LA(1)
+
+                        if (LA179_0 == LT) :
+                            alt179 = 1
+
+
+                        if alt179 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                            pass 
+                            LT363=self.match(self.input, LT, self.FOLLOW_LT_in_primaryExpression2588)
+
+
+                        else:
+                            break #loop179
+                    char_literal364=self.match(self.input, 57, self.FOLLOW_57_in_primaryExpression2592)
                     if self._state.backtracking == 0:
 
-                        char_literal362_tree = self._adaptor.createWithPayload(char_literal362)
-                        self._adaptor.addChild(root_0, char_literal362_tree)
+                        char_literal364_tree = self._adaptor.createWithPayload(char_literal364)
+                        self._adaptor.addChild(root_0, char_literal364_tree)
 
 
 
@@ -9967,7 +9994,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "arrayLiteral"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:366:1: arrayLiteral : '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']' -> ^( ARRAY ( assignmentExpression )* ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:365:1: arrayLiteral : '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']' -> ^( ARRAY ( assignmentExpression )* ) ;
     def arrayLiteral(self, ):
 
         retval = self.arrayLiteral_return()
@@ -9975,25 +10002,25 @@ class JavaScriptParser(Parser):
         arrayLiteral_StartIndex = self.input.index()
         root_0 = None
 
-        char_literal363 = None
-        LT364 = None
+        char_literal365 = None
         LT366 = None
-        char_literal367 = None
         LT368 = None
+        char_literal369 = None
         LT370 = None
-        char_literal371 = None
-        assignmentExpression365 = None
+        LT372 = None
+        char_literal373 = None
+        assignmentExpression367 = None
 
-        assignmentExpression369 = None
+        assignmentExpression371 = None
 
 
-        char_literal363_tree = None
-        LT364_tree = None
+        char_literal365_tree = None
         LT366_tree = None
-        char_literal367_tree = None
         LT368_tree = None
+        char_literal369_tree = None
         LT370_tree = None
-        char_literal371_tree = None
+        LT372_tree = None
+        char_literal373_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_56 = RewriteRuleTokenStream(self._adaptor, "token 56")
         stream_82 = RewriteRuleTokenStream(self._adaptor, "token 82")
@@ -10007,143 +10034,143 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:2: ( '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']' -> ^( ARRAY ( assignmentExpression )* ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:4: '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']'
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:2: ( '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']' -> ^( ARRAY ( assignmentExpression )* ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:4: '[' ( LT )* ( assignmentExpression )? ( ( LT )* ',' ( ( LT )* assignmentExpression )? )* ( LT )* ']'
                 pass 
-                char_literal363=self.match(self.input, 82, self.FOLLOW_82_in_arrayLiteral2602) 
+                char_literal365=self.match(self.input, 82, self.FOLLOW_82_in_arrayLiteral2604) 
                 if self._state.backtracking == 0:
-                    stream_82.add(char_literal363)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:8: ( LT )*
-                while True: #loop180
-                    alt180 = 2
-                    LA180_0 = self.input.LA(1)
+                    stream_82.add(char_literal365)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:8: ( LT )*
+                while True: #loop181
+                    alt181 = 2
+                    LA181_0 = self.input.LA(1)
 
-                    if (LA180_0 == LT) :
-                        LA180_2 = self.input.LA(2)
+                    if (LA181_0 == LT) :
+                        LA181_2 = self.input.LA(2)
 
-                        if (self.synpred239_JavaScript()) :
-                            alt180 = 1
-
-
+                        if (self.synpred240_JavaScript()) :
+                            alt181 = 1
 
 
-                    if alt180 == 1:
+
+
+                    if alt181 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT364=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2604) 
+                        LT366=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2606) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT364)
+                            stream_LT.add(LT366)
 
 
                     else:
-                        break #loop180
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:12: ( assignmentExpression )?
-                alt181 = 2
-                LA181_0 = self.input.LA(1)
+                        break #loop181
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:12: ( assignmentExpression )?
+                alt182 = 2
+                LA182_0 = self.input.LA(1)
 
-                if ((Identifier <= LA181_0 <= NumericLiteral) or LA181_0 == 53 or LA181_0 == 55 or LA181_0 == 58 or (81 <= LA181_0 <= 82) or (98 <= LA181_0 <= 99) or (113 <= LA181_0 <= 123)) :
-                    alt181 = 1
-                if alt181 == 1:
+                if ((Identifier <= LA182_0 <= RegexpLiteral) or (StringLiteral <= LA182_0 <= NumericLiteral) or LA182_0 == 53 or LA182_0 == 55 or LA182_0 == 58 or (81 <= LA182_0 <= 82) or (97 <= LA182_0 <= 98) or (112 <= LA182_0 <= 122)) :
+                    alt182 = 1
+                if alt182 == 1:
                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2607)
-                    assignmentExpression365 = self.assignmentExpression()
+                    self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2609)
+                    assignmentExpression367 = self.assignmentExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_assignmentExpression.add(assignmentExpression365.tree)
+                        stream_assignmentExpression.add(assignmentExpression367.tree)
 
 
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:34: ( ( LT )* ',' ( ( LT )* assignmentExpression )? )*
-                while True: #loop185
-                    alt185 = 2
-                    alt185 = self.dfa185.predict(self.input)
-                    if alt185 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:367:35: ( LT )* ',' ( ( LT )* assignmentExpression )?
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:34: ( ( LT )* ',' ( ( LT )* assignmentExpression )? )*
+                while True: #loop186
+                    alt186 = 2
+                    alt186 = self.dfa186.predict(self.input)
+                    if alt186 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:366:35: ( LT )* ',' ( ( LT )* assignmentExpression )?
                         pass 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:367:35: ( LT )*
-                        while True: #loop182
-                            alt182 = 2
-                            LA182_0 = self.input.LA(1)
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:366:35: ( LT )*
+                        while True: #loop183
+                            alt183 = 2
+                            LA183_0 = self.input.LA(1)
 
-                            if (LA182_0 == LT) :
-                                alt182 = 1
+                            if (LA183_0 == LT) :
+                                alt183 = 1
 
 
-                            if alt182 == 1:
+                            if alt183 == 1:
                                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                 pass 
-                                LT366=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2611) 
+                                LT368=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2613) 
                                 if self._state.backtracking == 0:
-                                    stream_LT.add(LT366)
+                                    stream_LT.add(LT368)
 
 
                             else:
-                                break #loop182
-                        char_literal367=self.match(self.input, 56, self.FOLLOW_56_in_arrayLiteral2614) 
+                                break #loop183
+                        char_literal369=self.match(self.input, 56, self.FOLLOW_56_in_arrayLiteral2616) 
                         if self._state.backtracking == 0:
-                            stream_56.add(char_literal367)
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:367:43: ( ( LT )* assignmentExpression )?
-                        alt184 = 2
-                        alt184 = self.dfa184.predict(self.input)
-                        if alt184 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:367:44: ( LT )* assignmentExpression
+                            stream_56.add(char_literal369)
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:366:43: ( ( LT )* assignmentExpression )?
+                        alt185 = 2
+                        alt185 = self.dfa185.predict(self.input)
+                        if alt185 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:366:44: ( LT )* assignmentExpression
                             pass 
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:367:44: ( LT )*
-                            while True: #loop183
-                                alt183 = 2
-                                LA183_0 = self.input.LA(1)
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:366:44: ( LT )*
+                            while True: #loop184
+                                alt184 = 2
+                                LA184_0 = self.input.LA(1)
 
-                                if (LA183_0 == LT) :
-                                    alt183 = 1
+                                if (LA184_0 == LT) :
+                                    alt184 = 1
 
 
-                                if alt183 == 1:
+                                if alt184 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT368=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2617) 
+                                    LT370=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2619) 
                                     if self._state.backtracking == 0:
-                                        stream_LT.add(LT368)
+                                        stream_LT.add(LT370)
 
 
                                 else:
-                                    break #loop183
-                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2620)
-                            assignmentExpression369 = self.assignmentExpression()
+                                    break #loop184
+                            self._state.following.append(self.FOLLOW_assignmentExpression_in_arrayLiteral2622)
+                            assignmentExpression371 = self.assignmentExpression()
 
                             self._state.following.pop()
                             if self._state.backtracking == 0:
-                                stream_assignmentExpression.add(assignmentExpression369.tree)
+                                stream_assignmentExpression.add(assignmentExpression371.tree)
 
 
 
-
-
-                    else:
-                        break #loop185
-                # ../src/checkjs/parsers/antlr/JavaScript.g:367:73: ( LT )*
-                while True: #loop186
-                    alt186 = 2
-                    LA186_0 = self.input.LA(1)
-
-                    if (LA186_0 == LT) :
-                        alt186 = 1
-
-
-                    if alt186 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                        pass 
-                        LT370=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2626) 
-                        if self._state.backtracking == 0:
-                            stream_LT.add(LT370)
 
 
                     else:
                         break #loop186
-                char_literal371=self.match(self.input, 83, self.FOLLOW_83_in_arrayLiteral2629) 
+                # ../src/checkjs/parsers/antlr/JavaScript.g:366:73: ( LT )*
+                while True: #loop187
+                    alt187 = 2
+                    LA187_0 = self.input.LA(1)
+
+                    if (LA187_0 == LT) :
+                        alt187 = 1
+
+
+                    if alt187 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                        pass 
+                        LT372=self.match(self.input, LT, self.FOLLOW_LT_in_arrayLiteral2628) 
+                        if self._state.backtracking == 0:
+                            stream_LT.add(LT372)
+
+
+                    else:
+                        break #loop187
+                char_literal373=self.match(self.input, 83, self.FOLLOW_83_in_arrayLiteral2631) 
                 if self._state.backtracking == 0:
-                    stream_83.add(char_literal371)
+                    stream_83.add(char_literal373)
 
                 # AST Rewrite
                 # elements: assignmentExpression
@@ -10163,12 +10190,12 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 368:9: -> ^( ARRAY ( assignmentExpression )* )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:368:12: ^( ARRAY ( assignmentExpression )* )
+                    # 367:9: -> ^( ARRAY ( assignmentExpression )* )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:367:12: ^( ARRAY ( assignmentExpression )* )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(ARRAY, "ARRAY"), root_1)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:368:21: ( assignmentExpression )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:367:21: ( assignmentExpression )*
                     while stream_assignmentExpression.hasNext():
                         self._adaptor.addChild(root_1, stream_assignmentExpression.nextTree())
 
@@ -10215,7 +10242,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "objectLiteral"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:372:1: objectLiteral : '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}' -> ^( OBJECT ( propertyNameAndValue )* ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:371:1: objectLiteral : '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}' -> ^( OBJECT ( propertyNameAndValue )* ) ;
     def objectLiteral(self, ):
 
         retval = self.objectLiteral_return()
@@ -10223,25 +10250,25 @@ class JavaScriptParser(Parser):
         objectLiteral_StartIndex = self.input.index()
         root_0 = None
 
-        char_literal372 = None
-        LT373 = None
+        char_literal374 = None
         LT375 = None
-        char_literal376 = None
         LT377 = None
+        char_literal378 = None
         LT379 = None
-        char_literal380 = None
-        propertyNameAndValue374 = None
+        LT381 = None
+        char_literal382 = None
+        propertyNameAndValue376 = None
 
-        propertyNameAndValue378 = None
+        propertyNameAndValue380 = None
 
 
-        char_literal372_tree = None
-        LT373_tree = None
+        char_literal374_tree = None
         LT375_tree = None
-        char_literal376_tree = None
         LT377_tree = None
+        char_literal378_tree = None
         LT379_tree = None
-        char_literal380_tree = None
+        LT381_tree = None
+        char_literal382_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_59 = RewriteRuleTokenStream(self._adaptor, "token 59")
         stream_58 = RewriteRuleTokenStream(self._adaptor, "token 58")
@@ -10255,81 +10282,59 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:373:2: ( '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}' -> ^( OBJECT ( propertyNameAndValue )* ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:373:4: '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}'
+                # ../src/checkjs/parsers/antlr/JavaScript.g:372:2: ( '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}' -> ^( OBJECT ( propertyNameAndValue )* ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:372:4: '{' ( LT )* ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )? ( LT )* '}'
                 pass 
-                char_literal372=self.match(self.input, 58, self.FOLLOW_58_in_objectLiteral2659) 
+                char_literal374=self.match(self.input, 58, self.FOLLOW_58_in_objectLiteral2661) 
                 if self._state.backtracking == 0:
-                    stream_58.add(char_literal372)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:373:8: ( LT )*
-                while True: #loop187
-                    alt187 = 2
-                    LA187_0 = self.input.LA(1)
+                    stream_58.add(char_literal374)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:372:8: ( LT )*
+                while True: #loop188
+                    alt188 = 2
+                    LA188_0 = self.input.LA(1)
 
-                    if (LA187_0 == LT) :
-                        LA187_2 = self.input.LA(2)
+                    if (LA188_0 == LT) :
+                        LA188_2 = self.input.LA(2)
 
-                        if (self.synpred246_JavaScript()) :
-                            alt187 = 1
-
-
+                        if (self.synpred247_JavaScript()) :
+                            alt188 = 1
 
 
-                    if alt187 == 1:
+
+
+                    if alt188 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT373=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2661) 
+                        LT375=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2663) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT373)
+                            stream_LT.add(LT375)
 
 
                     else:
-                        break #loop187
-                # ../src/checkjs/parsers/antlr/JavaScript.g:373:12: ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )?
-                alt191 = 2
-                LA191_0 = self.input.LA(1)
+                        break #loop188
+                # ../src/checkjs/parsers/antlr/JavaScript.g:372:12: ( propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )* )?
+                alt192 = 2
+                LA192_0 = self.input.LA(1)
 
-                if (LA191_0 == Identifier or (StringLiteral <= LA191_0 <= NumericLiteral)) :
-                    alt191 = 1
-                if alt191 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:373:13: propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )*
+                if (LA192_0 == Identifier or (StringLiteral <= LA192_0 <= NumericLiteral)) :
+                    alt192 = 1
+                if alt192 == 1:
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:372:13: propertyNameAndValue ( ( LT )* ',' ( LT )* propertyNameAndValue )*
                     pass 
-                    self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2665)
-                    propertyNameAndValue374 = self.propertyNameAndValue()
+                    self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2667)
+                    propertyNameAndValue376 = self.propertyNameAndValue()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_propertyNameAndValue.add(propertyNameAndValue374.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:373:34: ( ( LT )* ',' ( LT )* propertyNameAndValue )*
-                    while True: #loop190
-                        alt190 = 2
-                        alt190 = self.dfa190.predict(self.input)
-                        if alt190 == 1:
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:373:35: ( LT )* ',' ( LT )* propertyNameAndValue
+                        stream_propertyNameAndValue.add(propertyNameAndValue376.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:372:34: ( ( LT )* ',' ( LT )* propertyNameAndValue )*
+                    while True: #loop191
+                        alt191 = 2
+                        alt191 = self.dfa191.predict(self.input)
+                        if alt191 == 1:
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:372:35: ( LT )* ',' ( LT )* propertyNameAndValue
                             pass 
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:373:35: ( LT )*
-                            while True: #loop188
-                                alt188 = 2
-                                LA188_0 = self.input.LA(1)
-
-                                if (LA188_0 == LT) :
-                                    alt188 = 1
-
-
-                                if alt188 == 1:
-                                    # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                                    pass 
-                                    LT375=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2668) 
-                                    if self._state.backtracking == 0:
-                                        stream_LT.add(LT375)
-
-
-                                else:
-                                    break #loop188
-                            char_literal376=self.match(self.input, 56, self.FOLLOW_56_in_objectLiteral2671) 
-                            if self._state.backtracking == 0:
-                                stream_56.add(char_literal376)
-                            # ../src/checkjs/parsers/antlr/JavaScript.g:373:43: ( LT )*
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:372:35: ( LT )*
                             while True: #loop189
                                 alt189 = 2
                                 LA189_0 = self.input.LA(1)
@@ -10341,48 +10346,70 @@ class JavaScriptParser(Parser):
                                 if alt189 == 1:
                                     # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                                     pass 
-                                    LT377=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2673) 
+                                    LT377=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2670) 
                                     if self._state.backtracking == 0:
                                         stream_LT.add(LT377)
 
 
                                 else:
                                     break #loop189
-                            self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2676)
-                            propertyNameAndValue378 = self.propertyNameAndValue()
+                            char_literal378=self.match(self.input, 56, self.FOLLOW_56_in_objectLiteral2673) 
+                            if self._state.backtracking == 0:
+                                stream_56.add(char_literal378)
+                            # ../src/checkjs/parsers/antlr/JavaScript.g:372:43: ( LT )*
+                            while True: #loop190
+                                alt190 = 2
+                                LA190_0 = self.input.LA(1)
+
+                                if (LA190_0 == LT) :
+                                    alt190 = 1
+
+
+                                if alt190 == 1:
+                                    # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                                    pass 
+                                    LT379=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2675) 
+                                    if self._state.backtracking == 0:
+                                        stream_LT.add(LT379)
+
+
+                                else:
+                                    break #loop190
+                            self._state.following.append(self.FOLLOW_propertyNameAndValue_in_objectLiteral2678)
+                            propertyNameAndValue380 = self.propertyNameAndValue()
 
                             self._state.following.pop()
                             if self._state.backtracking == 0:
-                                stream_propertyNameAndValue.add(propertyNameAndValue378.tree)
+                                stream_propertyNameAndValue.add(propertyNameAndValue380.tree)
 
 
                         else:
-                            break #loop190
+                            break #loop191
 
 
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:373:72: ( LT )*
-                while True: #loop192
-                    alt192 = 2
-                    LA192_0 = self.input.LA(1)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:372:72: ( LT )*
+                while True: #loop193
+                    alt193 = 2
+                    LA193_0 = self.input.LA(1)
 
-                    if (LA192_0 == LT) :
-                        alt192 = 1
+                    if (LA193_0 == LT) :
+                        alt193 = 1
 
 
-                    if alt192 == 1:
+                    if alt193 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT379=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2682) 
+                        LT381=self.match(self.input, LT, self.FOLLOW_LT_in_objectLiteral2684) 
                         if self._state.backtracking == 0:
-                            stream_LT.add(LT379)
+                            stream_LT.add(LT381)
 
 
                     else:
-                        break #loop192
-                char_literal380=self.match(self.input, 59, self.FOLLOW_59_in_objectLiteral2685) 
+                        break #loop193
+                char_literal382=self.match(self.input, 59, self.FOLLOW_59_in_objectLiteral2687) 
                 if self._state.backtracking == 0:
-                    stream_59.add(char_literal380)
+                    stream_59.add(char_literal382)
 
                 # AST Rewrite
                 # elements: propertyNameAndValue
@@ -10402,12 +10429,12 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 374:9: -> ^( OBJECT ( propertyNameAndValue )* )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:374:12: ^( OBJECT ( propertyNameAndValue )* )
+                    # 373:9: -> ^( OBJECT ( propertyNameAndValue )* )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:373:12: ^( OBJECT ( propertyNameAndValue )* )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(OBJECT, "OBJECT"), root_1)
 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:374:22: ( propertyNameAndValue )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:373:22: ( propertyNameAndValue )*
                     while stream_propertyNameAndValue.hasNext():
                         self._adaptor.addChild(root_1, stream_propertyNameAndValue.nextTree())
 
@@ -10454,7 +10481,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "propertyNameAndValue"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:377:1: propertyNameAndValue : propertyName ( LT )* ':' ( LT )* assignmentExpression -> ^( PROPERTY propertyName assignmentExpression ) ;
+    # ../src/checkjs/parsers/antlr/JavaScript.g:376:1: propertyNameAndValue : propertyName ( LT )* ':' ( LT )* assignmentExpression -> ^( PROPERTY propertyName assignmentExpression ) ;
     def propertyNameAndValue(self, ):
 
         retval = self.propertyNameAndValue_return()
@@ -10462,17 +10489,17 @@ class JavaScriptParser(Parser):
         propertyNameAndValue_StartIndex = self.input.index()
         root_0 = None
 
-        LT382 = None
-        char_literal383 = None
         LT384 = None
-        propertyName381 = None
+        char_literal385 = None
+        LT386 = None
+        propertyName383 = None
 
-        assignmentExpression385 = None
+        assignmentExpression387 = None
 
 
-        LT382_tree = None
-        char_literal383_tree = None
         LT384_tree = None
+        char_literal385_tree = None
+        LT386_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_72 = RewriteRuleTokenStream(self._adaptor, "token 72")
         stream_propertyName = RewriteRuleSubtreeStream(self._adaptor, "rule propertyName")
@@ -10485,38 +10512,16 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:378:2: ( propertyName ( LT )* ':' ( LT )* assignmentExpression -> ^( PROPERTY propertyName assignmentExpression ) )
-                # ../src/checkjs/parsers/antlr/JavaScript.g:378:4: propertyName ( LT )* ':' ( LT )* assignmentExpression
+                # ../src/checkjs/parsers/antlr/JavaScript.g:377:2: ( propertyName ( LT )* ':' ( LT )* assignmentExpression -> ^( PROPERTY propertyName assignmentExpression ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:377:4: propertyName ( LT )* ':' ( LT )* assignmentExpression
                 pass 
-                self._state.following.append(self.FOLLOW_propertyName_in_propertyNameAndValue2714)
-                propertyName381 = self.propertyName()
+                self._state.following.append(self.FOLLOW_propertyName_in_propertyNameAndValue2716)
+                propertyName383 = self.propertyName()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_propertyName.add(propertyName381.tree)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:378:17: ( LT )*
-                while True: #loop193
-                    alt193 = 2
-                    LA193_0 = self.input.LA(1)
-
-                    if (LA193_0 == LT) :
-                        alt193 = 1
-
-
-                    if alt193 == 1:
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                        pass 
-                        LT382=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2716) 
-                        if self._state.backtracking == 0:
-                            stream_LT.add(LT382)
-
-
-                    else:
-                        break #loop193
-                char_literal383=self.match(self.input, 72, self.FOLLOW_72_in_propertyNameAndValue2719) 
-                if self._state.backtracking == 0:
-                    stream_72.add(char_literal383)
-                # ../src/checkjs/parsers/antlr/JavaScript.g:378:25: ( LT )*
+                    stream_propertyName.add(propertyName383.tree)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:377:17: ( LT )*
                 while True: #loop194
                     alt194 = 2
                     LA194_0 = self.input.LA(1)
@@ -10528,22 +10533,44 @@ class JavaScriptParser(Parser):
                     if alt194 == 1:
                         # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                         pass 
-                        LT384=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2721) 
+                        LT384=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2718) 
                         if self._state.backtracking == 0:
                             stream_LT.add(LT384)
 
 
                     else:
                         break #loop194
-                self._state.following.append(self.FOLLOW_assignmentExpression_in_propertyNameAndValue2724)
-                assignmentExpression385 = self.assignmentExpression()
+                char_literal385=self.match(self.input, 72, self.FOLLOW_72_in_propertyNameAndValue2721) 
+                if self._state.backtracking == 0:
+                    stream_72.add(char_literal385)
+                # ../src/checkjs/parsers/antlr/JavaScript.g:377:25: ( LT )*
+                while True: #loop195
+                    alt195 = 2
+                    LA195_0 = self.input.LA(1)
+
+                    if (LA195_0 == LT) :
+                        alt195 = 1
+
+
+                    if alt195 == 1:
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                        pass 
+                        LT386=self.match(self.input, LT, self.FOLLOW_LT_in_propertyNameAndValue2723) 
+                        if self._state.backtracking == 0:
+                            stream_LT.add(LT386)
+
+
+                    else:
+                        break #loop195
+                self._state.following.append(self.FOLLOW_assignmentExpression_in_propertyNameAndValue2726)
+                assignmentExpression387 = self.assignmentExpression()
 
                 self._state.following.pop()
                 if self._state.backtracking == 0:
-                    stream_assignmentExpression.add(assignmentExpression385.tree)
+                    stream_assignmentExpression.add(assignmentExpression387.tree)
 
                 # AST Rewrite
-                # elements: propertyName, assignmentExpression
+                # elements: assignmentExpression, propertyName
                 # token labels: 
                 # rule labels: retval
                 # token list labels: 
@@ -10560,8 +10587,8 @@ class JavaScriptParser(Parser):
 
 
                     root_0 = self._adaptor.nil()
-                    # 378:50: -> ^( PROPERTY propertyName assignmentExpression )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:379:9: ^( PROPERTY propertyName assignmentExpression )
+                    # 377:50: -> ^( PROPERTY propertyName assignmentExpression )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:378:9: ^( PROPERTY propertyName assignmentExpression )
                     root_1 = self._adaptor.nil()
                     root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(PROPERTY, "PROPERTY"), root_1)
 
@@ -10608,7 +10635,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "propertyName"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:382:1: propertyName : ( Identifier | StringLiteral | NumericLiteral );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:381:1: propertyName : ( Identifier | StringLiteral | NumericLiteral );
     def propertyName(self, ):
 
         retval = self.propertyName_return()
@@ -10616,9 +10643,9 @@ class JavaScriptParser(Parser):
         propertyName_StartIndex = self.input.index()
         root_0 = None
 
-        set386 = None
+        set388 = None
 
-        set386_tree = None
+        set388_tree = None
 
         success = False
         try:
@@ -10628,16 +10655,16 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:383:2: ( Identifier | StringLiteral | NumericLiteral )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:382:2: ( Identifier | StringLiteral | NumericLiteral )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:
                 pass 
                 root_0 = self._adaptor.nil()
 
-                set386 = self.input.LT(1)
+                set388 = self.input.LT(1)
                 if self.input.LA(1) == Identifier or (StringLiteral <= self.input.LA(1) <= NumericLiteral):
                     self.input.consume()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set386))
+                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set388))
                     self._state.errorRecovery = False
 
                 else:
@@ -10683,7 +10710,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "literal"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:389:1: literal : ( 'null' | 'true' | 'false' | StringLiteral | NumericLiteral );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:388:1: literal : ( 'null' | 'true' | 'false' | StringLiteral | NumericLiteral );
     def literal(self, ):
 
         retval = self.literal_return()
@@ -10691,9 +10718,9 @@ class JavaScriptParser(Parser):
         literal_StartIndex = self.input.index()
         root_0 = None
 
-        set387 = None
+        set389 = None
 
-        set387_tree = None
+        set389_tree = None
 
         success = False
         try:
@@ -10703,16 +10730,16 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:390:2: ( 'null' | 'true' | 'false' | StringLiteral | NumericLiteral )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:389:2: ( 'null' | 'true' | 'false' | StringLiteral | NumericLiteral )
                 # ../src/checkjs/parsers/antlr/JavaScript.g:
                 pass 
                 root_0 = self._adaptor.nil()
 
-                set387 = self.input.LT(1)
-                if (StringLiteral <= self.input.LA(1) <= NumericLiteral) or (121 <= self.input.LA(1) <= 123):
+                set389 = self.input.LT(1)
+                if (StringLiteral <= self.input.LA(1) <= NumericLiteral) or (120 <= self.input.LA(1) <= 122):
                     self.input.consume()
                     if self._state.backtracking == 0:
-                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set387))
+                        self._adaptor.addChild(root_0, self._adaptor.createWithPayload(set389))
                     self._state.errorRecovery = False
 
                 else:
@@ -10889,24 +10916,6 @@ class JavaScriptParser(Parser):
         # ../src/checkjs/parsers/antlr/JavaScript.g:160:78: ( LT )* 'else' ( LT )* ( statement | statementBlock )
         pass 
         # ../src/checkjs/parsers/antlr/JavaScript.g:160:80: ( LT )*
-        while True: #loop208
-            alt208 = 2
-            LA208_0 = self.input.LA(1)
-
-            if (LA208_0 == LT) :
-                alt208 = 1
-
-
-            if alt208 == 1:
-                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred64_JavaScript856)
-
-
-            else:
-                break #loop208
-        self.match(self.input, 63, self.FOLLOW_63_in_synpred64_JavaScript860)
-        # ../src/checkjs/parsers/antlr/JavaScript.g:160:92: ( LT )*
         while True: #loop209
             alt209 = 2
             LA209_0 = self.input.LA(1)
@@ -10918,15 +10927,33 @@ class JavaScriptParser(Parser):
             if alt209 == 1:
                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                 pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred64_JavaScript862)
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred64_JavaScript856)
 
 
             else:
                 break #loop209
+        self.match(self.input, 63, self.FOLLOW_63_in_synpred64_JavaScript860)
+        # ../src/checkjs/parsers/antlr/JavaScript.g:160:92: ( LT )*
+        while True: #loop210
+            alt210 = 2
+            LA210_0 = self.input.LA(1)
+
+            if (LA210_0 == LT) :
+                alt210 = 1
+
+
+            if alt210 == 1:
+                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                pass 
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred64_JavaScript862)
+
+
+            else:
+                break #loop210
         # ../src/checkjs/parsers/antlr/JavaScript.g:160:95: ( statement | statementBlock )
-        alt210 = 2
-        alt210 = self.dfa210.predict(self.input)
-        if alt210 == 1:
+        alt211 = 2
+        alt211 = self.dfa211.predict(self.input)
+        if alt211 == 1:
             # ../src/checkjs/parsers/antlr/JavaScript.g:160:96: statement
             pass 
             self._state.following.append(self.FOLLOW_statement_in_synpred64_JavaScript867)
@@ -10935,7 +10962,7 @@ class JavaScriptParser(Parser):
             self._state.following.pop()
 
 
-        elif alt210 == 2:
+        elif alt211 == 2:
             # ../src/checkjs/parsers/antlr/JavaScript.g:160:108: statementBlock
             pass 
             self._state.following.append(self.FOLLOW_statementBlock_in_synpred64_JavaScript871)
@@ -11065,97 +11092,34 @@ class JavaScriptParser(Parser):
 
 
 
-    # $ANTLR start "synpred151_JavaScript"
-    def synpred151_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( callExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: callExpression
+    # $ANTLR start "synpred152_JavaScript"
+    def synpred152_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:259:7: ( callExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:259:7: callExpression
         pass 
-        self._state.following.append(self.FOLLOW_callExpression_in_synpred151_JavaScript1613)
+        self._state.following.append(self.FOLLOW_callExpression_in_synpred152_JavaScript1615)
         self.callExpression()
 
         self._state.following.pop()
 
 
-    # $ANTLR end "synpred151_JavaScript"
+    # $ANTLR end "synpred152_JavaScript"
 
 
 
-    # $ANTLR start "synpred154_JavaScript"
-    def synpred154_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+    # $ANTLR start "synpred155_JavaScript"
+    def synpred155_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
         pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
         pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred154_JavaScript1631)
+        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred155_JavaScript1633)
         self.leftHandSideExpression()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:31: ( LT )*
-        while True: #loop225
-            alt225 = 2
-            LA225_0 = self.input.LA(1)
-
-            if (LA225_0 == LT) :
-                alt225 = 1
-
-
-            if alt225 == 1:
-                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred154_JavaScript1633)
-
-
-            else:
-                break #loop225
-        self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_synpred154_JavaScript1636)
-        self.nonAssignmentOperator()
-
-        self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:261:57: ( LT )*
-        while True: #loop226
-            alt226 = 2
-            LA226_0 = self.input.LA(1)
-
-            if (LA226_0 == LT) :
-                alt226 = 1
-
-
-            if alt226 == 1:
-                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
-                pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred154_JavaScript1638)
-
-
-            else:
-                break #loop226
-        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred154_JavaScript1641)
-        self.assignmentExpression()
-
-        self._state.following.pop()
-
-
-
-
-
-    # $ANTLR end "synpred154_JavaScript"
-
-
-
-    # $ANTLR start "synpred157_JavaScript"
-    def synpred157_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:7: ( ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
-        pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
-        pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred157_JavaScript1736)
-        self.leftHandSideExpression()
-
-        self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:31: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:31: ( LT )*
         while True: #loop227
             alt227 = 2
             LA227_0 = self.input.LA(1)
@@ -11167,16 +11131,16 @@ class JavaScriptParser(Parser):
             if alt227 == 1:
                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                 pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred157_JavaScript1738)
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred155_JavaScript1635)
 
 
             else:
                 break #loop227
-        self._state.following.append(self.FOLLOW_assignmentOperator_in_synpred157_JavaScript1741)
-        self.assignmentOperator()
+        self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_synpred155_JavaScript1638)
+        self.nonAssignmentOperator()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:267:54: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:260:57: ( LT )*
         while True: #loop228
             alt228 = 2
             LA228_0 = self.input.LA(1)
@@ -11188,12 +11152,12 @@ class JavaScriptParser(Parser):
             if alt228 == 1:
                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                 pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred157_JavaScript1743)
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred155_JavaScript1640)
 
 
             else:
                 break #loop228
-        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred157_JavaScript1746)
+        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred155_JavaScript1643)
         self.assignmentExpression()
 
         self._state.following.pop()
@@ -11202,19 +11166,67 @@ class JavaScriptParser(Parser):
 
 
 
-    # $ANTLR end "synpred157_JavaScript"
+    # $ANTLR end "synpred155_JavaScript"
 
 
 
     # $ANTLR start "synpred158_JavaScript"
     def synpred158_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:273:7: ( unaryExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:273:7: unaryExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:7: ( ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
         pass 
-        self._state.following.append(self.FOLLOW_unaryExpression_in_synpred158_JavaScript1840)
-        self.unaryExpression()
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
+        pass 
+        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred158_JavaScript1738)
+        self.leftHandSideExpression()
 
         self._state.following.pop()
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:31: ( LT )*
+        while True: #loop229
+            alt229 = 2
+            LA229_0 = self.input.LA(1)
+
+            if (LA229_0 == LT) :
+                alt229 = 1
+
+
+            if alt229 == 1:
+                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                pass 
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred158_JavaScript1740)
+
+
+            else:
+                break #loop229
+        self._state.following.append(self.FOLLOW_assignmentOperator_in_synpred158_JavaScript1743)
+        self.assignmentOperator()
+
+        self._state.following.pop()
+        # ../src/checkjs/parsers/antlr/JavaScript.g:266:54: ( LT )*
+        while True: #loop230
+            alt230 = 2
+            LA230_0 = self.input.LA(1)
+
+            if (LA230_0 == LT) :
+                alt230 = 1
+
+
+            if alt230 == 1:
+                # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
+                pass 
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred158_JavaScript1745)
+
+
+            else:
+                break #loop230
+        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred158_JavaScript1748)
+        self.assignmentExpression()
+
+        self._state.following.pop()
+
+
+
 
 
     # $ANTLR end "synpred158_JavaScript"
@@ -11223,11 +11235,11 @@ class JavaScriptParser(Parser):
 
     # $ANTLR start "synpred159_JavaScript"
     def synpred159_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:278:4: ( conditionalExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:278:4: conditionalExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:272:7: ( unaryExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:272:7: unaryExpression
         pass 
-        self._state.following.append(self.FOLLOW_conditionalExpression_in_synpred159_JavaScript1871)
-        self.conditionalExpression()
+        self._state.following.append(self.FOLLOW_unaryExpression_in_synpred159_JavaScript1842)
+        self.unaryExpression()
 
         self._state.following.pop()
 
@@ -11236,72 +11248,87 @@ class JavaScriptParser(Parser):
 
 
 
-    # $ANTLR start "synpred162_JavaScript"
-    def synpred162_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:287:4: ( memberExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:287:4: memberExpression
+    # $ANTLR start "synpred160_JavaScript"
+    def synpred160_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:277:4: ( conditionalExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:277:4: conditionalExpression
         pass 
-        self._state.following.append(self.FOLLOW_memberExpression_in_synpred162_JavaScript1919)
+        self._state.following.append(self.FOLLOW_conditionalExpression_in_synpred160_JavaScript1873)
+        self.conditionalExpression()
+
+        self._state.following.pop()
+
+
+    # $ANTLR end "synpred160_JavaScript"
+
+
+
+    # $ANTLR start "synpred163_JavaScript"
+    def synpred163_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:286:4: ( memberExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:286:4: memberExpression
+        pass 
+        self._state.following.append(self.FOLLOW_memberExpression_in_synpred163_JavaScript1921)
         self.memberExpression()
 
         self._state.following.pop()
 
 
-    # $ANTLR end "synpred162_JavaScript"
+    # $ANTLR end "synpred163_JavaScript"
 
 
 
-    # $ANTLR start "synpred203_JavaScript"
-    def synpred203_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+    # $ANTLR start "synpred204_JavaScript"
+    def synpred204_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
         pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
         pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred203_JavaScript2277)
+        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred204_JavaScript2279)
         self.leftHandSideExpression()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:31: ( LT )*
-        while True: #loop241
-            alt241 = 2
-            LA241_0 = self.input.LA(1)
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:31: ( LT )*
+        while True: #loop243
+            alt243 = 2
+            LA243_0 = self.input.LA(1)
 
-            if (LA241_0 == LT) :
-                alt241 = 1
+            if (LA243_0 == LT) :
+                alt243 = 1
 
 
-            if alt241 == 1:
+            if alt243 == 1:
                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                 pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred203_JavaScript2279)
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred204_JavaScript2281)
 
 
             else:
-                break #loop241
-        self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_synpred203_JavaScript2282)
+                break #loop243
+        self._state.following.append(self.FOLLOW_nonAssignmentOperator_in_synpred204_JavaScript2284)
         self.nonAssignmentOperator()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:333:57: ( LT )*
-        while True: #loop242
-            alt242 = 2
-            LA242_0 = self.input.LA(1)
+        # ../src/checkjs/parsers/antlr/JavaScript.g:332:57: ( LT )*
+        while True: #loop244
+            alt244 = 2
+            LA244_0 = self.input.LA(1)
 
-            if (LA242_0 == LT) :
-                alt242 = 1
+            if (LA244_0 == LT) :
+                alt244 = 1
 
 
-            if alt242 == 1:
+            if alt244 == 1:
                 # ../src/checkjs/parsers/antlr/JavaScript.g:0:0: LT
                 pass 
-                self.match(self.input, LT, self.FOLLOW_LT_in_synpred203_JavaScript2284)
+                self.match(self.input, LT, self.FOLLOW_LT_in_synpred204_JavaScript2286)
 
 
             else:
-                break #loop242
-        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred203_JavaScript2287)
+                break #loop244
+        self._state.following.append(self.FOLLOW_assignmentExpression_in_synpred204_JavaScript2289)
         self.assignmentExpression()
 
         self._state.following.pop()
@@ -11310,31 +11337,31 @@ class JavaScriptParser(Parser):
 
 
 
-    # $ANTLR end "synpred203_JavaScript"
+    # $ANTLR end "synpred204_JavaScript"
 
 
 
-    # $ANTLR start "synpred239_JavaScript"
-    def synpred239_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:367:8: ( LT )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:367:8: LT
+    # $ANTLR start "synpred240_JavaScript"
+    def synpred240_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:366:8: ( LT )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:366:8: LT
         pass 
-        self.match(self.input, LT, self.FOLLOW_LT_in_synpred239_JavaScript2604)
+        self.match(self.input, LT, self.FOLLOW_LT_in_synpred240_JavaScript2606)
 
 
-    # $ANTLR end "synpred239_JavaScript"
+    # $ANTLR end "synpred240_JavaScript"
 
 
 
-    # $ANTLR start "synpred246_JavaScript"
-    def synpred246_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:373:8: ( LT )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:373:8: LT
+    # $ANTLR start "synpred247_JavaScript"
+    def synpred247_JavaScript_fragment(self, ):
+        # ../src/checkjs/parsers/antlr/JavaScript.g:372:8: ( LT )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:372:8: LT
         pass 
-        self.match(self.input, LT, self.FOLLOW_LT_in_synpred246_JavaScript2661)
+        self.match(self.input, LT, self.FOLLOW_LT_in_synpred247_JavaScript2663)
 
 
-    # $ANTLR end "synpred246_JavaScript"
+    # $ANTLR end "synpred247_JavaScript"
 
 
 
@@ -11354,37 +11381,11 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred239_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred239_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
     def synpred67_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
         try:
             self.synpred67_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
-    def synpred154_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred154_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11432,11 +11433,11 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred157_JavaScript(self):
+    def synpred247_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
         try:
-            self.synpred157_JavaScript_fragment()
+            self.synpred247_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11458,24 +11459,11 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred203_JavaScript(self):
+    def synpred163_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
         try:
-            self.synpred203_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
-    def synpred151_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred151_JavaScript_fragment()
+            self.synpred163_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11489,6 +11477,58 @@ class JavaScriptParser(Parser):
         start = self.input.mark()
         try:
             self.synpred98_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
+    def synpred204_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred204_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
+    def synpred155_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred155_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
+    def synpred240_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred240_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
+    def synpred152_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred152_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11541,19 +11581,6 @@ class JavaScriptParser(Parser):
         start = self.input.mark()
         try:
             self.synpred127_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
-    def synpred162_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred162_JavaScript_fragment()
         except BacktrackingFailed:
             success = False
         else:
@@ -11627,19 +11654,6 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
-    def synpred246_JavaScript(self):
-        self._state.backtracking += 1
-        start = self.input.mark()
-        try:
-            self.synpred246_JavaScript_fragment()
-        except BacktrackingFailed:
-            success = False
-        else:
-            success = True
-        self.input.rewind(start)
-        self._state.backtracking -= 1
-        return success
-
     def synpred64_JavaScript(self):
         self._state.backtracking += 1
         start = self.input.mark()
@@ -11705,6 +11719,19 @@ class JavaScriptParser(Parser):
         self._state.backtracking -= 1
         return success
 
+    def synpred160_JavaScript(self):
+        self._state.backtracking += 1
+        start = self.input.mark()
+        try:
+            self.synpred160_JavaScript_fragment()
+        except BacktrackingFailed:
+            success = False
+        else:
+            success = True
+        self.input.rewind(start)
+        self._state.backtracking -= 1
+        return success
+
 
 
     # lookup tables for DFA #4
@@ -11722,7 +11749,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA4_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA4_accept = DFA.unpack(
@@ -11735,12 +11762,12 @@ class JavaScriptParser(Parser):
 
             
     DFA4_transition = [
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
-        u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\uffff\2\3"
-        u"\3\uffff\2\3\17\uffff\2\3\15\uffff\13\3"),
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
-        u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\uffff\2\3"
-        u"\3\uffff\2\3\17\uffff\2\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\1\3\1\2\1\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2"
+        u"\uffff\2\3\3\uffff\2\3\16\uffff\2\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\1\3\1\2\1\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2"
+        u"\uffff\2\3\3\uffff\2\3\16\uffff\2\3\15\uffff\13\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -11766,7 +11793,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA5_max = DFA.unpack(
-        u"\1\173\1\0\26\uffff"
+        u"\1\172\1\0\26\uffff"
         )
 
     DFA5_accept = DFA.unpack(
@@ -11779,9 +11806,9 @@ class JavaScriptParser(Parser):
 
             
     DFA5_transition = [
-        DFA.unpack(u"\4\2\31\uffff\1\1\1\uffff\1\2\2\uffff\1\2\1\uffff\1"
-        u"\2\1\uffff\1\2\1\uffff\3\2\1\uffff\4\2\1\uffff\1\2\2\uffff\2\2"
-        u"\3\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\2\2\1\uffff\2\2\30\uffff\1\1\1\uffff\1\2\2\uffff\1"
+        u"\2\1\uffff\1\2\1\uffff\1\2\1\uffff\3\2\1\uffff\4\2\1\uffff\1\2"
+        u"\2\uffff\2\2\3\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -11941,7 +11968,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA24_max = DFA.unpack(
-        u"\1\173\3\uffff\1\0\23\uffff"
+        u"\1\172\3\uffff\1\0\23\uffff"
         )
 
     DFA24_accept = DFA.unpack(
@@ -11955,9 +11982,10 @@ class JavaScriptParser(Parser):
 
             
     DFA24_transition = [
-        DFA.unpack(u"\1\4\3\2\31\uffff\1\2\1\uffff\1\2\2\uffff\1\2\1\uffff"
-        u"\1\1\1\uffff\1\14\1\uffff\3\15\1\uffff\1\20\1\21\1\22\1\23\1\uffff"
-        u"\1\24\2\uffff\1\25\1\26\3\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\4\1\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\2\uffff"
+        u"\1\2\1\uffff\1\1\1\uffff\1\14\1\uffff\3\15\1\uffff\1\20\1\21\1"
+        u"\22\1\23\1\uffff\1\24\2\uffff\1\25\1\26\3\uffff\2\2\16\uffff\2"
+        u"\2\15\uffff\13\2"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12037,7 +12065,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA29_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA29_accept = DFA.unpack(
@@ -12050,12 +12078,12 @@ class JavaScriptParser(Parser):
 
             
     DFA29_transition = [
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
-        u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\2\2\3\3\uffff"
-        u"\2\3\17\uffff\2\3\15\uffff\13\3"),
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\1\3\1\2\1"
-        u"\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2\2\2\3\3\uffff"
-        u"\2\3\17\uffff\2\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\1\3\1\2\1\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2"
+        u"\2\2\3\3\uffff\2\3\16\uffff\2\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\1\3\1\2\1\3\1\uffff\1\3\1\uffff\3\3\1\uffff\4\3\1\uffff\1\3\2"
+        u"\2\2\3\3\uffff\2\3\16\uffff\2\3\15\uffff\13\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12202,7 +12230,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA50_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA50_accept = DFA.unpack(
@@ -12215,9 +12243,9 @@ class JavaScriptParser(Parser):
 
             
     DFA50_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12297,7 +12325,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA53_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA53_accept = DFA.unpack(
@@ -12310,9 +12338,9 @@ class JavaScriptParser(Parser):
 
             
     DFA53_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12392,7 +12420,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA57_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA57_accept = DFA.unpack(
@@ -12405,9 +12433,9 @@ class JavaScriptParser(Parser):
 
             
     DFA57_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12487,7 +12515,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA65_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA65_accept = DFA.unpack(
@@ -12500,9 +12528,9 @@ class JavaScriptParser(Parser):
 
             
     DFA65_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12582,7 +12610,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA68_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA68_accept = DFA.unpack(
@@ -12595,10 +12623,10 @@ class JavaScriptParser(Parser):
 
             
     DFA68_transition = [
-        DFA.unpack(u"\1\1\1\2\1\uffff\2\2\31\uffff\1\2\1\3\1\2\2\uffff\1"
-        u"\2\1\uffff\1\2\24\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u"\1\1\1\2\1\uffff\2\2\31\uffff\1\2\1\3\1\2\2\uffff\1"
-        u"\2\1\uffff\1\2\24\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\1\2\2\uffff\2\2\30\uffff\1\2\1\3\1\2\2\uffff\1"
+        u"\2\1\uffff\1\2\24\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\1\2\2\uffff\2\2\30\uffff\1\2\1\3\1\2\2\uffff\1"
+        u"\2\1\uffff\1\2\24\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12624,7 +12652,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA71_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA71_accept = DFA.unpack(
@@ -12637,10 +12665,10 @@ class JavaScriptParser(Parser):
 
             
     DFA71_transition = [
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\3\1\2\2\uffff\1\2\26\uffff\2"
-        u"\2\17\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\3\1\2\2\uffff\1\2\26\uffff"
-        u"\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\3\1\2\2\uffff\1"
+        u"\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\3\1\2\2\uffff\1"
+        u"\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12666,7 +12694,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA74_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA74_accept = DFA.unpack(
@@ -12679,10 +12707,10 @@ class JavaScriptParser(Parser):
 
             
     DFA74_transition = [
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\26"
-        u"\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\26"
-        u"\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\uffff"
+        u"\1\3\1\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\uffff"
+        u"\1\3\1\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -12708,7 +12736,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA77_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA77_accept = DFA.unpack(
@@ -12721,9 +12749,9 @@ class JavaScriptParser(Parser):
 
             
     DFA77_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12803,7 +12831,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA86_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA86_accept = DFA.unpack(
@@ -12816,9 +12844,9 @@ class JavaScriptParser(Parser):
 
             
     DFA86_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -12898,7 +12926,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA99_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
     DFA99_accept = DFA.unpack(
@@ -12911,9 +12939,9 @@ class JavaScriptParser(Parser):
 
             
     DFA99_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -13113,7 +13141,7 @@ class JavaScriptParser(Parser):
         )
 
     DFA124_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA124_accept = DFA.unpack(
@@ -13126,12 +13154,12 @@ class JavaScriptParser(Parser):
 
             
     DFA124_transition = [
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\3\3\1\uffff"
-        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\1\uffff\2\3\17\uffff\2"
-        u"\3\15\uffff\13\3"),
-        DFA.unpack(u"\1\1\4\3\31\uffff\1\3\1\uffff\1\3\2\uffff\3\3\1\uffff"
-        u"\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\1\uffff\2\3\17\uffff\2"
-        u"\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\3\3\1\uffff\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\1\uffff\2"
+        u"\3\16\uffff\2\3\15\uffff\13\3"),
+        DFA.unpack(u"\1\1\2\3\1\uffff\2\3\30\uffff\1\3\1\uffff\1\3\2\uffff"
+        u"\3\3\1\uffff\5\3\1\uffff\4\3\1\uffff\5\3\1\uffff\1\2\1\uffff\2"
+        u"\3\16\uffff\2\3\15\uffff\13\3"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -13224,36 +13252,36 @@ class JavaScriptParser(Parser):
         pass
 
 
-    # lookup tables for DFA #142
+    # lookup tables for DFA #143
 
-    DFA142_eot = DFA.unpack(
+    DFA143_eot = DFA.unpack(
         u"\17\uffff"
         )
 
-    DFA142_eof = DFA.unpack(
+    DFA143_eof = DFA.unpack(
         u"\17\uffff"
         )
 
-    DFA142_min = DFA.unpack(
+    DFA143_min = DFA.unpack(
         u"\1\30\1\uffff\10\0\5\uffff"
         )
 
-    DFA142_max = DFA.unpack(
-        u"\1\173\1\uffff\10\0\5\uffff"
+    DFA143_max = DFA.unpack(
+        u"\1\172\1\uffff\10\0\5\uffff"
         )
 
-    DFA142_accept = DFA.unpack(
+    DFA143_accept = DFA.unpack(
         u"\1\uffff\1\1\10\uffff\1\5\1\2\1\3\1\4\1\6"
         )
 
-    DFA142_special = DFA.unpack(
+    DFA143_special = DFA.unpack(
         u"\2\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\5\uffff"
         )
 
             
-    DFA142_transition = [
-        DFA.unpack(u"\1\3\1\1\2\4\31\uffff\1\10\1\uffff\1\7\2\uffff\1\6\26"
-        u"\uffff\1\11\1\5\17\uffff\2\12\15\uffff\7\12\1\2\3\4"),
+    DFA143_transition = [
+        DFA.unpack(u"\1\3\1\1\1\uffff\2\4\30\uffff\1\10\1\uffff\1\7\2\uffff"
+        u"\1\6\26\uffff\1\11\1\5\16\uffff\2\12\15\uffff\7\12\1\2\3\4"),
         DFA.unpack(u""),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -13270,9 +13298,9 @@ class JavaScriptParser(Parser):
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #142
+    # class definition for DFA #143
 
-    class DFA142(DFA):
+    class DFA143(DFA):
         pass
 
 
@@ -13287,249 +13315,249 @@ class JavaScriptParser(Parser):
             _s = s
 
             if s == 0: 
-                LA142_2 = input.LA(1)
+                LA143_2 = input.LA(1)
 
                  
-                index142_2 = input.index()
+                index143_2 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_2)
+                input.seek(index143_2)
                 if s >= 0:
                     return s
             elif s == 1: 
-                LA142_3 = input.LA(1)
+                LA143_3 = input.LA(1)
 
                  
-                index142_3 = input.index()
+                index143_3 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_3)
+                input.seek(index143_3)
                 if s >= 0:
                     return s
             elif s == 2: 
-                LA142_4 = input.LA(1)
+                LA143_4 = input.LA(1)
 
                  
-                index142_4 = input.index()
+                index143_4 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_4)
+                input.seek(index143_4)
                 if s >= 0:
                     return s
             elif s == 3: 
-                LA142_5 = input.LA(1)
+                LA143_5 = input.LA(1)
 
                  
-                index142_5 = input.index()
+                index143_5 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_5)
+                input.seek(index143_5)
                 if s >= 0:
                     return s
             elif s == 4: 
-                LA142_6 = input.LA(1)
+                LA143_6 = input.LA(1)
 
                  
-                index142_6 = input.index()
+                index143_6 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_6)
+                input.seek(index143_6)
                 if s >= 0:
                     return s
             elif s == 5: 
-                LA142_7 = input.LA(1)
+                LA143_7 = input.LA(1)
 
                  
-                index142_7 = input.index()
+                index143_7 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_7)
+                input.seek(index143_7)
                 if s >= 0:
                     return s
             elif s == 6: 
-                LA142_8 = input.LA(1)
+                LA143_8 = input.LA(1)
 
                  
-                index142_8 = input.index()
+                index143_8 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_8)
+                input.seek(index143_8)
                 if s >= 0:
                     return s
             elif s == 7: 
-                LA142_9 = input.LA(1)
+                LA143_9 = input.LA(1)
 
                  
-                index142_9 = input.index()
+                index143_9 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred151_JavaScript()):
+                if (self.synpred152_JavaScript()):
                     s = 11
 
-                elif (self.synpred154_JavaScript()):
+                elif (self.synpred155_JavaScript()):
                     s = 12
 
-                elif (self.synpred157_JavaScript()):
+                elif (self.synpred158_JavaScript()):
                     s = 13
 
-                elif (self.synpred158_JavaScript()):
+                elif (self.synpred159_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 14
 
                  
-                input.seek(index142_9)
+                input.seek(index143_9)
                 if s >= 0:
                     return s
 
             if self._state.backtracking >0:
                 raise BacktrackingFailed
-            nvae = NoViableAltException(self_.getDescription(), 142, _s, input)
+            nvae = NoViableAltException(self_.getDescription(), 143, _s, input)
             self_.error(nvae)
             raise nvae
-    # lookup tables for DFA #145
+    # lookup tables for DFA #146
 
-    DFA145_eot = DFA.unpack(
+    DFA146_eot = DFA.unpack(
         u"\13\uffff"
         )
 
-    DFA145_eof = DFA.unpack(
+    DFA146_eof = DFA.unpack(
         u"\13\uffff"
         )
 
-    DFA145_min = DFA.unpack(
+    DFA146_min = DFA.unpack(
         u"\1\30\10\0\2\uffff"
         )
 
-    DFA145_max = DFA.unpack(
-        u"\1\173\10\0\2\uffff"
+    DFA146_max = DFA.unpack(
+        u"\1\172\10\0\2\uffff"
         )
 
-    DFA145_accept = DFA.unpack(
+    DFA146_accept = DFA.unpack(
         u"\11\uffff\1\1\1\2"
         )
 
-    DFA145_special = DFA.unpack(
+    DFA146_special = DFA.unpack(
         u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff"
         )
 
             
-    DFA145_transition = [
-        DFA.unpack(u"\1\2\1\uffff\2\3\31\uffff\1\7\1\uffff\1\6\2\uffff\1"
-        u"\5\26\uffff\1\10\1\4\17\uffff\2\11\15\uffff\7\11\1\1\3\3"),
+    DFA146_transition = [
+        DFA.unpack(u"\1\2\2\uffff\2\3\30\uffff\1\7\1\uffff\1\6\2\uffff\1"
+        u"\5\26\uffff\1\10\1\4\16\uffff\2\11\15\uffff\7\11\1\1\3\3"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -13542,9 +13570,9 @@ class JavaScriptParser(Parser):
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #145
+    # class definition for DFA #146
 
-    class DFA145(DFA):
+    class DFA146(DFA):
         pass
 
 
@@ -13559,177 +13587,177 @@ class JavaScriptParser(Parser):
             _s = s
 
             if s == 0: 
-                LA145_1 = input.LA(1)
+                LA146_1 = input.LA(1)
 
                  
-                index145_1 = input.index()
+                index146_1 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_1)
+                input.seek(index146_1)
                 if s >= 0:
                     return s
             elif s == 1: 
-                LA145_2 = input.LA(1)
+                LA146_2 = input.LA(1)
 
                  
-                index145_2 = input.index()
+                index146_2 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_2)
+                input.seek(index146_2)
                 if s >= 0:
                     return s
             elif s == 2: 
-                LA145_3 = input.LA(1)
+                LA146_3 = input.LA(1)
 
                  
-                index145_3 = input.index()
+                index146_3 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_3)
+                input.seek(index146_3)
                 if s >= 0:
                     return s
             elif s == 3: 
-                LA145_4 = input.LA(1)
+                LA146_4 = input.LA(1)
 
                  
-                index145_4 = input.index()
+                index146_4 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_4)
+                input.seek(index146_4)
                 if s >= 0:
                     return s
             elif s == 4: 
-                LA145_5 = input.LA(1)
+                LA146_5 = input.LA(1)
 
                  
-                index145_5 = input.index()
+                index146_5 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_5)
+                input.seek(index146_5)
                 if s >= 0:
                     return s
             elif s == 5: 
-                LA145_6 = input.LA(1)
+                LA146_6 = input.LA(1)
 
                  
-                index145_6 = input.index()
+                index146_6 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_6)
+                input.seek(index146_6)
                 if s >= 0:
                     return s
             elif s == 6: 
-                LA145_7 = input.LA(1)
+                LA146_7 = input.LA(1)
 
                  
-                index145_7 = input.index()
+                index146_7 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_7)
+                input.seek(index146_7)
                 if s >= 0:
                     return s
             elif s == 7: 
-                LA145_8 = input.LA(1)
+                LA146_8 = input.LA(1)
 
                  
-                index145_8 = input.index()
+                index146_8 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred159_JavaScript()):
+                if (self.synpred160_JavaScript()):
                     s = 9
 
                 elif (True):
                     s = 10
 
                  
-                input.seek(index145_8)
+                input.seek(index146_8)
                 if s >= 0:
                     return s
 
             if self._state.backtracking >0:
                 raise BacktrackingFailed
-            nvae = NoViableAltException(self_.getDescription(), 145, _s, input)
+            nvae = NoViableAltException(self_.getDescription(), 146, _s, input)
             self_.error(nvae)
             raise nvae
-    # lookup tables for DFA #147
+    # lookup tables for DFA #148
 
-    DFA147_eot = DFA.unpack(
+    DFA148_eot = DFA.unpack(
         u"\12\uffff"
         )
 
-    DFA147_eof = DFA.unpack(
+    DFA148_eof = DFA.unpack(
         u"\12\uffff"
         )
 
-    DFA147_min = DFA.unpack(
+    DFA148_min = DFA.unpack(
         u"\1\30\7\uffff\1\0\1\uffff"
         )
 
-    DFA147_max = DFA.unpack(
-        u"\1\173\7\uffff\1\0\1\uffff"
+    DFA148_max = DFA.unpack(
+        u"\1\172\7\uffff\1\0\1\uffff"
         )
 
-    DFA147_accept = DFA.unpack(
+    DFA148_accept = DFA.unpack(
         u"\1\uffff\1\1\7\uffff\1\2"
         )
 
-    DFA147_special = DFA.unpack(
+    DFA148_special = DFA.unpack(
         u"\10\uffff\1\0\1\uffff"
         )
 
             
-    DFA147_transition = [
-        DFA.unpack(u"\1\1\1\uffff\2\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1"
-        u"\1\26\uffff\1\10\1\1\45\uffff\4\1"),
+    DFA148_transition = [
+        DFA.unpack(u"\1\1\2\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\1\26\uffff\1\10\1\1\44\uffff\4\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -13741,9 +13769,9 @@ class JavaScriptParser(Parser):
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #147
+    # class definition for DFA #148
 
-    class DFA147(DFA):
+    class DFA148(DFA):
         pass
 
 
@@ -13758,109 +13786,151 @@ class JavaScriptParser(Parser):
             _s = s
 
             if s == 0: 
-                LA147_8 = input.LA(1)
+                LA148_8 = input.LA(1)
 
                  
-                index147_8 = input.index()
+                index148_8 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred162_JavaScript()):
+                if (self.synpred163_JavaScript()):
                     s = 1
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index147_8)
+                input.seek(index148_8)
                 if s >= 0:
                     return s
 
             if self._state.backtracking >0:
                 raise BacktrackingFailed
-            nvae = NoViableAltException(self_.getDescription(), 147, _s, input)
+            nvae = NoViableAltException(self_.getDescription(), 148, _s, input)
             self_.error(nvae)
             raise nvae
-    # lookup tables for DFA #152
+    # lookup tables for DFA #153
 
-    DFA152_eot = DFA.unpack(
+    DFA153_eot = DFA.unpack(
         u"\4\uffff"
         )
 
-    DFA152_eof = DFA.unpack(
+    DFA153_eof = DFA.unpack(
         u"\1\2\3\uffff"
         )
 
-    DFA152_min = DFA.unpack(
+    DFA153_min = DFA.unpack(
         u"\2\27\2\uffff"
         )
 
-    DFA152_max = DFA.unpack(
-        u"\1\165\1\160\2\uffff"
+    DFA153_max = DFA.unpack(
+        u"\1\164\1\157\2\uffff"
         )
 
-    DFA152_accept = DFA.unpack(
+    DFA153_accept = DFA.unpack(
         u"\2\uffff\1\2\1\1"
         )
 
-    DFA152_special = DFA.unpack(
+    DFA153_special = DFA.unpack(
         u"\4\uffff"
         )
 
             
-    DFA152_transition = [
+    DFA153_transition = [
         DFA.unpack(u"\1\1\36\uffff\4\2\1\uffff\1\2\1\uffff\1\2\5\uffff\1"
-        u"\2\4\uffff\1\2\11\uffff\1\3\1\2\1\3\34\2\3\uffff\2\2"),
+        u"\2\4\uffff\1\2\7\uffff\1\3\1\uffff\1\3\35\2\3\uffff\2\2"),
         DFA.unpack(u"\1\1\36\uffff\4\2\1\uffff\1\2\1\uffff\1\2\5\uffff\1"
-        u"\2\4\uffff\1\2\11\uffff\1\3\1\2\1\3\34\2"),
+        u"\2\4\uffff\1\2\7\uffff\1\3\1\uffff\1\3\35\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #152
+    # class definition for DFA #153
 
-    class DFA152(DFA):
+    class DFA153(DFA):
         pass
 
 
-    # lookup tables for DFA #156
+    # lookup tables for DFA #157
 
-    DFA156_eot = DFA.unpack(
+    DFA157_eot = DFA.unpack(
         u"\4\uffff"
         )
 
-    DFA156_eof = DFA.unpack(
+    DFA157_eof = DFA.unpack(
         u"\1\2\3\uffff"
         )
 
-    DFA156_min = DFA.unpack(
+    DFA157_min = DFA.unpack(
         u"\2\27\2\uffff"
         )
 
-    DFA156_max = DFA.unpack(
-        u"\2\140\2\uffff"
+    DFA157_max = DFA.unpack(
+        u"\2\137\2\uffff"
         )
 
-    DFA156_accept = DFA.unpack(
+    DFA157_accept = DFA.unpack(
         u"\2\uffff\1\2\1\1"
         )
 
-    DFA156_special = DFA.unpack(
+    DFA157_special = DFA.unpack(
         u"\4\uffff"
         )
 
             
-    DFA156_transition = [
+    DFA157_transition = [
         DFA.unpack(u"\1\1\36\uffff\1\2\1\3\2\2\1\uffff\1\2\7\uffff\1\2\4"
-        u"\uffff\1\2\11\uffff\1\3\1\2\1\3\13\uffff\1\2"),
+        u"\uffff\1\2\7\uffff\1\3\1\uffff\1\3\1\2\13\uffff\1\2"),
         DFA.unpack(u"\1\1\36\uffff\1\2\1\3\2\2\1\uffff\1\2\7\uffff\1\2\4"
-        u"\uffff\1\2\11\uffff\1\3\1\2\1\3\13\uffff\1\2"),
+        u"\uffff\1\2\7\uffff\1\3\1\uffff\1\3\1\2\13\uffff\1\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #156
+    # class definition for DFA #157
 
-    class DFA156(DFA):
+    class DFA157(DFA):
+        pass
+
+
+    # lookup tables for DFA #163
+
+    DFA163_eot = DFA.unpack(
+        u"\4\uffff"
+        )
+
+    DFA163_eof = DFA.unpack(
+        u"\4\uffff"
+        )
+
+    DFA163_min = DFA.unpack(
+        u"\2\27\2\uffff"
+        )
+
+    DFA163_max = DFA.unpack(
+        u"\2\172\2\uffff"
+        )
+
+    DFA163_accept = DFA.unpack(
+        u"\2\uffff\1\1\1\2"
+        )
+
+    DFA163_special = DFA.unpack(
+        u"\4\uffff"
+        )
+
+            
+    DFA163_transition = [
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\uffff"
+        u"\1\3\1\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\uffff"
+        u"\1\3\1\2\26\uffff\2\2\16\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u""),
+        DFA.unpack(u"")
+    ]
+
+    # class definition for DFA #163
+
+    class DFA163(DFA):
         pass
 
 
@@ -13879,11 +13949,11 @@ class JavaScriptParser(Parser):
         )
 
     DFA162_max = DFA.unpack(
-        u"\2\173\2\uffff"
+        u"\2\71\2\uffff"
         )
 
     DFA162_accept = DFA.unpack(
-        u"\2\uffff\1\1\1\2"
+        u"\2\uffff\1\2\1\1"
         )
 
     DFA162_special = DFA.unpack(
@@ -13892,10 +13962,8 @@ class JavaScriptParser(Parser):
 
             
     DFA162_transition = [
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\26"
-        u"\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\uffff\1\3\1\2\26"
-        u"\uffff\2\2\17\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\40\uffff\1\3\1\2"),
+        DFA.unpack(u"\1\1\40\uffff\1\3\1\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -13906,118 +13974,78 @@ class JavaScriptParser(Parser):
         pass
 
 
-    # lookup tables for DFA #161
+    # lookup tables for DFA #172
 
-    DFA161_eot = DFA.unpack(
+    DFA172_eot = DFA.unpack(
         u"\4\uffff"
         )
 
-    DFA161_eof = DFA.unpack(
-        u"\4\uffff"
-        )
-
-    DFA161_min = DFA.unpack(
-        u"\2\27\2\uffff"
-        )
-
-    DFA161_max = DFA.unpack(
-        u"\2\71\2\uffff"
-        )
-
-    DFA161_accept = DFA.unpack(
-        u"\2\uffff\1\2\1\1"
-        )
-
-    DFA161_special = DFA.unpack(
-        u"\4\uffff"
-        )
-
-            
-    DFA161_transition = [
-        DFA.unpack(u"\1\1\40\uffff\1\3\1\2"),
-        DFA.unpack(u"\1\1\40\uffff\1\3\1\2"),
-        DFA.unpack(u""),
-        DFA.unpack(u"")
-    ]
-
-    # class definition for DFA #161
-
-    class DFA161(DFA):
-        pass
-
-
-    # lookup tables for DFA #171
-
-    DFA171_eot = DFA.unpack(
-        u"\4\uffff"
-        )
-
-    DFA171_eof = DFA.unpack(
+    DFA172_eof = DFA.unpack(
         u"\1\3\3\uffff"
         )
 
-    DFA171_min = DFA.unpack(
+    DFA172_min = DFA.unpack(
         u"\2\27\2\uffff"
         )
 
-    DFA171_max = DFA.unpack(
-        u"\2\140\2\uffff"
+    DFA172_max = DFA.unpack(
+        u"\2\137\2\uffff"
         )
 
-    DFA171_accept = DFA.unpack(
+    DFA172_accept = DFA.unpack(
         u"\2\uffff\1\1\1\2"
         )
 
-    DFA171_special = DFA.unpack(
+    DFA172_special = DFA.unpack(
         u"\4\uffff"
         )
 
             
-    DFA171_transition = [
-        DFA.unpack(u"\1\1\36\uffff\1\3\1\uffff\1\3\12\uffff\1\3\34\uffff"
+    DFA172_transition = [
+        DFA.unpack(u"\1\1\36\uffff\1\3\1\uffff\1\3\12\uffff\1\3\33\uffff"
         u"\1\2"),
-        DFA.unpack(u"\1\1\36\uffff\1\3\1\uffff\1\3\12\uffff\1\3\34\uffff"
+        DFA.unpack(u"\1\1\36\uffff\1\3\1\uffff\1\3\12\uffff\1\3\33\uffff"
         u"\1\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #171
+    # class definition for DFA #172
 
-    class DFA171(DFA):
+    class DFA172(DFA):
         pass
 
 
-    # lookup tables for DFA #174
+    # lookup tables for DFA #175
 
-    DFA174_eot = DFA.unpack(
+    DFA175_eot = DFA.unpack(
         u"\13\uffff"
         )
 
-    DFA174_eof = DFA.unpack(
+    DFA175_eof = DFA.unpack(
         u"\13\uffff"
         )
 
-    DFA174_min = DFA.unpack(
+    DFA175_min = DFA.unpack(
         u"\1\30\10\0\2\uffff"
         )
 
-    DFA174_max = DFA.unpack(
-        u"\1\173\10\0\2\uffff"
+    DFA175_max = DFA.unpack(
+        u"\1\172\10\0\2\uffff"
         )
 
-    DFA174_accept = DFA.unpack(
+    DFA175_accept = DFA.unpack(
         u"\11\uffff\1\2\1\1"
         )
 
-    DFA174_special = DFA.unpack(
+    DFA175_special = DFA.unpack(
         u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff"
         )
 
             
-    DFA174_transition = [
-        DFA.unpack(u"\1\2\1\uffff\2\3\31\uffff\1\7\1\uffff\1\6\2\uffff\1"
-        u"\5\26\uffff\1\10\1\4\17\uffff\2\11\15\uffff\7\11\1\1\3\3"),
+    DFA175_transition = [
+        DFA.unpack(u"\1\2\2\uffff\2\3\30\uffff\1\7\1\uffff\1\6\2\uffff\1"
+        u"\5\26\uffff\1\10\1\4\16\uffff\2\11\15\uffff\7\11\1\1\3\3"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -14030,9 +14058,9 @@ class JavaScriptParser(Parser):
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #174
+    # class definition for DFA #175
 
-    class DFA174(DFA):
+    class DFA175(DFA):
         pass
 
 
@@ -14047,147 +14075,187 @@ class JavaScriptParser(Parser):
             _s = s
 
             if s == 0: 
-                LA174_1 = input.LA(1)
+                LA175_1 = input.LA(1)
 
                  
-                index174_1 = input.index()
+                index175_1 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_1)
+                input.seek(index175_1)
                 if s >= 0:
                     return s
             elif s == 1: 
-                LA174_2 = input.LA(1)
+                LA175_2 = input.LA(1)
 
                  
-                index174_2 = input.index()
+                index175_2 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_2)
+                input.seek(index175_2)
                 if s >= 0:
                     return s
             elif s == 2: 
-                LA174_3 = input.LA(1)
+                LA175_3 = input.LA(1)
 
                  
-                index174_3 = input.index()
+                index175_3 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_3)
+                input.seek(index175_3)
                 if s >= 0:
                     return s
             elif s == 3: 
-                LA174_4 = input.LA(1)
+                LA175_4 = input.LA(1)
 
                  
-                index174_4 = input.index()
+                index175_4 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_4)
+                input.seek(index175_4)
                 if s >= 0:
                     return s
             elif s == 4: 
-                LA174_5 = input.LA(1)
+                LA175_5 = input.LA(1)
 
                  
-                index174_5 = input.index()
+                index175_5 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_5)
+                input.seek(index175_5)
                 if s >= 0:
                     return s
             elif s == 5: 
-                LA174_6 = input.LA(1)
+                LA175_6 = input.LA(1)
 
                  
-                index174_6 = input.index()
+                index175_6 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_6)
+                input.seek(index175_6)
                 if s >= 0:
                     return s
             elif s == 6: 
-                LA174_7 = input.LA(1)
+                LA175_7 = input.LA(1)
 
                  
-                index174_7 = input.index()
+                index175_7 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_7)
+                input.seek(index175_7)
                 if s >= 0:
                     return s
             elif s == 7: 
-                LA174_8 = input.LA(1)
+                LA175_8 = input.LA(1)
 
                  
-                index174_8 = input.index()
+                index175_8 = input.index()
                 input.rewind()
                 s = -1
-                if (self.synpred203_JavaScript()):
+                if (self.synpred204_JavaScript()):
                     s = 10
 
                 elif (True):
                     s = 9
 
                  
-                input.seek(index174_8)
+                input.seek(index175_8)
                 if s >= 0:
                     return s
 
             if self._state.backtracking >0:
                 raise BacktrackingFailed
-            nvae = NoViableAltException(self_.getDescription(), 174, _s, input)
+            nvae = NoViableAltException(self_.getDescription(), 175, _s, input)
             self_.error(nvae)
             raise nvae
+    # lookup tables for DFA #186
+
+    DFA186_eot = DFA.unpack(
+        u"\4\uffff"
+        )
+
+    DFA186_eof = DFA.unpack(
+        u"\4\uffff"
+        )
+
+    DFA186_min = DFA.unpack(
+        u"\2\27\2\uffff"
+        )
+
+    DFA186_max = DFA.unpack(
+        u"\2\123\2\uffff"
+        )
+
+    DFA186_accept = DFA.unpack(
+        u"\2\uffff\1\2\1\1"
+        )
+
+    DFA186_special = DFA.unpack(
+        u"\4\uffff"
+        )
+
+            
+    DFA186_transition = [
+        DFA.unpack(u"\1\1\40\uffff\1\3\32\uffff\1\2"),
+        DFA.unpack(u"\1\1\40\uffff\1\3\32\uffff\1\2"),
+        DFA.unpack(u""),
+        DFA.unpack(u"")
+    ]
+
+    # class definition for DFA #186
+
+    class DFA186(DFA):
+        pass
+
+
     # lookup tables for DFA #185
 
     DFA185_eot = DFA.unpack(
@@ -14203,11 +14271,11 @@ class JavaScriptParser(Parser):
         )
 
     DFA185_max = DFA.unpack(
-        u"\2\123\2\uffff"
+        u"\2\172\2\uffff"
         )
 
     DFA185_accept = DFA.unpack(
-        u"\2\uffff\1\2\1\1"
+        u"\2\uffff\1\1\1\2"
         )
 
     DFA185_special = DFA.unpack(
@@ -14216,8 +14284,10 @@ class JavaScriptParser(Parser):
 
             
     DFA185_transition = [
-        DFA.unpack(u"\1\1\40\uffff\1\3\32\uffff\1\2"),
-        DFA.unpack(u"\1\1\40\uffff\1\3\32\uffff\1\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\3\1"
+        u"\uffff\1\2\26\uffff\2\2\1\3\15\uffff\2\2\15\uffff\13\2"),
+        DFA.unpack(u"\1\1\2\2\1\uffff\2\2\30\uffff\1\2\1\uffff\1\2\1\3\1"
+        u"\uffff\1\2\26\uffff\2\2\1\3\15\uffff\2\2\15\uffff\13\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
@@ -14228,119 +14298,77 @@ class JavaScriptParser(Parser):
         pass
 
 
-    # lookup tables for DFA #184
+    # lookup tables for DFA #191
 
-    DFA184_eot = DFA.unpack(
+    DFA191_eot = DFA.unpack(
         u"\4\uffff"
         )
 
-    DFA184_eof = DFA.unpack(
+    DFA191_eof = DFA.unpack(
         u"\4\uffff"
         )
 
-    DFA184_min = DFA.unpack(
+    DFA191_min = DFA.unpack(
         u"\2\27\2\uffff"
         )
 
-    DFA184_max = DFA.unpack(
-        u"\2\173\2\uffff"
-        )
-
-    DFA184_accept = DFA.unpack(
-        u"\2\uffff\1\1\1\2"
-        )
-
-    DFA184_special = DFA.unpack(
-        u"\4\uffff"
-        )
-
-            
-    DFA184_transition = [
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\3\1\uffff\1\2\26"
-        u"\uffff\2\2\1\3\16\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u"\1\1\4\2\31\uffff\1\2\1\uffff\1\2\1\3\1\uffff\1\2\26"
-        u"\uffff\2\2\1\3\16\uffff\2\2\15\uffff\13\2"),
-        DFA.unpack(u""),
-        DFA.unpack(u"")
-    ]
-
-    # class definition for DFA #184
-
-    class DFA184(DFA):
-        pass
-
-
-    # lookup tables for DFA #190
-
-    DFA190_eot = DFA.unpack(
-        u"\4\uffff"
-        )
-
-    DFA190_eof = DFA.unpack(
-        u"\4\uffff"
-        )
-
-    DFA190_min = DFA.unpack(
-        u"\2\27\2\uffff"
-        )
-
-    DFA190_max = DFA.unpack(
+    DFA191_max = DFA.unpack(
         u"\2\73\2\uffff"
         )
 
-    DFA190_accept = DFA.unpack(
+    DFA191_accept = DFA.unpack(
         u"\2\uffff\1\2\1\1"
         )
 
-    DFA190_special = DFA.unpack(
+    DFA191_special = DFA.unpack(
         u"\4\uffff"
         )
 
             
-    DFA190_transition = [
+    DFA191_transition = [
         DFA.unpack(u"\1\1\40\uffff\1\3\2\uffff\1\2"),
         DFA.unpack(u"\1\1\40\uffff\1\3\2\uffff\1\2"),
         DFA.unpack(u""),
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #190
+    # class definition for DFA #191
 
-    class DFA190(DFA):
+    class DFA191(DFA):
         pass
 
 
-    # lookup tables for DFA #210
+    # lookup tables for DFA #211
 
-    DFA210_eot = DFA.unpack(
+    DFA211_eot = DFA.unpack(
         u"\30\uffff"
         )
 
-    DFA210_eof = DFA.unpack(
+    DFA211_eof = DFA.unpack(
         u"\30\uffff"
         )
 
-    DFA210_min = DFA.unpack(
+    DFA211_min = DFA.unpack(
         u"\1\30\6\uffff\1\0\20\uffff"
         )
 
-    DFA210_max = DFA.unpack(
-        u"\1\173\6\uffff\1\0\20\uffff"
+    DFA211_max = DFA.unpack(
+        u"\1\172\6\uffff\1\0\20\uffff"
         )
 
-    DFA210_accept = DFA.unpack(
+    DFA211_accept = DFA.unpack(
         u"\1\uffff\1\1\25\uffff\1\2"
         )
 
-    DFA210_special = DFA.unpack(
+    DFA211_special = DFA.unpack(
         u"\7\uffff\1\0\20\uffff"
         )
 
             
-    DFA210_transition = [
-        DFA.unpack(u"\4\1\31\uffff\1\1\1\uffff\1\1\2\uffff\1\7\1\uffff\1"
-        u"\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1\2\uffff\2\1"
-        u"\3\uffff\2\1\17\uffff\2\1\15\uffff\13\1"),
+    DFA211_transition = [
+        DFA.unpack(u"\2\1\1\uffff\2\1\30\uffff\1\1\1\uffff\1\1\2\uffff\1"
+        u"\7\1\uffff\1\1\1\uffff\1\1\1\uffff\3\1\1\uffff\4\1\1\uffff\1\1"
+        u"\2\uffff\2\1\3\uffff\2\1\16\uffff\2\1\15\uffff\13\1"),
         DFA.unpack(u""),
         DFA.unpack(u""),
         DFA.unpack(u""),
@@ -14366,9 +14394,9 @@ class JavaScriptParser(Parser):
         DFA.unpack(u"")
     ]
 
-    # class definition for DFA #210
+    # class definition for DFA #211
 
-    class DFA210(DFA):
+    class DFA211(DFA):
         pass
 
 
@@ -14383,10 +14411,10 @@ class JavaScriptParser(Parser):
             _s = s
 
             if s == 0: 
-                LA210_7 = input.LA(1)
+                LA211_7 = input.LA(1)
 
                  
-                index210_7 = input.index()
+                index211_7 = input.index()
                 input.rewind()
                 s = -1
                 if (self.synpred63_JavaScript()):
@@ -14396,24 +14424,24 @@ class JavaScriptParser(Parser):
                     s = 23
 
                  
-                input.seek(index210_7)
+                input.seek(index211_7)
                 if s >= 0:
                     return s
 
             if self._state.backtracking >0:
                 raise BacktrackingFailed
-            nvae = NoViableAltException(self_.getDescription(), 210, _s, input)
+            nvae = NoViableAltException(self_.getDescription(), 211, _s, input)
             self_.error(nvae)
             raise nvae
  
 
-    FOLLOW_LT_in_program195 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_LT_in_program195 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_sourceElements_in_program199 = frozenset([23])
     FOLLOW_LT_in_program201 = frozenset([23])
     FOLLOW_EOF_in_program205 = frozenset([1])
-    FOLLOW_sourceElement_in_sourceElements217 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_sourceElements220 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_sourceElement_in_sourceElements224 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_sourceElement_in_sourceElements217 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_sourceElements220 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_sourceElement_in_sourceElements224 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_functionDeclaration_in_sourceElement237 = frozenset([1])
     FOLLOW_statement_in_sourceElement242 = frozenset([1])
     FOLLOW_53_in_functionDeclaration254 = frozenset([23, 24])
@@ -14440,13 +14468,13 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_formalParameterList370 = frozenset([23, 56, 57])
     FOLLOW_LT_in_formalParameterList376 = frozenset([23, 57])
     FOLLOW_57_in_formalParameterList379 = frozenset([1])
-    FOLLOW_58_in_functionBody408 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_functionBody410 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_58_in_functionBody408 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_functionBody410 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_sourceElements_in_functionBody413 = frozenset([23, 59])
     FOLLOW_LT_in_functionBody416 = frozenset([23, 59])
     FOLLOW_59_in_functionBody419 = frozenset([1])
     FOLLOW_58_in_djangoVariable449 = frozenset([58])
-    FOLLOW_58_in_djangoVariable451 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_58_in_djangoVariable451 = frozenset([4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_59_in_djangoVariable454 = frozenset([59])
     FOLLOW_59_in_djangoVariable456 = frozenset([1])
     FOLLOW_variableStatement_in_statement482 = frozenset([1])
@@ -14461,14 +14489,14 @@ class JavaScriptParser(Parser):
     FOLLOW_switchStatement_in_statement534 = frozenset([1])
     FOLLOW_throwStatement_in_statement539 = frozenset([1])
     FOLLOW_tryStatement_in_statement544 = frozenset([1])
-    FOLLOW_58_in_statementBlock555 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_statementBlock557 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_58_in_statementBlock555 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_statementBlock557 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 59, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementList_in_statementBlock561 = frozenset([23, 59])
     FOLLOW_LT_in_statementBlock564 = frozenset([23, 59])
     FOLLOW_59_in_statementBlock568 = frozenset([1])
-    FOLLOW_statement_in_statementList579 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_statementList582 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_statement_in_statementList586 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_statement_in_statementList579 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_statementList582 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_statement_in_statementList586 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_60_in_variableStatement599 = frozenset([23, 24])
     FOLLOW_LT_in_variableStatement602 = frozenset([23, 24])
     FOLLOW_variableDeclarationList_in_variableStatement606 = frozenset([23, 54])
@@ -14492,11 +14520,11 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_variableDeclarationNoIn722 = frozenset([1, 23, 61])
     FOLLOW_LT_in_variableDeclarationNoIn724 = frozenset([1, 23, 61])
     FOLLOW_initialiserNoIn_in_variableDeclarationNoIn727 = frozenset([1])
-    FOLLOW_61_in_initialiser758 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_initialiser761 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_61_in_initialiser758 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_initialiser761 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_assignmentExpression_in_initialiser765 = frozenset([1])
-    FOLLOW_61_in_initialiserNoIn776 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_initialiserNoIn779 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_61_in_initialiserNoIn776 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_initialiserNoIn779 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_assignmentExpressionNoIn_in_initialiserNoIn783 = frozenset([1])
     FOLLOW_54_in_emptyStatement794 = frozenset([1])
     FOLLOW_expression_in_expressionStatement805 = frozenset([23, 54])
@@ -14504,61 +14532,61 @@ class JavaScriptParser(Parser):
     FOLLOW_54_in_expressionStatement811 = frozenset([1])
     FOLLOW_62_in_ifStatement823 = frozenset([23, 55])
     FOLLOW_LT_in_ifStatement825 = frozenset([23, 55])
-    FOLLOW_55_in_ifStatement829 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_ifStatement831 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_ifStatement829 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_ifStatement831 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_ifStatement835 = frozenset([23, 57])
     FOLLOW_LT_in_ifStatement837 = frozenset([23, 57])
-    FOLLOW_57_in_ifStatement841 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_ifStatement843 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_ifStatement841 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_ifStatement843 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_ifStatement848 = frozenset([1, 23, 63])
     FOLLOW_statementBlock_in_ifStatement852 = frozenset([1, 23, 63])
     FOLLOW_LT_in_ifStatement856 = frozenset([23, 63])
-    FOLLOW_63_in_ifStatement860 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_ifStatement862 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_63_in_ifStatement860 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_ifStatement862 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_ifStatement867 = frozenset([1])
     FOLLOW_statementBlock_in_ifStatement871 = frozenset([1])
     FOLLOW_doWhileStatement_in_iterationStatement885 = frozenset([1])
     FOLLOW_whileStatement_in_iterationStatement890 = frozenset([1])
     FOLLOW_forStatement_in_iterationStatement895 = frozenset([1])
     FOLLOW_forInStatement_in_iterationStatement900 = frozenset([1])
-    FOLLOW_64_in_doWhileStatement911 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_doWhileStatement913 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_64_in_doWhileStatement911 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_doWhileStatement913 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_doWhileStatement918 = frozenset([23, 65])
     FOLLOW_statementBlock_in_doWhileStatement922 = frozenset([23, 65])
     FOLLOW_LT_in_doWhileStatement925 = frozenset([23, 65])
     FOLLOW_65_in_doWhileStatement929 = frozenset([23, 55])
     FOLLOW_LT_in_doWhileStatement931 = frozenset([23, 55])
-    FOLLOW_55_in_doWhileStatement935 = frozenset([24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_doWhileStatement935 = frozenset([24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_doWhileStatement937 = frozenset([57])
     FOLLOW_57_in_doWhileStatement939 = frozenset([23, 54])
     FOLLOW_LT_in_doWhileStatement941 = frozenset([23, 54])
     FOLLOW_54_in_doWhileStatement945 = frozenset([1])
     FOLLOW_65_in_whileStatement957 = frozenset([23, 55])
     FOLLOW_LT_in_whileStatement959 = frozenset([23, 55])
-    FOLLOW_55_in_whileStatement963 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_whileStatement965 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_whileStatement963 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_whileStatement965 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_whileStatement969 = frozenset([23, 57])
     FOLLOW_LT_in_whileStatement971 = frozenset([23, 57])
-    FOLLOW_57_in_whileStatement975 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_whileStatement977 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_whileStatement975 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_whileStatement977 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_whileStatement982 = frozenset([1])
     FOLLOW_statementBlock_in_whileStatement986 = frozenset([1])
     FOLLOW_66_in_forStatement998 = frozenset([23, 55])
     FOLLOW_LT_in_forStatement1000 = frozenset([23, 55])
-    FOLLOW_55_in_forStatement1004 = frozenset([23, 24, 26, 27, 53, 54, 55, 58, 60, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forStatement1007 = frozenset([23, 24, 26, 27, 53, 55, 58, 60, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_forStatement1004 = frozenset([23, 24, 27, 28, 53, 54, 55, 58, 60, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forStatement1007 = frozenset([23, 24, 27, 28, 53, 55, 58, 60, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_forStatementInitialiserPart_in_forStatement1011 = frozenset([23, 54])
     FOLLOW_LT_in_forStatement1015 = frozenset([23, 54])
-    FOLLOW_54_in_forStatement1019 = frozenset([23, 24, 25, 26, 27, 53, 54, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forStatement1023 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_54_in_forStatement1019 = frozenset([23, 24, 25, 27, 28, 53, 54, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forStatement1023 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_forStatement1027 = frozenset([23, 54])
     FOLLOW_LT_in_forStatement1031 = frozenset([23, 54])
-    FOLLOW_54_in_forStatement1035 = frozenset([23, 24, 25, 26, 27, 53, 55, 57, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forStatement1039 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_54_in_forStatement1035 = frozenset([23, 24, 25, 27, 28, 53, 55, 57, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forStatement1039 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_forStatement1043 = frozenset([23, 57])
     FOLLOW_LT_in_forStatement1047 = frozenset([23, 57])
-    FOLLOW_57_in_forStatement1051 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forStatement1053 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_forStatement1051 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forStatement1053 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_forStatement1058 = frozenset([1])
     FOLLOW_statementBlock_in_forStatement1062 = frozenset([1])
     FOLLOW_expressionNoIn_in_forStatementInitialiserPart1074 = frozenset([1])
@@ -14567,16 +14595,16 @@ class JavaScriptParser(Parser):
     FOLLOW_variableDeclarationListNoIn_in_forStatementInitialiserPart1085 = frozenset([1])
     FOLLOW_66_in_forInStatement1096 = frozenset([23, 55])
     FOLLOW_LT_in_forInStatement1098 = frozenset([23, 55])
-    FOLLOW_55_in_forInStatement1102 = frozenset([23, 24, 26, 27, 53, 55, 58, 60, 81, 82, 120, 121, 122, 123])
-    FOLLOW_LT_in_forInStatement1104 = frozenset([23, 24, 26, 27, 53, 55, 58, 60, 81, 82, 120, 121, 122, 123])
+    FOLLOW_55_in_forInStatement1102 = frozenset([23, 24, 27, 28, 53, 55, 58, 60, 81, 82, 119, 120, 121, 122])
+    FOLLOW_LT_in_forInStatement1104 = frozenset([23, 24, 27, 28, 53, 55, 58, 60, 81, 82, 119, 120, 121, 122])
     FOLLOW_forInStatementInitialiserPart_in_forInStatement1108 = frozenset([23, 67])
     FOLLOW_LT_in_forInStatement1110 = frozenset([23, 67])
-    FOLLOW_67_in_forInStatement1114 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forInStatement1116 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_67_in_forInStatement1114 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forInStatement1116 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_forInStatement1120 = frozenset([23, 57])
     FOLLOW_LT_in_forInStatement1122 = frozenset([23, 57])
-    FOLLOW_57_in_forInStatement1126 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_forInStatement1128 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_forInStatement1126 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_forInStatement1128 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_forInStatement1133 = frozenset([1])
     FOLLOW_statementBlock_in_forInStatement1137 = frozenset([1])
     FOLLOW_leftHandSideExpression_in_forInStatementInitialiserPart1149 = frozenset([1])
@@ -14591,29 +14619,29 @@ class JavaScriptParser(Parser):
     FOLLOW_Identifier_in_breakStatement1194 = frozenset([23, 54])
     FOLLOW_LT_in_breakStatement1197 = frozenset([23, 54])
     FOLLOW_54_in_breakStatement1201 = frozenset([1])
-    FOLLOW_70_in_returnStatement1213 = frozenset([23, 24, 25, 26, 27, 53, 54, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_70_in_returnStatement1213 = frozenset([23, 24, 25, 27, 28, 53, 54, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_returnStatement1215 = frozenset([23, 54])
     FOLLOW_LT_in_returnStatement1218 = frozenset([23, 54])
     FOLLOW_54_in_returnStatement1222 = frozenset([1])
     FOLLOW_71_in_withStatement1234 = frozenset([23, 55])
     FOLLOW_LT_in_withStatement1236 = frozenset([23, 55])
-    FOLLOW_55_in_withStatement1240 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_withStatement1242 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_withStatement1240 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_withStatement1242 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_withStatement1246 = frozenset([23, 57])
     FOLLOW_LT_in_withStatement1248 = frozenset([23, 57])
-    FOLLOW_57_in_withStatement1252 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_withStatement1254 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_withStatement1252 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_withStatement1254 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_withStatement1259 = frozenset([1])
     FOLLOW_statementBlock_in_withStatement1263 = frozenset([1])
     FOLLOW_Identifier_in_labelledStatement1275 = frozenset([23, 72])
     FOLLOW_LT_in_labelledStatement1277 = frozenset([23, 72])
-    FOLLOW_72_in_labelledStatement1281 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_labelledStatement1283 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_72_in_labelledStatement1281 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_labelledStatement1283 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_labelledStatement1287 = frozenset([1])
     FOLLOW_73_in_switchStatement1298 = frozenset([23, 55])
     FOLLOW_LT_in_switchStatement1300 = frozenset([23, 55])
-    FOLLOW_55_in_switchStatement1304 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_switchStatement1306 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_55_in_switchStatement1304 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_switchStatement1306 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_switchStatement1310 = frozenset([23, 57])
     FOLLOW_LT_in_switchStatement1312 = frozenset([23, 57])
     FOLLOW_57_in_switchStatement1316 = frozenset([23, 58])
@@ -14628,24 +14656,24 @@ class JavaScriptParser(Parser):
     FOLLOW_caseClause_in_caseBlock1356 = frozenset([23, 59, 74])
     FOLLOW_LT_in_caseBlock1362 = frozenset([23, 59])
     FOLLOW_59_in_caseBlock1366 = frozenset([1])
-    FOLLOW_74_in_caseClause1377 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_caseClause1379 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_74_in_caseClause1377 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_caseClause1379 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_caseClause1383 = frozenset([23, 72])
     FOLLOW_LT_in_caseClause1385 = frozenset([23, 72])
-    FOLLOW_72_in_caseClause1389 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_caseClause1391 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_72_in_caseClause1389 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_caseClause1391 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementList_in_caseClause1395 = frozenset([1])
     FOLLOW_75_in_defaultClause1407 = frozenset([23, 72])
     FOLLOW_LT_in_defaultClause1409 = frozenset([23, 72])
-    FOLLOW_72_in_defaultClause1413 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_defaultClause1415 = frozenset([1, 23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_72_in_defaultClause1413 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_defaultClause1415 = frozenset([1, 23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementList_in_defaultClause1419 = frozenset([1])
-    FOLLOW_76_in_throwStatement1431 = frozenset([24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_76_in_throwStatement1431 = frozenset([24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_expression_in_throwStatement1433 = frozenset([23, 54])
     FOLLOW_LT_in_throwStatement1435 = frozenset([23, 54])
     FOLLOW_54_in_throwStatement1439 = frozenset([1])
-    FOLLOW_77_in_tryStatement1451 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_tryStatement1453 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_77_in_tryStatement1451 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_tryStatement1453 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementBlock_in_tryStatement1457 = frozenset([23, 78, 79])
     FOLLOW_LT_in_tryStatement1459 = frozenset([23, 78, 79])
     FOLLOW_finallyClause_in_tryStatement1464 = frozenset([1])
@@ -14658,139 +14686,141 @@ class JavaScriptParser(Parser):
     FOLLOW_LT_in_catchClause1497 = frozenset([23, 24])
     FOLLOW_Identifier_in_catchClause1501 = frozenset([23, 57])
     FOLLOW_LT_in_catchClause1503 = frozenset([23, 57])
-    FOLLOW_57_in_catchClause1507 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_catchClause1509 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_57_in_catchClause1507 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_catchClause1509 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementBlock_in_catchClause1513 = frozenset([1])
-    FOLLOW_79_in_finallyClause1524 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_finallyClause1526 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_79_in_finallyClause1524 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_finallyClause1526 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statementBlock_in_finallyClause1530 = frozenset([1])
     FOLLOW_assignmentExpression_in_expression1542 = frozenset([1, 23, 56])
     FOLLOW_LT_in_expression1545 = frozenset([23, 56])
-    FOLLOW_56_in_expression1549 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_expression1551 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_56_in_expression1549 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_expression1551 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_assignmentExpression_in_expression1555 = frozenset([1, 23, 56])
     FOLLOW_assignmentExpressionNoIn_in_expressionNoIn1568 = frozenset([1, 23, 56])
     FOLLOW_LT_in_expressionNoIn1571 = frozenset([23, 56])
-    FOLLOW_56_in_expressionNoIn1575 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_expressionNoIn1577 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_56_in_expressionNoIn1575 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_expressionNoIn1577 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_assignmentExpressionNoIn_in_expressionNoIn1581 = frozenset([1, 23, 56])
-    FOLLOW_RegexpLiteral_in_assignmentExpression1602 = frozenset([1, 80])
-    FOLLOW_80_in_assignmentExpression1604 = frozenset([1])
-    FOLLOW_callExpression_in_assignmentExpression1613 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_assignmentExpression1631 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_LT_in_assignmentExpression1633 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_nonAssignmentOperator_in_assignmentExpression1636 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_assignmentExpression1638 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_assignmentExpression1641 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_assignmentExpression1736 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_LT_in_assignmentExpression1738 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_assignmentOperator_in_assignmentExpression1741 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_assignmentExpression1743 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_assignmentExpression1746 = frozenset([1])
-    FOLLOW_unaryExpression_in_assignmentExpression1840 = frozenset([1])
-    FOLLOW_newExpression_in_assignmentExpression1848 = frozenset([1])
-    FOLLOW_conditionalExpression_in_assignmentExpressionNoIn1871 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_assignmentExpressionNoIn1876 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_LT_in_assignmentExpressionNoIn1878 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1882 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_assignmentExpressionNoIn1884 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpressionNoIn_in_assignmentExpressionNoIn1888 = frozenset([1])
-    FOLLOW_memberExpression_in_leftHandSideExpression1899 = frozenset([1])
-    FOLLOW_memberExpression_in_newExpression1919 = frozenset([1])
-    FOLLOW_81_in_newExpression1924 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_newExpression1926 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_newExpression_in_newExpression1930 = frozenset([1])
-    FOLLOW_primaryExpression_in_memberExpression1942 = frozenset([1, 23, 82, 84])
-    FOLLOW_functionExpression_in_memberExpression1946 = frozenset([1, 23, 82, 84])
-    FOLLOW_81_in_memberExpression1950 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 120, 121, 122, 123])
-    FOLLOW_LT_in_memberExpression1952 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 120, 121, 122, 123])
-    FOLLOW_memberExpression_in_memberExpression1956 = frozenset([23, 55])
-    FOLLOW_LT_in_memberExpression1958 = frozenset([23, 55])
-    FOLLOW_arguments_in_memberExpression1962 = frozenset([1, 23, 82, 84])
-    FOLLOW_LT_in_memberExpression1966 = frozenset([23, 82, 84])
-    FOLLOW_memberExpressionSuffix_in_memberExpression1970 = frozenset([1, 23, 82, 84])
-    FOLLOW_indexSuffix_in_memberExpressionSuffix1983 = frozenset([1])
-    FOLLOW_propertyReferenceSuffix_in_memberExpressionSuffix1988 = frozenset([1])
-    FOLLOW_memberExpression_in_callExpression1999 = frozenset([23, 55])
-    FOLLOW_LT_in_callExpression2001 = frozenset([23, 55])
-    FOLLOW_arguments_in_callExpression2004 = frozenset([1, 23, 55, 82, 84])
-    FOLLOW_LT_in_callExpression2007 = frozenset([23, 55, 82, 84])
-    FOLLOW_callExpressionSuffix_in_callExpression2010 = frozenset([1, 23, 55, 82, 84])
-    FOLLOW_arguments_in_callExpressionSuffix2048 = frozenset([1])
-    FOLLOW_indexSuffix_in_callExpressionSuffix2053 = frozenset([1])
-    FOLLOW_propertyReferenceSuffix_in_callExpressionSuffix2058 = frozenset([1])
-    FOLLOW_55_in_arguments2069 = frozenset([23, 24, 25, 26, 27, 53, 55, 57, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_arguments2072 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_arguments2075 = frozenset([23, 56, 57])
-    FOLLOW_LT_in_arguments2078 = frozenset([23, 56])
-    FOLLOW_56_in_arguments2081 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_arguments2083 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_arguments2086 = frozenset([23, 56, 57])
-    FOLLOW_LT_in_arguments2093 = frozenset([23, 57])
-    FOLLOW_57_in_arguments2096 = frozenset([1])
-    FOLLOW_82_in_indexSuffix2125 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_indexSuffix2127 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_expression_in_indexSuffix2130 = frozenset([23, 83])
-    FOLLOW_LT_in_indexSuffix2132 = frozenset([23, 83])
-    FOLLOW_83_in_indexSuffix2135 = frozenset([1])
-    FOLLOW_84_in_propertyReferenceSuffix2155 = frozenset([23, 24])
-    FOLLOW_LT_in_propertyReferenceSuffix2157 = frozenset([23, 24])
-    FOLLOW_Identifier_in_propertyReferenceSuffix2160 = frozenset([1])
+    FOLLOW_RegexpLiteral_in_assignmentExpression1597 = frozenset([1, 26, 80])
+    FOLLOW_RegexpFlags_in_assignmentExpression1599 = frozenset([1, 80])
+    FOLLOW_80_in_assignmentExpression1603 = frozenset([24, 27, 28, 53, 55, 58, 81, 82, 119, 120, 121, 122])
+    FOLLOW_callExpression_in_assignmentExpression1605 = frozenset([1])
+    FOLLOW_callExpression_in_assignmentExpression1615 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_assignmentExpression1633 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_LT_in_assignmentExpression1635 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_nonAssignmentOperator_in_assignmentExpression1638 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_assignmentExpression1640 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_assignmentExpression1643 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_assignmentExpression1738 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_LT_in_assignmentExpression1740 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_assignmentOperator_in_assignmentExpression1743 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_assignmentExpression1745 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_assignmentExpression1748 = frozenset([1])
+    FOLLOW_unaryExpression_in_assignmentExpression1842 = frozenset([1])
+    FOLLOW_newExpression_in_assignmentExpression1850 = frozenset([1])
+    FOLLOW_conditionalExpression_in_assignmentExpressionNoIn1873 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_assignmentExpressionNoIn1878 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_LT_in_assignmentExpressionNoIn1880 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_assignmentOperator_in_assignmentExpressionNoIn1884 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_assignmentExpressionNoIn1886 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpressionNoIn_in_assignmentExpressionNoIn1890 = frozenset([1])
+    FOLLOW_memberExpression_in_leftHandSideExpression1901 = frozenset([1])
+    FOLLOW_memberExpression_in_newExpression1921 = frozenset([1])
+    FOLLOW_81_in_newExpression1926 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_newExpression1928 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_newExpression_in_newExpression1932 = frozenset([1])
+    FOLLOW_primaryExpression_in_memberExpression1944 = frozenset([1, 23, 80, 82])
+    FOLLOW_functionExpression_in_memberExpression1948 = frozenset([1, 23, 80, 82])
+    FOLLOW_81_in_memberExpression1952 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 119, 120, 121, 122])
+    FOLLOW_LT_in_memberExpression1954 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 119, 120, 121, 122])
+    FOLLOW_memberExpression_in_memberExpression1958 = frozenset([23, 55])
+    FOLLOW_LT_in_memberExpression1960 = frozenset([23, 55])
+    FOLLOW_arguments_in_memberExpression1964 = frozenset([1, 23, 80, 82])
+    FOLLOW_LT_in_memberExpression1968 = frozenset([23, 80, 82])
+    FOLLOW_memberExpressionSuffix_in_memberExpression1972 = frozenset([1, 23, 80, 82])
+    FOLLOW_indexSuffix_in_memberExpressionSuffix1985 = frozenset([1])
+    FOLLOW_propertyReferenceSuffix_in_memberExpressionSuffix1990 = frozenset([1])
+    FOLLOW_memberExpression_in_callExpression2001 = frozenset([23, 55])
+    FOLLOW_LT_in_callExpression2003 = frozenset([23, 55])
+    FOLLOW_arguments_in_callExpression2006 = frozenset([1, 23, 55, 80, 82])
+    FOLLOW_LT_in_callExpression2009 = frozenset([23, 55, 80, 82])
+    FOLLOW_callExpressionSuffix_in_callExpression2012 = frozenset([1, 23, 55, 80, 82])
+    FOLLOW_arguments_in_callExpressionSuffix2050 = frozenset([1])
+    FOLLOW_indexSuffix_in_callExpressionSuffix2055 = frozenset([1])
+    FOLLOW_propertyReferenceSuffix_in_callExpressionSuffix2060 = frozenset([1])
+    FOLLOW_55_in_arguments2071 = frozenset([23, 24, 25, 27, 28, 53, 55, 57, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_arguments2074 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_arguments2077 = frozenset([23, 56, 57])
+    FOLLOW_LT_in_arguments2080 = frozenset([23, 56])
+    FOLLOW_56_in_arguments2083 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_arguments2085 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_arguments2088 = frozenset([23, 56, 57])
+    FOLLOW_LT_in_arguments2095 = frozenset([23, 57])
+    FOLLOW_57_in_arguments2098 = frozenset([1])
+    FOLLOW_82_in_indexSuffix2127 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_indexSuffix2129 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_expression_in_indexSuffix2132 = frozenset([23, 83])
+    FOLLOW_LT_in_indexSuffix2134 = frozenset([23, 83])
+    FOLLOW_83_in_indexSuffix2137 = frozenset([1])
+    FOLLOW_80_in_propertyReferenceSuffix2157 = frozenset([23, 24])
+    FOLLOW_LT_in_propertyReferenceSuffix2159 = frozenset([23, 24])
+    FOLLOW_Identifier_in_propertyReferenceSuffix2162 = frozenset([1])
     FOLLOW_set_in_assignmentOperator0 = frozenset([1])
-    FOLLOW_operatorExpression_in_conditionalExpression2235 = frozenset([1, 23, 96])
-    FOLLOW_LT_in_conditionalExpression2238 = frozenset([23, 96])
-    FOLLOW_96_in_conditionalExpression2242 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_conditionalExpression2244 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_operatorExpression_in_conditionalExpression2248 = frozenset([23, 72])
-    FOLLOW_LT_in_conditionalExpression2250 = frozenset([23, 72])
-    FOLLOW_72_in_conditionalExpression2254 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_conditionalExpression2256 = frozenset([23, 24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_operatorExpression_in_conditionalExpression2260 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_operatorExpression2277 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_LT_in_operatorExpression2279 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_nonAssignmentOperator_in_operatorExpression2282 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_operatorExpression2284 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_operatorExpression2287 = frozenset([1])
-    FOLLOW_unaryExpression_in_operatorExpression2381 = frozenset([1])
+    FOLLOW_operatorExpression_in_conditionalExpression2237 = frozenset([1, 23, 95])
+    FOLLOW_LT_in_conditionalExpression2240 = frozenset([23, 95])
+    FOLLOW_95_in_conditionalExpression2244 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_conditionalExpression2246 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_operatorExpression_in_conditionalExpression2250 = frozenset([23, 72])
+    FOLLOW_LT_in_conditionalExpression2252 = frozenset([23, 72])
+    FOLLOW_72_in_conditionalExpression2256 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_conditionalExpression2258 = frozenset([23, 24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_operatorExpression_in_conditionalExpression2262 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_operatorExpression2279 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_LT_in_operatorExpression2281 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_nonAssignmentOperator_in_operatorExpression2284 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_operatorExpression2286 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_operatorExpression2289 = frozenset([1])
+    FOLLOW_unaryExpression_in_operatorExpression2383 = frozenset([1])
     FOLLOW_set_in_nonAssignmentOperator0 = frozenset([1])
-    FOLLOW_postfixExpression_in_unaryExpression2481 = frozenset([1])
-    FOLLOW_set_in_unaryExpression2486 = frozenset([24, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_unaryExpression_in_unaryExpression2522 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_postfixExpression2533 = frozenset([1, 116, 117])
-    FOLLOW_set_in_postfixExpression2535 = frozenset([1])
-    FOLLOW_120_in_primaryExpression2553 = frozenset([1])
-    FOLLOW_Identifier_in_primaryExpression2558 = frozenset([1])
-    FOLLOW_literal_in_primaryExpression2563 = frozenset([1])
-    FOLLOW_arrayLiteral_in_primaryExpression2568 = frozenset([1])
-    FOLLOW_objectLiteral_in_primaryExpression2573 = frozenset([1])
-    FOLLOW_55_in_primaryExpression2578 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_primaryExpression2580 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_expression_in_primaryExpression2584 = frozenset([23, 57])
-    FOLLOW_LT_in_primaryExpression2586 = frozenset([23, 57])
-    FOLLOW_57_in_primaryExpression2590 = frozenset([1])
-    FOLLOW_82_in_arrayLiteral2602 = frozenset([23, 24, 25, 26, 27, 53, 55, 56, 58, 81, 82, 83, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_arrayLiteral2604 = frozenset([23, 24, 25, 26, 27, 53, 55, 56, 58, 81, 82, 83, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_arrayLiteral2607 = frozenset([23, 56, 83])
-    FOLLOW_LT_in_arrayLiteral2611 = frozenset([23, 56])
-    FOLLOW_56_in_arrayLiteral2614 = frozenset([23, 24, 25, 26, 27, 53, 55, 56, 58, 81, 82, 83, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_arrayLiteral2617 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_arrayLiteral2620 = frozenset([23, 56, 83])
-    FOLLOW_LT_in_arrayLiteral2626 = frozenset([23, 83])
-    FOLLOW_83_in_arrayLiteral2629 = frozenset([1])
-    FOLLOW_58_in_objectLiteral2659 = frozenset([23, 24, 26, 27, 59])
-    FOLLOW_LT_in_objectLiteral2661 = frozenset([23, 24, 26, 27, 59])
-    FOLLOW_propertyNameAndValue_in_objectLiteral2665 = frozenset([23, 56, 59])
-    FOLLOW_LT_in_objectLiteral2668 = frozenset([23, 56])
-    FOLLOW_56_in_objectLiteral2671 = frozenset([23, 24, 26, 27])
-    FOLLOW_LT_in_objectLiteral2673 = frozenset([23, 24, 26, 27])
-    FOLLOW_propertyNameAndValue_in_objectLiteral2676 = frozenset([23, 56, 59])
-    FOLLOW_LT_in_objectLiteral2682 = frozenset([23, 59])
-    FOLLOW_59_in_objectLiteral2685 = frozenset([1])
-    FOLLOW_propertyName_in_propertyNameAndValue2714 = frozenset([23, 72])
-    FOLLOW_LT_in_propertyNameAndValue2716 = frozenset([23, 72])
-    FOLLOW_72_in_propertyNameAndValue2719 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_propertyNameAndValue2721 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_propertyNameAndValue2724 = frozenset([1])
+    FOLLOW_postfixExpression_in_unaryExpression2483 = frozenset([1])
+    FOLLOW_set_in_unaryExpression2488 = frozenset([24, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_unaryExpression_in_unaryExpression2524 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_postfixExpression2535 = frozenset([1, 115, 116])
+    FOLLOW_set_in_postfixExpression2537 = frozenset([1])
+    FOLLOW_119_in_primaryExpression2555 = frozenset([1])
+    FOLLOW_Identifier_in_primaryExpression2560 = frozenset([1])
+    FOLLOW_literal_in_primaryExpression2565 = frozenset([1])
+    FOLLOW_arrayLiteral_in_primaryExpression2570 = frozenset([1])
+    FOLLOW_objectLiteral_in_primaryExpression2575 = frozenset([1])
+    FOLLOW_55_in_primaryExpression2580 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_primaryExpression2582 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_expression_in_primaryExpression2586 = frozenset([23, 57])
+    FOLLOW_LT_in_primaryExpression2588 = frozenset([23, 57])
+    FOLLOW_57_in_primaryExpression2592 = frozenset([1])
+    FOLLOW_82_in_arrayLiteral2604 = frozenset([23, 24, 25, 27, 28, 53, 55, 56, 58, 81, 82, 83, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_arrayLiteral2606 = frozenset([23, 24, 25, 27, 28, 53, 55, 56, 58, 81, 82, 83, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_arrayLiteral2609 = frozenset([23, 56, 83])
+    FOLLOW_LT_in_arrayLiteral2613 = frozenset([23, 56])
+    FOLLOW_56_in_arrayLiteral2616 = frozenset([23, 24, 25, 27, 28, 53, 55, 56, 58, 81, 82, 83, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_arrayLiteral2619 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_arrayLiteral2622 = frozenset([23, 56, 83])
+    FOLLOW_LT_in_arrayLiteral2628 = frozenset([23, 83])
+    FOLLOW_83_in_arrayLiteral2631 = frozenset([1])
+    FOLLOW_58_in_objectLiteral2661 = frozenset([23, 24, 27, 28, 59])
+    FOLLOW_LT_in_objectLiteral2663 = frozenset([23, 24, 27, 28, 59])
+    FOLLOW_propertyNameAndValue_in_objectLiteral2667 = frozenset([23, 56, 59])
+    FOLLOW_LT_in_objectLiteral2670 = frozenset([23, 56])
+    FOLLOW_56_in_objectLiteral2673 = frozenset([23, 24, 27, 28])
+    FOLLOW_LT_in_objectLiteral2675 = frozenset([23, 24, 27, 28])
+    FOLLOW_propertyNameAndValue_in_objectLiteral2678 = frozenset([23, 56, 59])
+    FOLLOW_LT_in_objectLiteral2684 = frozenset([23, 59])
+    FOLLOW_59_in_objectLiteral2687 = frozenset([1])
+    FOLLOW_propertyName_in_propertyNameAndValue2716 = frozenset([23, 72])
+    FOLLOW_LT_in_propertyNameAndValue2718 = frozenset([23, 72])
+    FOLLOW_72_in_propertyNameAndValue2721 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_propertyNameAndValue2723 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_propertyNameAndValue2726 = frozenset([1])
     FOLLOW_set_in_propertyName0 = frozenset([1])
     FOLLOW_set_in_literal0 = frozenset([1])
     FOLLOW_functionDeclaration_in_synpred5_JavaScript237 = frozenset([1])
@@ -14804,8 +14834,8 @@ class JavaScriptParser(Parser):
     FOLLOW_statement_in_synpred60_JavaScript848 = frozenset([1])
     FOLLOW_statement_in_synpred63_JavaScript867 = frozenset([1])
     FOLLOW_LT_in_synpred64_JavaScript856 = frozenset([23, 63])
-    FOLLOW_63_in_synpred64_JavaScript860 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_synpred64_JavaScript862 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
+    FOLLOW_63_in_synpred64_JavaScript860 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_synpred64_JavaScript862 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 60, 62, 64, 65, 66, 68, 69, 70, 71, 73, 76, 77, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
     FOLLOW_statement_in_synpred64_JavaScript867 = frozenset([1])
     FOLLOW_statementBlock_in_synpred64_JavaScript871 = frozenset([1])
     FOLLOW_forStatement_in_synpred67_JavaScript895 = frozenset([1])
@@ -14816,27 +14846,27 @@ class JavaScriptParser(Parser):
     FOLLOW_statement_in_synpred111_JavaScript1259 = frozenset([1])
     FOLLOW_LT_in_synpred127_JavaScript1391 = frozenset([1])
     FOLLOW_LT_in_synpred130_JavaScript1415 = frozenset([1])
-    FOLLOW_callExpression_in_synpred151_JavaScript1613 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred154_JavaScript1631 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_LT_in_synpred154_JavaScript1633 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_nonAssignmentOperator_in_synpred154_JavaScript1636 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_synpred154_JavaScript1638 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_synpred154_JavaScript1641 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred157_JavaScript1736 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_LT_in_synpred157_JavaScript1738 = frozenset([23, 61, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95])
-    FOLLOW_assignmentOperator_in_synpred157_JavaScript1741 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_synpred157_JavaScript1743 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_synpred157_JavaScript1746 = frozenset([1])
-    FOLLOW_unaryExpression_in_synpred158_JavaScript1840 = frozenset([1])
-    FOLLOW_conditionalExpression_in_synpred159_JavaScript1871 = frozenset([1])
-    FOLLOW_memberExpression_in_synpred162_JavaScript1919 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred203_JavaScript2277 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_LT_in_synpred203_JavaScript2279 = frozenset([23, 72, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
-    FOLLOW_nonAssignmentOperator_in_synpred203_JavaScript2282 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_LT_in_synpred203_JavaScript2284 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 81, 82, 98, 99, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
-    FOLLOW_assignmentExpression_in_synpred203_JavaScript2287 = frozenset([1])
-    FOLLOW_LT_in_synpred239_JavaScript2604 = frozenset([1])
-    FOLLOW_LT_in_synpred246_JavaScript2661 = frozenset([1])
+    FOLLOW_callExpression_in_synpred152_JavaScript1615 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_synpred155_JavaScript1633 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_LT_in_synpred155_JavaScript1635 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_nonAssignmentOperator_in_synpred155_JavaScript1638 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_synpred155_JavaScript1640 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_synpred155_JavaScript1643 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_synpred158_JavaScript1738 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_LT_in_synpred158_JavaScript1740 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_assignmentOperator_in_synpred158_JavaScript1743 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_synpred158_JavaScript1745 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_synpred158_JavaScript1748 = frozenset([1])
+    FOLLOW_unaryExpression_in_synpred159_JavaScript1842 = frozenset([1])
+    FOLLOW_conditionalExpression_in_synpred160_JavaScript1873 = frozenset([1])
+    FOLLOW_memberExpression_in_synpred163_JavaScript1921 = frozenset([1])
+    FOLLOW_leftHandSideExpression_in_synpred204_JavaScript2279 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_LT_in_synpred204_JavaScript2281 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111])
+    FOLLOW_nonAssignmentOperator_in_synpred204_JavaScript2284 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_LT_in_synpred204_JavaScript2286 = frozenset([23, 24, 25, 27, 28, 53, 55, 58, 81, 82, 97, 98, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122])
+    FOLLOW_assignmentExpression_in_synpred204_JavaScript2289 = frozenset([1])
+    FOLLOW_LT_in_synpred240_JavaScript2606 = frozenset([1])
+    FOLLOW_LT_in_synpred247_JavaScript2663 = frozenset([1])
 
 
 

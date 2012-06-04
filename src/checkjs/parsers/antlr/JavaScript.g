@@ -255,8 +255,7 @@ expressionNoIn
 	;
 
 assignmentExpression
-    : RegexpLiteral RegexpFlags? ('.' callExpression)?
-    | callExpression -> ^( ASSIGNMENT_EXPR callExpression)
+    : callExpression -> ^( ASSIGNMENT_EXPR callExpression)
     | (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
                 ^(OPERATOR_ARG leftHandSideExpression)
@@ -389,16 +388,13 @@ literal
 	: 'null'
 	| 'true'
 	| 'false'
-    // | regexpLiteral
+    | RegexpLiteral
 	| StringLiteral
 	| NumericLiteral
 	;
 
-// lexer rules.
-// Does not work :-(
-
 RegexpLiteral
-	: '/' RegexpCharacter+ '/'
+	: '/' RegexpCharacter+ '/' RegexpFlag*
 	;
 
 fragment RegexpCharacter
@@ -406,8 +402,8 @@ fragment RegexpCharacter
 	| '\\' EscapeSequence
     ;
 
-RegexpFlags
-    : ('g' | 'i' | 'm' | 'y')+
+fragment RegexpFlag
+    : 'g' | 'y' | 'i' | 'm'
     ;
 
 StringLiteral

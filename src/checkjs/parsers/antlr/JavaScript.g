@@ -40,6 +40,8 @@ tokens
     INDEX;
 
     MEMBER_EXPR;
+
+    REGEXP;
 }
 
 program
@@ -254,7 +256,8 @@ expressionNoIn
 
 assignmentExpression
     // : conditionalExpression -> ^( ASSIGNMENT_EXPR conditionalExpression)
-    : callExpression -> ^( ASSIGNMENT_EXPR callExpression)
+    : RegexpLiteral 'g'?
+    | callExpression -> ^( ASSIGNMENT_EXPR callExpression)
     | (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
                 ^(OPERATOR_ARG leftHandSideExpression)
@@ -387,25 +390,25 @@ literal
 	: 'null'
 	| 'true'
 	| 'false'
+    // | regexpLiteral
 	| StringLiteral
 	| NumericLiteral
-    | regexpLiteral
 	;
 
 // lexer rules.
 // Does not work :-(
-regexpLiteral
-	: '\/' ~'\/' '\/' // RegexpFlags?
+
+RegexpLiteral
+	: '/' RegexpCharacter+ '/'
 	;
 
 fragment RegexpCharacter
-	: ~('\/' | '\\' | LT)
+	: ~('/' | '\\' | LT)
 	| '\\' EscapeSequence
     ;
 
 fragment RegexpFlags
-    : 'g'
-    | 's'
+    : 'g' | 's'
     ;
 
 StringLiteral
@@ -901,9 +904,9 @@ fragment UnicodeConnectorPunctuation	// Any character in the Unicode category "C
 	| '\uFF65'
 	;
 
-fragment SingleSlash
-    : '/'
-    ;
+// fragment SingleSlash
+//     : '/'
+//     ;
 
 Comment
 	: '/*' (options {greedy=false;} : .)* '*/' {$channel=HIDDEN;}

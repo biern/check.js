@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from collections import defaultdict
 
 from checkjs.analyzers.base import Analyzer
 
@@ -8,15 +9,19 @@ class ExtAnalyzer(Analyzer):
     def analyze(self, tree):
         self.clean()
         self.defines = []
-        self.depends = []
+        self.depends = defaultdict(list)
         self.tree_recur(tree)
 
     def print_result(self):
         print("   Defines ext: {0}".format(self.defines))
         print("Depends on ext: {0}".format(self.depends))
 
-    def _add_depends(self, node):
-        self.depends.append(node.text)
+    def _add_depends(self, node, base=None):
+        level = 0
+        if base:
+            level = self.count_call_depth(base)
+
+        self.depends[level].append(node.text)
 
     def _add_defines(self, node):
         self.defines.append(node.text)
@@ -41,7 +46,7 @@ class ExtAnalyzer(Analyzer):
         if arg.type != 'StringLiteral':
             return
 
-        self._add_depends(arg)
+        self._add_depends(arg, node.parent)
 
     def _handle_ext_define(self, node):
         arg = node.arguments[0][0]
@@ -60,4 +65,4 @@ class ExtAnalyzer(Analyzer):
 
         for prop in node:
             if prop.name.text == 'extend':
-                self._add_depends(prop.value[0])
+                self._add_depends(prop.value[0], node)

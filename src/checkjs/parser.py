@@ -40,6 +40,20 @@ class Node(object):
 
             return res
 
+    def count(self, *names):
+        """
+        Counts occurences parents of type in names
+        """
+        res = self.parent
+        count = 0
+        while res:
+            if res.type in names:
+                count += 1
+
+            res = res.parent
+
+        return count
+
     def print_tree(self, indent=0):
         indent_str = ' ' * 2 * indent
         print('{}{}: {}'.format(

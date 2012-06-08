@@ -255,8 +255,7 @@ expressionNoIn
 	;
 
 assignmentExpression
-    : callExpression -> ^( ASSIGNMENT_EXPR callExpression)
-    | (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
+    : (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
                 ^(OPERATOR_ARG leftHandSideExpression)
                 ^(OPERATOR_ARG assignmentExpression)
@@ -278,7 +277,8 @@ assignmentExpressionNoIn
 	;
 
 leftHandSideExpression
-	: memberExpression -> ^( MEMBER_EXPR memberExpression)
+    : callExpression -> ^( ASSIGNMENT_EXPR callExpression)
+	| memberExpression -> ^( MEMBER_EXPR memberExpression)
 	;
 
 newExpression
@@ -388,14 +388,14 @@ literal
 	: 'null'
 	| 'true'
 	| 'false'
-    | RegexpLiteral
+    // | RegexpLiteral
 	| StringLiteral
 	| NumericLiteral
 	;
 
-RegexpLiteral
-	: '(' '/' RegexpCharacter+ '/' RegexpFlag* ')'
-	;
+// RegexpLiteral
+// 	: '(' '/' RegexpCharacter+ '/' RegexpFlag* ')'
+// 	;
 
 fragment RegexpCharacter
 	: ~('/' | '\\' | LT)

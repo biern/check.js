@@ -1,27 +1,43 @@
 # -*- coding: utf-8 -*-
+
 from collections import defaultdict
 
 from checkjs.analyzers.base import Analyzer
 
 
 class ExtAnalyzer(Analyzer):
+    name = 'ext'
 
     def analyze(self, tree):
         self.clean()
+        self.tree_recur(tree)
+        return self._make_result()
+
+    def _make_result(self):
+        return {
+            'requires': self.depends[1],
+            'uses': sum(self.depends.values(), []),
+            'defines': self.defines,
+        }
+
+    def clean(self):
+        super(ExtAnalyzer, self).clean()
         self.defines = []
         self.depends = defaultdict(list)
-        self.tree_recur(tree)
 
     def print_result(self):
         print("   Defines ext: {0}".format(self.defines))
         print("Depends on ext: {0}".format(self.depends))
 
-    def _add_depends(self, node, base=None):
+    def _add_depends(self, name, base=None):
         level = 0
-        if base:
+        if base and type(base) != int:
             level = self.count_call_depth(base)
 
-        self.depends[level].append(node.text)
+        if not type(name) == str:
+            name = name.text
+
+        self.depends[level].append(name)
 
     def _add_defines(self, node):
         self.defines.append(node.text)
@@ -38,7 +54,7 @@ class ExtAnalyzer(Analyzer):
         if idents[0] != 'Ext' or len(idents) < 2:
             return
 
-        if idents[1] in ('create', 'define'):
+        if idents[1] in ('create', 'define', 'application'):
             getattr(self, '_handle_ext_{0}'.format(idents[1]))(node)
 
     def _handle_ext_create(self, node):
@@ -56,9 +72,26 @@ class ExtAnalyzer(Analyzer):
 
         self._add_defines(arg)
 
-        self._handle_ext_object_properties(node.arguments[1][0])
+        app_name = arg.text.split('.')[0]
 
-    def _handle_ext_object_properties(self, node):
+        self._handle_ext_object_properties(node.arguments[1][0], app_name)
+
+    def _handle_ext_application(self, node):
+        self._handle_ext_object_properties(node.arguments[0][0])
+
+        name = None
+        controllers = []
+        for prop in node.arguments[0][0]:
+            if prop.name.text == 'name':
+                name = prop.value[0].text
+            if prop.name.text == 'controllers':
+                controllers = self.extract_list_items(prop.value)
+                # controllers = [value[0].text for value in prop.value[0]]
+
+        self.depends[0].extend(
+            '{0}.controller.{1}'.format(name, c) for c in controllers)
+
+    def _handle_ext_object_properties(self, node, app_name=None):
         if node.type != 'Object':
             self.error("Bad Ext call", node)
             return
@@ -66,3 +99,12 @@ class ExtAnalyzer(Analyzer):
         for prop in node:
             if prop.name.text == 'extend':
                 self._add_depends(prop.value[0], node)
+
+            if prop.name.text == 'requires':
+                for name in self.extract_list_items(prop.value):
+                    self._add_depends(name, node)
+
+            if app_name and prop.name.text == 'views':
+                views = self.extract_list_items(prop.value)
+                self.depends[1].extend(
+                    ('{0}.view.{1}'.format(app_name, view) for view in views))

@@ -5,6 +5,7 @@ class Analyzer(object):
     """
     Base analyzer class that defines some helper methods
     """
+    name = "base"
 
     def extract_string(self, node):
         return node.text[1:-1]
@@ -35,6 +36,9 @@ class Analyzer(object):
             ident.append(c.identifier.text)
 
         return ident
+
+    def extract_list_items(self, node):
+        return [value[0].text for value in node[0]]
 
     def clean(self):
         self.errors = []

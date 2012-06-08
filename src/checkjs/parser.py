@@ -7,7 +7,10 @@ class Parser(object):
         pass
 
     def parse_file(self, filepath):
-        pass
+        raise NotImplementedError()
+
+    def parse_stream(self, stream):
+        raise NotImplementedError()
 
 
 class Node(object):

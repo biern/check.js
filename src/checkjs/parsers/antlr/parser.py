@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import codecs
+import logging
 import sys
 
 import antlr3
@@ -11,9 +12,27 @@ from JavaScriptLexer import JavaScriptLexer, \
      VARIABLE_DECL, OBJECT, PROPERTY
 from JavaScriptParser import JavaScriptParser, tokenNames
 
-
 from checkjs.parser import Parser, Node
 
+
+log = logging.getLogger('antlr-parser')
+
+
+class JavaScriptParserMk2(JavaScriptParser):
+    def __init__(self, *args, **kwargs):
+        super(JavaScriptParserMk2, self).__init__(*args, **kwargs)
+        self.errors = []
+
+    def emitErrorMessage(self, msg):
+        self.errors.append(msg)
+
+    # TODO:
+    # public void displayRecognitionError(String[] tokenNames,
+    #                                     RecognitionException e) {
+    #     String hdr = getErrorHeader(e);
+    #     String msg = getErrorMessage(e, tokenNames);
+    #     errors.add(hdr + " " + msg);
+    # }    # def displayRecognitionError(self, token_names, exc):
 
 class AntlrParser(Parser):
     tokens_map = {
@@ -29,12 +48,32 @@ class AntlrParser(Parser):
         VARIABLE_DECL: ('VariableDecl', ['identifier', 'value']),
     }
 
+    def clean(self):
+        self.errors = []
+
     def parse_file(self, path):
+        self.clean()
+        log.debug('parsing path: {0}'.format(path))
         file_stream = antlr3.ANTLRFileStream(path, 'utf-8')
         lexer = JavaScriptLexer(file_stream)
-        parser = JavaScriptParser(antlr3.CommonTokenStream(lexer))
+        parser = JavaScriptParserMk2(antlr3.CommonTokenStream(lexer))
+        print parser.errors
 
         program = parser.program()
+        self.errors.extend(parser.errors)
+
+        return self._convert_tree(program.tree)
+
+    def parse_stream(self, stream):
+        self.clean()
+        log.debug('parsing stream')
+        string_stream = antlr3.ANTLRStringStream(
+            codecs.decode(stream, 'utf-8'))
+        lexer = JavaScriptLexer(string_stream)
+        parser = JavaScriptParserMk2(antlr3.CommonTokenStream(lexer))
+
+        program = parser.program()
+        self.errors.extend(parser.errors)
 
         return self._convert_tree(program.tree)
 

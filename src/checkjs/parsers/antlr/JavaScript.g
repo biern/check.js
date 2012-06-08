@@ -388,14 +388,14 @@ literal
 	: 'null'
 	| 'true'
 	| 'false'
-    // | RegexpLiteral
+    | RegexpLiteral
 	| StringLiteral
 	| NumericLiteral
 	;
 
-// RegexpLiteral
-// 	: '(' '/' RegexpCharacter+ '/' RegexpFlag* ')'
-// 	;
+RegexpLiteral
+	: '(' '/' RegexpCharacter+ '/' RegexpFlag* ')'
+	;
 
 fragment RegexpCharacter
 	: ~('/' | '\\' | LT)

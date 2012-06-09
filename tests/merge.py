@@ -64,7 +64,7 @@ if __name__ == '__main__':
     # Creating dependency list
     deps, missing = utils.to_dep_dict(files_data, ['ext', 'globals'], 'Ext.')
     print('Undefined Dependencies:')
-    for m in missing:
+    for m in sorted(missing):
         print(m)
     print('')
 

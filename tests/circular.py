@@ -55,6 +55,9 @@ if __name__ == '__main__':
 
     if circular:
         exit()
+    else:
+        print('No!')
+        print('')
 
     print('Merge order:')
     for i, files in enumerate(m.make_dep_list(deps)):

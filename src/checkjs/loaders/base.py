@@ -53,8 +53,8 @@ class BaseLoader(object):
             return parser.parse_stream(self.get_file(path))
 
     def get_file(self, path):
-        log.info('Loading {0}'.format(path))
-        return open(path)
+        log.info('Opening {0}'.format(path))
+        return open(path).read()
 
     def _parser_error(self, f, parser):
         err = 'Unable to parse file "{0}"'.format(f)

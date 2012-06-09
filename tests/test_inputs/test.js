@@ -243,7 +243,7 @@ Ext.define('VideoID.view.content.CMSBlockForm', {
             values.contextWrapper = {};
             for (k in values) {
                 if (values.hasOwnProperty(k)) {
-                    if (/context__/.exec(k)) {
+                    if ((/context__/).exec(k)) {
                         values.contextWrapper[k] = values[k];
                     }
                 }

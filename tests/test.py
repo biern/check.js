@@ -13,6 +13,8 @@ if __name__ == '__main__':
     p = AntlrParser()
     tree = p.parse_file(sys.argv[1])
 
+    tree.print_tree()
+
     print('Checking "{0}"\n'.format(sys.argv[1]))
 
     a = ExtAnalyzer()

@@ -26,7 +26,7 @@ class ExtLoader(object):
 
             parsed.add(f)
             log.info('Loading {0}'.format(f))
-            tree = self._parse(f, parser)
+            tree = self.parse(f, parser)
 
             if tree is None:
                 log.info('Unable to parse file {0}'.format(f))
@@ -51,19 +51,16 @@ class ExtLoader(object):
             for err in self.errors:
                 print(err)
 
-        # for file, analyzers in files_data.items():
-        #     print('{0}:'.format(file))
-        #     if not analyzers:
-        #         print("    ERROR")
-        #         continue
+        return files_data
 
-        #     for name, data in analyzers.items():
-        #         print('  {0}:'.format(name))
-        #         for key, value in data.items():
-        #             print('    {0}: {1}'.format(key, value))
+    def parse(self, path, parser):
+        try:
+            return parser.parse_file(path)
+        except NotImplementedError:
+            return parser.parse_stream(self.get_file(path))
 
-    def _parse(self, path, parser):
-        return parser.parse_file(path)
+    def get_file(self, path):
+        return open(path)
 
     def _paths_from_names(self, names, extloaders):
         """

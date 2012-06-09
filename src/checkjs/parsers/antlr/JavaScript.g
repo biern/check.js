@@ -255,16 +255,16 @@ expressionNoIn
 	;
 
 assignmentExpression
-    : (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
+    : (unaryExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
-                ^(OPERATOR_ARG leftHandSideExpression)
+                ^(OPERATOR_ARG unaryExpression)
                 ^(OPERATOR_ARG assignmentExpression)
             )
         )
-    | (leftHandSideExpression LT* assignmentOperator LT* assignmentExpression ->
+    | (unaryExpression LT* assignmentOperator LT* assignmentExpression ->
             ^( ASSIGNMENT
                 ^(assignmentOperator)
-                ^(OPERATOR_ARGS leftHandSideExpression assignmentExpression)
+                ^(OPERATOR_ARGS unaryExpression assignmentExpression)
             )
         )
     | unaryExpression
@@ -328,9 +328,9 @@ conditionalExpression
 	;
 
 operatorExpression
-    : (leftHandSideExpression LT* nonAssignmentOperator LT* assignmentExpression ->
+    : (unaryExpression LT* nonAssignmentOperator LT* assignmentExpression ->
             ^( nonAssignmentOperator
-                ^(OPERATOR_ARG leftHandSideExpression)
+                ^(OPERATOR_ARG unaryExpression)
                 ^(OPERATOR_ARG assignmentExpression)
             )
         )

@@ -1,4 +1,4 @@
-# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-08 16:49:28
+# $ANTLR 3.1.3 Mar 18, 2009 10:09:25 ../src/checkjs/parsers/antlr/JavaScript.g 2012-06-08 20:47:36
 
 import sys
 from antlr3 import *
@@ -7151,7 +7151,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "assignmentExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:257:1: assignmentExpression : ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:257:1: assignmentExpression : ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) );
     def assignmentExpression(self, ):
 
         retval = self.assignmentExpression_return()
@@ -7163,13 +7163,13 @@ class JavaScriptParser(Parser):
         LT272 = None
         LT275 = None
         LT277 = None
-        leftHandSideExpression269 = None
+        unaryExpression269 = None
 
         nonAssignmentOperator271 = None
 
         assignmentExpression273 = None
 
-        leftHandSideExpression274 = None
+        unaryExpression274 = None
 
         assignmentOperator276 = None
 
@@ -7186,9 +7186,9 @@ class JavaScriptParser(Parser):
         LT277_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
         stream_assignmentOperator = RewriteRuleSubtreeStream(self._adaptor, "rule assignmentOperator")
-        stream_leftHandSideExpression = RewriteRuleSubtreeStream(self._adaptor, "rule leftHandSideExpression")
         stream_nonAssignmentOperator = RewriteRuleSubtreeStream(self._adaptor, "rule nonAssignmentOperator")
         stream_assignmentExpression = RewriteRuleSubtreeStream(self._adaptor, "rule assignmentExpression")
+        stream_unaryExpression = RewriteRuleSubtreeStream(self._adaptor, "rule unaryExpression")
         stream_newExpression = RewriteRuleSubtreeStream(self._adaptor, "rule newExpression")
         success = False
         try:
@@ -7198,22 +7198,22 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:258:5: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:258:5: ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) ) ) | unaryExpression | newExpression -> ^( ASSIGNMENT_EXPR newExpression ) )
                 alt141 = 4
                 alt141 = self.dfa141.predict(self.input)
                 if alt141 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:8: unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1598)
-                    leftHandSideExpression269 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_assignmentExpression1598)
+                    unaryExpression269 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression269.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:31: ( LT )*
+                        stream_unaryExpression.add(unaryExpression269.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:24: ( LT )*
                     while True: #loop137
                         alt137 = 2
                         LA137_0 = self.input.LA(1)
@@ -7238,7 +7238,7 @@ class JavaScriptParser(Parser):
                     self._state.following.pop()
                     if self._state.backtracking == 0:
                         stream_nonAssignmentOperator.add(nonAssignmentOperator271.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:57: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:258:50: ( LT )*
                     while True: #loop138
                         alt138 = 2
                         LA138_0 = self.input.LA(1)
@@ -7265,7 +7265,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression273.tree)
 
                     # AST Rewrite
-                    # elements: nonAssignmentOperator, leftHandSideExpression, assignmentExpression
+                    # elements: nonAssignmentOperator, unaryExpression, assignmentExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -7282,16 +7282,16 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 258:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:259:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # 258:75: -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:259:13: ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(stream_nonAssignmentOperator.nextNode(), root_1)
 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:260:17: ^( OPERATOR_ARG leftHandSideExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:260:17: ^( OPERATOR_ARG unaryExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
-                        self._adaptor.addChild(root_2, stream_leftHandSideExpression.nextTree())
+                        self._adaptor.addChild(root_2, stream_unaryExpression.nextTree())
 
                         self._adaptor.addChild(root_1, root_2)
                         # ../src/checkjs/parsers/antlr/JavaScript.g:261:17: ^( OPERATOR_ARG assignmentExpression )
@@ -7313,18 +7313,18 @@ class JavaScriptParser(Parser):
 
 
                 elif alt141 == 2:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:8: unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_assignmentExpression1703)
-                    leftHandSideExpression274 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_assignmentExpression1703)
+                    unaryExpression274 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression274.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:31: ( LT )*
+                        stream_unaryExpression.add(unaryExpression274.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:24: ( LT )*
                     while True: #loop139
                         alt139 = 2
                         LA139_0 = self.input.LA(1)
@@ -7349,7 +7349,7 @@ class JavaScriptParser(Parser):
                     self._state.following.pop()
                     if self._state.backtracking == 0:
                         stream_assignmentOperator.add(assignmentOperator276.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:54: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:264:47: ( LT )*
                     while True: #loop140
                         alt140 = 2
                         LA140_0 = self.input.LA(1)
@@ -7376,7 +7376,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression278.tree)
 
                     # AST Rewrite
-                    # elements: assignmentExpression, leftHandSideExpression, assignmentOperator
+                    # elements: assignmentExpression, unaryExpression, assignmentOperator
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -7393,8 +7393,8 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 264:79: -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:265:13: ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression ) )
+                        # 264:72: -> ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:265:13: ^( ASSIGNMENT ^( assignmentOperator ) ^( OPERATOR_ARGS unaryExpression assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(self._adaptor.createFromType(ASSIGNMENT, "ASSIGNMENT"), root_1)
 
@@ -7403,11 +7403,11 @@ class JavaScriptParser(Parser):
                         root_2 = self._adaptor.becomeRoot(stream_assignmentOperator.nextNode(), root_2)
 
                         self._adaptor.addChild(root_1, root_2)
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:267:17: ^( OPERATOR_ARGS leftHandSideExpression assignmentExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:267:17: ^( OPERATOR_ARGS unaryExpression assignmentExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARGS, "OPERATOR_ARGS"), root_2)
 
-                        self._adaptor.addChild(root_2, stream_leftHandSideExpression.nextTree())
+                        self._adaptor.addChild(root_2, stream_unaryExpression.nextTree())
                         self._adaptor.addChild(root_2, stream_assignmentExpression.nextTree())
 
                         self._adaptor.addChild(root_1, root_2)
@@ -9253,7 +9253,7 @@ class JavaScriptParser(Parser):
 
 
     # $ANTLR start "operatorExpression"
-    # ../src/checkjs/parsers/antlr/JavaScript.g:330:1: operatorExpression : ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression );
+    # ../src/checkjs/parsers/antlr/JavaScript.g:330:1: operatorExpression : ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression );
     def operatorExpression(self, ):
 
         retval = self.operatorExpression_return()
@@ -9263,7 +9263,7 @@ class JavaScriptParser(Parser):
 
         LT340 = None
         LT342 = None
-        leftHandSideExpression339 = None
+        unaryExpression339 = None
 
         nonAssignmentOperator341 = None
 
@@ -9275,9 +9275,9 @@ class JavaScriptParser(Parser):
         LT340_tree = None
         LT342_tree = None
         stream_LT = RewriteRuleTokenStream(self._adaptor, "token LT")
-        stream_leftHandSideExpression = RewriteRuleSubtreeStream(self._adaptor, "rule leftHandSideExpression")
         stream_nonAssignmentOperator = RewriteRuleSubtreeStream(self._adaptor, "rule nonAssignmentOperator")
         stream_assignmentExpression = RewriteRuleSubtreeStream(self._adaptor, "rule assignmentExpression")
+        stream_unaryExpression = RewriteRuleSubtreeStream(self._adaptor, "rule unaryExpression")
         success = False
         try:
             try:
@@ -9286,22 +9286,22 @@ class JavaScriptParser(Parser):
                     success = True
                     return retval
 
-                # ../src/checkjs/parsers/antlr/JavaScript.g:331:5: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression )
+                # ../src/checkjs/parsers/antlr/JavaScript.g:331:5: ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) ) | unaryExpression )
                 alt174 = 2
                 alt174 = self.dfa174.predict(self.input)
                 if alt174 == 1:
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
                     pass 
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) ) )
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:8: unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
                     pass 
-                    self._state.following.append(self.FOLLOW_leftHandSideExpression_in_operatorExpression2261)
-                    leftHandSideExpression339 = self.leftHandSideExpression()
+                    self._state.following.append(self.FOLLOW_unaryExpression_in_operatorExpression2261)
+                    unaryExpression339 = self.unaryExpression()
 
                     self._state.following.pop()
                     if self._state.backtracking == 0:
-                        stream_leftHandSideExpression.add(leftHandSideExpression339.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:31: ( LT )*
+                        stream_unaryExpression.add(unaryExpression339.tree)
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:24: ( LT )*
                     while True: #loop172
                         alt172 = 2
                         LA172_0 = self.input.LA(1)
@@ -9326,7 +9326,7 @@ class JavaScriptParser(Parser):
                     self._state.following.pop()
                     if self._state.backtracking == 0:
                         stream_nonAssignmentOperator.add(nonAssignmentOperator341.tree)
-                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:57: ( LT )*
+                    # ../src/checkjs/parsers/antlr/JavaScript.g:331:50: ( LT )*
                     while True: #loop173
                         alt173 = 2
                         LA173_0 = self.input.LA(1)
@@ -9353,7 +9353,7 @@ class JavaScriptParser(Parser):
                         stream_assignmentExpression.add(assignmentExpression343.tree)
 
                     # AST Rewrite
-                    # elements: leftHandSideExpression, nonAssignmentOperator, assignmentExpression
+                    # elements: unaryExpression, nonAssignmentOperator, assignmentExpression
                     # token labels: 
                     # rule labels: retval
                     # token list labels: 
@@ -9370,16 +9370,16 @@ class JavaScriptParser(Parser):
 
 
                         root_0 = self._adaptor.nil()
-                        # 331:82: -> ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:332:13: ^( nonAssignmentOperator ^( OPERATOR_ARG leftHandSideExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # 331:75: -> ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:332:13: ^( nonAssignmentOperator ^( OPERATOR_ARG unaryExpression ) ^( OPERATOR_ARG assignmentExpression ) )
                         root_1 = self._adaptor.nil()
                         root_1 = self._adaptor.becomeRoot(stream_nonAssignmentOperator.nextNode(), root_1)
 
-                        # ../src/checkjs/parsers/antlr/JavaScript.g:333:17: ^( OPERATOR_ARG leftHandSideExpression )
+                        # ../src/checkjs/parsers/antlr/JavaScript.g:333:17: ^( OPERATOR_ARG unaryExpression )
                         root_2 = self._adaptor.nil()
                         root_2 = self._adaptor.becomeRoot(self._adaptor.createFromType(OPERATOR_ARG, "OPERATOR_ARG"), root_2)
 
-                        self._adaptor.addChild(root_2, stream_leftHandSideExpression.nextTree())
+                        self._adaptor.addChild(root_2, stream_unaryExpression.nextTree())
 
                         self._adaptor.addChild(root_1, root_2)
                         # ../src/checkjs/parsers/antlr/JavaScript.g:334:17: ^( OPERATOR_ARG assignmentExpression )
@@ -11045,17 +11045,17 @@ class JavaScriptParser(Parser):
 
     # $ANTLR start "synpred151_JavaScript"
     def synpred151_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
         pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:8: unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
         pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred151_JavaScript1598)
-        self.leftHandSideExpression()
+        self._state.following.append(self.FOLLOW_unaryExpression_in_synpred151_JavaScript1598)
+        self.unaryExpression()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:31: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:24: ( LT )*
         while True: #loop224
             alt224 = 2
             LA224_0 = self.input.LA(1)
@@ -11076,7 +11076,7 @@ class JavaScriptParser(Parser):
         self.nonAssignmentOperator()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:258:57: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:258:50: ( LT )*
         while True: #loop225
             alt225 = 2
             LA225_0 = self.input.LA(1)
@@ -11108,17 +11108,17 @@ class JavaScriptParser(Parser):
 
     # $ANTLR start "synpred154_JavaScript"
     def synpred154_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
         pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:8: leftHandSideExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:7: ( unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:8: unaryExpression ( LT )* assignmentOperator ( LT )* assignmentExpression
         pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred154_JavaScript1703)
-        self.leftHandSideExpression()
+        self._state.following.append(self.FOLLOW_unaryExpression_in_synpred154_JavaScript1703)
+        self.unaryExpression()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:31: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:24: ( LT )*
         while True: #loop226
             alt226 = 2
             LA226_0 = self.input.LA(1)
@@ -11139,7 +11139,7 @@ class JavaScriptParser(Parser):
         self.assignmentOperator()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:264:54: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:264:47: ( LT )*
         while True: #loop227
             alt227 = 2
             LA227_0 = self.input.LA(1)
@@ -11231,17 +11231,17 @@ class JavaScriptParser(Parser):
 
     # $ANTLR start "synpred201_JavaScript"
     def synpred201_JavaScript_fragment(self, ):
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression ) )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
         pass 
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:8: leftHandSideExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:7: ( unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression )
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:8: unaryExpression ( LT )* nonAssignmentOperator ( LT )* assignmentExpression
         pass 
-        self._state.following.append(self.FOLLOW_leftHandSideExpression_in_synpred201_JavaScript2261)
-        self.leftHandSideExpression()
+        self._state.following.append(self.FOLLOW_unaryExpression_in_synpred201_JavaScript2261)
+        self.unaryExpression()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:31: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:24: ( LT )*
         while True: #loop240
             alt240 = 2
             LA240_0 = self.input.LA(1)
@@ -11262,7 +11262,7 @@ class JavaScriptParser(Parser):
         self.nonAssignmentOperator()
 
         self._state.following.pop()
-        # ../src/checkjs/parsers/antlr/JavaScript.g:331:57: ( LT )*
+        # ../src/checkjs/parsers/antlr/JavaScript.g:331:50: ( LT )*
         while True: #loop241
             alt241 = 2
             LA241_0 = self.input.LA(1)
@@ -13196,33 +13196,34 @@ class JavaScriptParser(Parser):
     # lookup tables for DFA #141
 
     DFA141_eot = DFA.unpack(
-        u"\15\uffff"
+        u"\16\uffff"
         )
 
     DFA141_eof = DFA.unpack(
-        u"\15\uffff"
+        u"\16\uffff"
         )
 
     DFA141_min = DFA.unpack(
-        u"\1\30\10\0\4\uffff"
+        u"\1\30\11\0\4\uffff"
         )
 
     DFA141_max = DFA.unpack(
-        u"\1\173\10\0\4\uffff"
+        u"\1\173\11\0\4\uffff"
         )
 
     DFA141_accept = DFA.unpack(
-        u"\11\uffff\1\3\1\1\1\2\1\4"
+        u"\12\uffff\1\1\1\2\1\3\1\4"
         )
 
     DFA141_special = DFA.unpack(
-        u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\4\uffff"
+        u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\4\uffff"
         )
 
             
     DFA141_transition = [
         DFA.unpack(u"\1\2\3\3\31\uffff\1\7\1\uffff\1\6\2\uffff\1\5\25\uffff"
         u"\1\10\1\4\17\uffff\2\11\16\uffff\7\11\1\1\3\3"),
+        DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -13267,10 +13268,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_1)
@@ -13290,10 +13291,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_2)
@@ -13313,10 +13314,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_3)
@@ -13336,10 +13337,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_4)
@@ -13359,10 +13360,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_5)
@@ -13382,10 +13383,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_6)
@@ -13405,10 +13406,10 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_7)
@@ -13428,13 +13429,33 @@ class JavaScriptParser(Parser):
                     s = 11
 
                 elif (self.synpred155_JavaScript()):
-                    s = 9
+                    s = 12
 
                 elif (True):
-                    s = 12
+                    s = 13
 
                  
                 input.seek(index141_8)
+                if s >= 0:
+                    return s
+            elif s == 8: 
+                LA141_9 = input.LA(1)
+
+                 
+                index141_9 = input.index()
+                input.rewind()
+                s = -1
+                if (self.synpred151_JavaScript()):
+                    s = 10
+
+                elif (self.synpred154_JavaScript()):
+                    s = 11
+
+                elif (self.synpred155_JavaScript()):
+                    s = 12
+
+                 
+                input.seek(index141_9)
                 if s >= 0:
                     return s
 
@@ -14134,33 +14155,34 @@ class JavaScriptParser(Parser):
     # lookup tables for DFA #174
 
     DFA174_eot = DFA.unpack(
-        u"\13\uffff"
+        u"\14\uffff"
         )
 
     DFA174_eof = DFA.unpack(
-        u"\13\uffff"
+        u"\14\uffff"
         )
 
     DFA174_min = DFA.unpack(
-        u"\1\30\10\0\2\uffff"
+        u"\1\30\11\0\2\uffff"
         )
 
     DFA174_max = DFA.unpack(
-        u"\1\173\10\0\2\uffff"
+        u"\1\173\11\0\2\uffff"
         )
 
     DFA174_accept = DFA.unpack(
-        u"\11\uffff\1\2\1\1"
+        u"\12\uffff\1\1\1\2"
         )
 
     DFA174_special = DFA.unpack(
-        u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\2\uffff"
+        u"\1\uffff\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\2\uffff"
         )
 
             
     DFA174_transition = [
         DFA.unpack(u"\1\2\3\3\31\uffff\1\7\1\uffff\1\6\2\uffff\1\5\25\uffff"
         u"\1\10\1\4\17\uffff\2\11\16\uffff\7\11\1\1\3\3"),
+        DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
         DFA.unpack(u"\1\uffff"),
@@ -14200,7 +14222,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_1)
@@ -14217,7 +14239,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_2)
@@ -14234,7 +14256,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_3)
@@ -14251,7 +14273,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_4)
@@ -14268,7 +14290,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_5)
@@ -14285,7 +14307,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_6)
@@ -14302,7 +14324,7 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_7)
@@ -14319,10 +14341,27 @@ class JavaScriptParser(Parser):
                     s = 10
 
                 elif (True):
-                    s = 9
+                    s = 11
 
                  
                 input.seek(index174_8)
+                if s >= 0:
+                    return s
+            elif s == 8: 
+                LA174_9 = input.LA(1)
+
+                 
+                index174_9 = input.index()
+                input.rewind()
+                s = -1
+                if (self.synpred201_JavaScript()):
+                    s = 10
+
+                elif (True):
+                    s = 11
+
+                 
+                input.seek(index174_9)
                 if s >= 0:
                     return s
 
@@ -14816,12 +14855,12 @@ class JavaScriptParser(Parser):
     FOLLOW_56_in_expressionNoIn1575 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_expressionNoIn1577 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_assignmentExpressionNoIn_in_expressionNoIn1581 = frozenset([1, 23, 56])
-    FOLLOW_leftHandSideExpression_in_assignmentExpression1598 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
+    FOLLOW_unaryExpression_in_assignmentExpression1598 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_LT_in_assignmentExpression1600 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_nonAssignmentOperator_in_assignmentExpression1603 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_assignmentExpression1605 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_assignmentExpression_in_assignmentExpression1608 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_assignmentExpression1703 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_unaryExpression_in_assignmentExpression1703 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
     FOLLOW_LT_in_assignmentExpression1705 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
     FOLLOW_assignmentOperator_in_assignmentExpression1708 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_assignmentExpression1710 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
@@ -14886,7 +14925,7 @@ class JavaScriptParser(Parser):
     FOLLOW_72_in_conditionalExpression2238 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_conditionalExpression2240 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_operatorExpression_in_conditionalExpression2244 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_operatorExpression2261 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
+    FOLLOW_unaryExpression_in_operatorExpression2261 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_LT_in_operatorExpression2263 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_nonAssignmentOperator_in_operatorExpression2266 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_operatorExpression2268 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
@@ -14956,12 +14995,12 @@ class JavaScriptParser(Parser):
     FOLLOW_statement_in_synpred111_JavaScript1259 = frozenset([1])
     FOLLOW_LT_in_synpred127_JavaScript1391 = frozenset([1])
     FOLLOW_LT_in_synpred130_JavaScript1415 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred151_JavaScript1598 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
+    FOLLOW_unaryExpression_in_synpred151_JavaScript1598 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_LT_in_synpred151_JavaScript1600 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_nonAssignmentOperator_in_synpred151_JavaScript1603 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_synpred151_JavaScript1605 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_assignmentExpression_in_synpred151_JavaScript1608 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred154_JavaScript1703 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
+    FOLLOW_unaryExpression_in_synpred154_JavaScript1703 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
     FOLLOW_LT_in_synpred154_JavaScript1705 = frozenset([23, 61, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94])
     FOLLOW_assignmentOperator_in_synpred154_JavaScript1708 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_synpred154_JavaScript1710 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
@@ -14970,7 +15009,7 @@ class JavaScriptParser(Parser):
     FOLLOW_conditionalExpression_in_synpred156_JavaScript1838 = frozenset([1])
     FOLLOW_callExpression_in_synpred159_JavaScript1869 = frozenset([1])
     FOLLOW_memberExpression_in_synpred160_JavaScript1903 = frozenset([1])
-    FOLLOW_leftHandSideExpression_in_synpred201_JavaScript2261 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
+    FOLLOW_unaryExpression_in_synpred201_JavaScript2261 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_LT_in_synpred201_JavaScript2263 = frozenset([23, 72, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112])
     FOLLOW_nonAssignmentOperator_in_synpred201_JavaScript2266 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])
     FOLLOW_LT_in_synpred201_JavaScript2268 = frozenset([23, 24, 25, 26, 27, 53, 55, 58, 80, 81, 97, 98, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123])

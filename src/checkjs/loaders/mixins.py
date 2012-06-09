@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import os
 import urllib2
 
 
@@ -36,3 +37,10 @@ class RemoteLoaderMixin(object):
             return None
 
         return super(RemoteLoaderMixin, self).parse(path, parser)
+
+
+class DirectoryLoaderMixin(object):
+    def load(self, path, *args):
+        files = [os.path.join(path, f) \
+                     for f in os.listdir(path) if f.endswith('.js')]
+        return super(DirectoryLoaderMixin, self).load(files, *args)

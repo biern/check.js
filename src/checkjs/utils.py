@@ -3,7 +3,7 @@
 from collections import defaultdict
 
 
-def to_dep_dict(file_data, analyzers, skip_prefixes):
+def to_dep_dict(file_data, analyzers, skip_prefixes=[]):
     result = defaultdict(set)
     undefined = set()
 

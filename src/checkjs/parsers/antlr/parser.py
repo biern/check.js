@@ -24,6 +24,7 @@ class JavaScriptParserMk2(JavaScriptParser):
         self.errors = []
 
     def emitErrorMessage(self, msg):
+        log.warning('parser error: {0}'.format(msg))
         self.errors.append(msg)
 
     # TODO:

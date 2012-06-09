@@ -1,66 +1,33 @@
 # -*- coding: utf-8 -*-
 
-from collections import defaultdict
 import logging
 import os
 
 from checkjs.analyzers.ext import ExtAnalyzer
+from checkjs.loaders.base import BaseLoader
 
 log = logging.getLogger('ext-loader')
 
 
-class ExtLoader(object):
+class ExtLoader(BaseLoader):
+    """
+    Tries to load all ext modules that this module depends on
+    """
 
-    def load(self, parser, files, extloaders=None, extra_analyzers=None):
-        analyzers = tuple([ExtAnalyzer()] + (extra_analyzers or []))
-        self.errors = []
+    def __init__(self, extloaders):
+        super(ExtLoader, self).__init__()
+        self.extloaders = extloaders
 
-        files_data = defaultdict(dict)
-        to_parse = set(files)
-        parsed = set()
+    def get_analyzers(self):
+        return [ExtAnalyzer()]
 
-        while to_parse:
-            f = to_parse.pop()
-            if f in parsed:
-                continue
-
-            parsed.add(f)
-            log.info('Loading {0}'.format(f))
-            tree = self.parse(f, parser)
-
-            if tree is None:
-                log.info('Unable to parse file {0}'.format(f))
-                continue
-
-            data = files_data[f]
-            for analyzer in analyzers:
-                data[analyzer.name] = analyzer.analyze(tree)
-
-            if not extloaders:
-                continue
-
-            # Parse all except already parsed
-            to_parse.update(
-                (path for path in \
-                     self._paths_from_names(
-                        data['ext']['uses'], extloaders)
-                 if path not in parsed))
-
-        if self.errors:
-            print("ERRORS:")
-            for err in self.errors:
-                print(err)
-
-        return files_data
-
-    def parse(self, path, parser):
-        try:
-            return parser.parse_file(path)
-        except NotImplementedError:
-            return parser.parse_stream(self.get_file(path))
-
-    def get_file(self, path):
-        return open(path)
+    def analyze(self, path, analyzers, tree):
+        data = super(ExtLoader, self).analyze(path, analyzers, tree)
+        self.to_parse.update(
+            (path for path in self._paths_from_names(
+                    data['ext']['uses'], self.extloaders))
+            )
+        return data
 
     def _paths_from_names(self, names, extloaders):
         """

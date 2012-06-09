@@ -11,6 +11,7 @@ class RemoteLoaderMixin(object):
     root_url = 'http://127.0.0.1'
 
     def get_file(self, path):
+        log.info('Fetching {0}'.format(path))
         if path.startswith('http://'):
             try:
                 stream = urllib2.urlopen(path)

@@ -10,9 +10,10 @@ class GlobalsAnalyzer(Analyzer):
     def analyze(self, tree):
         self.clean()
         self.tree_recur(tree, {'defined': []})
-        self.depends = list(set(self.depends) - self.skip_names)
         self.defines = list(set(self.defines))
-        print(self._make_result())
+        self.depends = list(set(self.depends) - \
+                            self.skip_names - \
+                            set(self.defines))
         return self._make_result()
 
     def _make_result(self):

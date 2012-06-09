@@ -58,7 +58,6 @@ class AntlrParser(Parser):
         file_stream = antlr3.ANTLRFileStream(path, 'utf-8')
         lexer = JavaScriptLexer(file_stream)
         parser = JavaScriptParserMk2(antlr3.CommonTokenStream(lexer))
-        print parser.errors
 
         program = parser.program()
         self.errors.extend(parser.errors)

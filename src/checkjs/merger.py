@@ -3,6 +3,8 @@ import logging
 
 from collections import defaultdict
 
+from checkjs.loaders.base import BaseLoader
+
 log = logging.getLogger('merger')
 
 
@@ -12,7 +14,10 @@ class MergeError(Exception):
 
 class Merger(object):
 
-    def merge(self, deps, out, loader):
+    def merge(self, deps, out, loader=None):
+        if loader is None:
+            loader = BaseLoader()
+
         circular = self.check_circular(deps)
         if circular:
             err = 'Circular dependency: {0}'.format(circular)
@@ -49,7 +54,13 @@ class Merger(object):
 
         def recur(root, bases=[]):
             if root in bases:
-                circular.add(tuple(bases + [root]))
+                path = tuple(bases + [root])
+                for c in circular:
+                    if set(c) == set(path):
+                        break
+                else:
+                    circular.add(path)
+
                 return
 
             for dep in files.get(root, []):

@@ -22,13 +22,17 @@ depend1.on.me = 2;
 notg.member = 4;
 // function definitions
 function defined5 (notg1, notg2, notg3) {
+    var a = depend9;
+
     function nested (notg4) {
+        var b = depend10;
         notg1 = 1;
         notg4 = 2;
         defined2 = 3;
     }
 
     function (local) {
+        var c = depend11;
         local = 2;
     }();
 

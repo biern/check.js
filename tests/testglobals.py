@@ -14,14 +14,14 @@ class TestGlobals(ParseTest):
         self.analyzer = GlobalsAnalyzer()
 
     def test_globals(self):
-        self.analyzer.analyze(self.tree)
+        result = self.analyzer.analyze(self.tree)
         self.analyzer.print_result()
         self.assertEqual(
             set(['defined{0}'.format(i + 1) for i in range(5)]),
-            set(self.analyzer.defines))
+            set(result['defines']))
         self.assertEqual(
             set(['depend{0}'.format(i + 1) for i in range(8)]),
-            set(self.analyzer.depends))
+            set(result['uses']))
 
 
 if __name__ == '__main__':

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from collections import defaultdict
+
 from checkjs.analyzers.base import Analyzer
 
 
@@ -10,22 +12,34 @@ class GlobalsAnalyzer(Analyzer):
     def analyze(self, tree):
         self.clean()
         self.tree_recur(tree, {'defined': []})
-        self.defines = list(set(self.defines))
-        self.depends = list(set(self.depends) - \
-                            self.skip_names - \
-                            set(self.defines))
+        # self.defines = list(set(self.defines))
+        # self.depends = list(set(self.depends) - \
+        #                     self.skip_names - \
+        #                     set(self.defines))
         return self._make_result()
 
     def _make_result(self):
+        skip_names = self.skip_names.union(set(self.defines))
         return {
-            'depends': self.depends,
-            'defines': self.defines,
+            'depends': list(set(self.depends[0]) - skip_names),
+            'uses': list(set(sum(self.depends.values(), [])) - skip_names),
+            'defines': list(set(self.defines)),
         }
 
     def clean(self):
         super(GlobalsAnalyzer, self).clean()
         self.defines = []
-        self.depends = []
+        self.depends = defaultdict(list)
+
+    def _add_depends(self, name, base=None):
+        level = 0
+        if base and type(base) != int:
+            level = self.count_func_depth(base)
+
+        if not type(name) == str:
+            name = name.text
+
+        self.depends[level].append(name)
 
     def tree_recur(self, node, kwargs):
         """
@@ -43,10 +57,6 @@ class GlobalsAnalyzer(Analyzer):
         for c in node:
             self.tree_recur(c, kwargs)
 
-    def print_result(self):
-        print("Defines globals: [{0}]".format(', '.join(self.defines)))
-        print("Depends on globals: [{0}]".format(', '.join(self.depends)))
-
     def analyze_call(self, node, kwargs):
         defined = kwargs['defined']
         if node.identifier[0].type == 'FunctionExpression':
@@ -54,7 +64,7 @@ class GlobalsAnalyzer(Analyzer):
 
         idents = self.extract_identifier(node.identifier)
         if idents[0] not in defined:
-            self.depends.append(idents[0])
+            self._add_depends(idents[0], node)
 
     def analyze_functiondeclaration(self, node, kwargs):
         defined = kwargs['defined']
@@ -102,12 +112,12 @@ class GlobalsAnalyzer(Analyzer):
 
         if node.type == 'MemberExpr' and node.base.type == 'Identifier' and \
                 node.base.text not in defined:
-            self.depends.append(node.base.text)
+            self._add_depends(node.base.text, node)
 
     def check_global_memberexpr(self, node, defined):
         if node.type == 'MemberExpr' and node.base.type == 'Identifier' and \
                 node.base.text not in defined:
-            self.depends.append(node.base.text)
+            self._add_depends(node.base.text, node)
             return True
 
         return False

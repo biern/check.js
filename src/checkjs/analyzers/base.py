@@ -7,6 +7,10 @@ class Analyzer(object):
     """
     name = "base"
 
+    def print_result(self):
+        for k, v in self._make_result().items():
+            print('{0}: {1}'.format(k, v))
+
     def extract_string(self, node):
         return node.text[1:-1]
 
@@ -22,6 +26,9 @@ class Analyzer(object):
 
     def count_call_depth(self, node):
         return node.count('FunctionExpression', 'Call')
+
+    def count_func_depth(self, node):
+        return node.count('FunctionExpression', 'FunctionDeclaration')
 
     def extract_identifier(self, node):
         """

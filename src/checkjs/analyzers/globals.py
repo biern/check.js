@@ -4,13 +4,26 @@ from checkjs.analyzers.base import Analyzer
 
 
 class GlobalsAnalyzer(Analyzer):
+    name = 'globals'
+    skip_names = set(['this', 'arguments', 'undefined', 'true', 'false'])
 
     def analyze(self, tree):
+        self.clean()
+        self.tree_recur(tree, {'defined': []})
+        self.depends = list(set(self.depends) - self.skip_names)
+        self.defines = list(set(self.defines))
+        return self._make_result()
+
+    def _make_result(self):
+        return {
+            'depends': self.depends,
+            'defines': self.defines,
+        }
+
+    def clean(self):
+        super(GlobalsAnalyzer, self).clean()
         self.defines = []
         self.depends = []
-        self.tree_recur(tree, {'defined': []})
-        self.depends = list(set(self.depends) - set(['this']))
-        self.defines = list(set(self.defines))
 
     def tree_recur(self, node, kwargs):
         """
@@ -18,7 +31,7 @@ class GlobalsAnalyzer(Analyzer):
         calls
         """
 
-        # TODO: Czy to nie zadziała czasem razem z extra? (defined.append(dupa))
+        # TODO: Czy to nie zadziała czasem razem z extra?
         meth = getattr(self, 'analyze_{0}'.format(node.type.lower()), None)
         if meth:
             res = meth(node, kwargs)

@@ -15,8 +15,9 @@ class ExtAnalyzer(Analyzer):
 
     def _make_result(self):
         return {
-            'requires': self.depends[1],
+            'requires': self.depends[1],  # tmp alias
             'uses': sum(self.depends.values(), []),
+            'depends': self.depends[1],
             'defines': self.defines,
         }
 
@@ -24,10 +25,6 @@ class ExtAnalyzer(Analyzer):
         super(ExtAnalyzer, self).clean()
         self.defines = []
         self.depends = defaultdict(list)
-
-    def print_result(self):
-        print("   Defines ext: {0}".format(self.defines))
-        print("Depends on ext: {0}".format(self.depends))
 
     def _add_depends(self, name, base=None):
         level = 0
@@ -104,7 +101,8 @@ class ExtAnalyzer(Analyzer):
                 for name in self.extract_list_items(prop.value):
                     self._add_depends(name, node)
 
-            if app_name and prop.name.text == 'views':
-                views = self.extract_list_items(prop.value)
+            if app_name and prop.name.text in ('views', 'stores', 'models'):
+                values = self.extract_list_items(prop.value)
                 self.depends[1].extend(
-                    ('{0}.view.{1}'.format(app_name, view) for view in views))
+                    ('{0}.{1}.{2}'.format(app_name, prop.name.text[:-1], v) \
+                         for v in values))

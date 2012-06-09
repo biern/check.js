@@ -20,7 +20,7 @@ class TestGlobals(ParseTest):
             set(['defined{0}'.format(i + 1) for i in range(5)]),
             set(self.analyzer.defines))
         self.assertEqual(
-            set(['depend{0}'.format(i + 1) for i in range(5)]),
+            set(['depend{0}'.format(i + 1) for i in range(8)]),
             set(self.analyzer.depends))
 
 

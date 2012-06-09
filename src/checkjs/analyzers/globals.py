@@ -12,6 +12,7 @@ class GlobalsAnalyzer(Analyzer):
         self.tree_recur(tree, {'defined': []})
         self.depends = list(set(self.depends) - self.skip_names)
         self.defines = list(set(self.defines))
+        print(self._make_result())
         return self._make_result()
 
     def _make_result(self):
@@ -81,12 +82,26 @@ class GlobalsAnalyzer(Analyzer):
         """
         Modify parent's context instead of creating new one
         """
-
         defined = kwargs['defined']
         if len(node) > 1:
             self.check_global_memberexpr(node.value, defined)
 
         kwargs['defined'] = [node.identifier.text] + defined
+
+    def analyze_memberexpr(self, node, kwargs):
+        defined = kwargs['defined']
+
+        assignment = node.up('Assignment')
+        if assignment and assignment.args.left == node:
+            return
+
+        # vardecl = node.up('VariableDecl')
+        # if vardecl and vardecl.identifier == node:
+        #     return
+
+        if node.type == 'MemberExpr' and node.base.type == 'Identifier' and \
+                node.base.text not in defined:
+            self.depends.append(node.base.text)
 
     def check_global_memberexpr(self, node, defined):
         if node.type == 'MemberExpr' and node.base.type == 'Identifier' and \

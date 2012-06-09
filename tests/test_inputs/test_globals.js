@@ -9,7 +9,7 @@ depend3();
 
 depend4.member();
 
-depend5(x.m.n, y, z);
+depend5(depend7.m.n, depend8);
 
 // vars
 var notg = 2,
@@ -45,3 +45,5 @@ function (local) {
 defined4 = 6;
 
 var x = depend2.on.me;
+
+var y = 3 + depend6;
